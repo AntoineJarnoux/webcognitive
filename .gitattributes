@@ -1,0 +1,3 @@
+# Le corpus brut est conservé octet pour octet (les empreintes SHA-256 de
+# data/corpus_metadata.json doivent rester valides après un clone).
+data/raw/** -text
