@@ -1,0 +1,18 @@
+# Environnement Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Sorties régénérables (étapes suivantes)
+data/vectordb/
+*.log
+
+# Le corpus brut (data/raw) EST versionné : l'étape 1 demande un corpus versionné.
+# Si un fichier dépasse 100 Mo, utiliser Git LFS.
