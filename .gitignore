@@ -13,6 +13,7 @@ Thumbs.db
 # Sorties régénérables (étapes suivantes)
 data/vectordb/
 data/embeddings/embeddings.npy
+docs/carte_vecteurs.html
 *.log
 
 # Le corpus brut (data/raw) EST versionné : l'étape 1 demande un corpus versionné.
