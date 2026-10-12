@@ -1,0 +1,36 @@
+{
+  "id": "html08",
+  "filename": "historyofinformation_cerf_kahn_tcp.html",
+  "format": "html",
+  "title": "Cerf & Kahn Publish TCP: A Protocol for Packet Network Intercommunication",
+  "author": "HistoryofInformation.com",
+  "year": null,
+  "lang": "en",
+  "url": "https://www.historyofinformation.com/detail.php?id=915",
+  "type": "article encyclopédique",
+  "source_path": "data/raw/html/historyofinformation_cerf_kahn_tcp.html",
+  "sha256": "c9a832cfe00ae6278041e174b7c454eb4360835370c978d4b2c2e77ab76fa08b",
+  "retrieved_at": "2026-09-28T11:43:27+00:00",
+  "parsed_at": "2026-10-05T10:48:01+00:00",
+  "parser": "BeautifulSoup (lxml)",
+  "units": [
+    {
+      "page": null,
+      "section": "Cerf & Kahn Publish TCP: A Protocol for Packet Network Communication",
+      "text": "Robert Kahn\n\nVinton Cerf\n\nIn May 1974 Vinton Cerf and Robert Kahn published “A Protocol for Packet Network Intercommunication” in IEEE Transactions on Communications COM 22, no. 5, (5 May 1974) 637-648, in which they described the Transmission Control Protocol (TCP).\n\nIn the early 1970s ARPANET and other data networks that were beginning to be constructed around the world each operated according to different hardware and software protocols, thus making it impossible for them to communicate with one another. ARPANET was using the Network Control Protocol or NCP. This problem was solved by Cerf and Kahn's invention of the Transmission Control Protocol (TCP) cross-network protocol that allowed the creation of an international network of computer networks; i.e., the Internet (a term Cerf and Kahn invented around 1973, as an abbrevation for \"inter-networking of networks.\" The authors laid out the architecture of such a network in their May 1974 paper:\n\n\"It describes gateways, which sit between networks to send and receive 'datagrams.' Datagrams, similar to envelopes, enclose messages and display destination addresses that are recognized by gateways. Datagrams can carry packets of various sizes. The messages within datagrams are called transmission control protocol (TCP) messages. TCP is the standard program, shared by each network, for loading and unloading datagrams; it is the only element of the international network that must be uniform among the small networks, and it is the crucial element that makes global networking possible\" (Moschovitis, History of the Internet. A Chronology, 1843 to the Present 82.\n\nIn 1978 TCP was split into TCP and IP for Internet Protocol. In 1983 the Defense Communications Agency DCA and ARPA established the Transmission Control Protocol (TCP) and Internet Protocol (IP), as the protocol suite, commonly known as TCP/IP for ARPANET. This led to one of the first definitions of an \"internet\" as a connected set of networks, specifically those using TCP/IP, and the \"Internet\" as connected TCP/IP internets. On January 1, 1983 ARPANET required that all connected machines use TCP/IP. On this date TCP/IP became the core Internet protocol and replaced NCP entirely.\n\nNorman, From Gutenberg to the Internet (2005) reading 13.8, p. 871."
+    }
+  ],
+  "text": "Robert Kahn\n\nVinton Cerf\n\nIn May 1974 Vinton Cerf and Robert Kahn published “A Protocol for Packet Network Intercommunication” in IEEE Transactions on Communications COM 22, no. 5, (5 May 1974) 637-648, in which they described the Transmission Control Protocol (TCP).\n\nIn the early 1970s ARPANET and other data networks that were beginning to be constructed around the world each operated according to different hardware and software protocols, thus making it impossible for them to communicate with one another. ARPANET was using the Network Control Protocol or NCP. This problem was solved by Cerf and Kahn's invention of the Transmission Control Protocol (TCP) cross-network protocol that allowed the creation of an international network of computer networks; i.e., the Internet (a term Cerf and Kahn invented around 1973, as an abbrevation for \"inter-networking of networks.\" The authors laid out the architecture of such a network in their May 1974 paper:\n\n\"It describes gateways, which sit between networks to send and receive 'datagrams.' Datagrams, similar to envelopes, enclose messages and display destination addresses that are recognized by gateways. Datagrams can carry packets of various sizes. The messages within datagrams are called transmission control protocol (TCP) messages. TCP is the standard program, shared by each network, for loading and unloading datagrams; it is the only element of the international network that must be uniform among the small networks, and it is the crucial element that makes global networking possible\" (Moschovitis, History of the Internet. A Chronology, 1843 to the Present 82.\n\nIn 1978 TCP was split into TCP and IP for Internet Protocol. In 1983 the Defense Communications Agency DCA and ARPA established the Transmission Control Protocol (TCP) and Internet Protocol (IP), as the protocol suite, commonly known as TCP/IP for ARPANET. This led to one of the first definitions of an \"internet\" as a connected set of networks, specifically those using TCP/IP, and the \"Internet\" as connected TCP/IP internets. On January 1, 1983 ARPANET required that all connected machines use TCP/IP. On this date TCP/IP became the core Internet protocol and replaced NCP entirely.\n\nNorman, From Gutenberg to the Internet (2005) reading 13.8, p. 871.",
+  "stats": {
+    "raw_chars": 21784,
+    "clean_chars": 2287,
+    "words": 364,
+    "units": 1,
+    "pages_total": null,
+    "removed_lines": null
+  },
+  "warnings": [
+    "1 section(s) écartée(s) : Related Entries",
+    "contenu gardé : 73 % du texte de la page"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "docx08",
+  "filename": "note_bio_jon_postel.docx",
+  "format": "docx",
+  "title": "Jon Postel",
+  "author": "Wikipédia FR (CC BY-SA)",
+  "year": null,
+  "lang": "fr",
+  "url": "https://fr.wikipedia.org/wiki/Jon_Postel",
+  "type": "biographie",
+  "source_path": "data/raw/docx/note_bio_jon_postel.docx",
+  "sha256": "1c49ceb9d084dfb5493fc8a335557327ce2716e7c075ee50cb089a54d5ec4312",
+  "retrieved_at": "2026-09-28T11:43:43+00:00",
+  "parsed_at": "2026-10-05T10:48:03+00:00",
+  "parser": "python-docx",
+  "units": [
+    {
+      "page": null,
+      "section": "Note de synthèse : Jon Postel",
+      "text": "Jonathan Bruce Postel, dit Jon Postel, né le 6 août 1943 à Altadena (Californie) et mort le 16 octobre 1998 à Santa Monica (Californie), est un informaticien américain et l'un des principaux contributeurs à la création de l'Internet."
+    },
+    {
+      "page": null,
+      "section": "Biographie",
+      "text": "Jon Postel obtient son doctorat d'informatique en 1974. Il était l'éditeur des Requests for comments, série de documents visant à établir les standards de l'Internet de l'IETF. À ce poste, il a apporté une très importante contribution à la création du protocole de communication TCP/IP, utilisé notamment sur l'Internet et dans la plupart des réseaux locaux d'aujourd'hui.\n\nIl fut le premier membre de l'Internet Society et était le responsable de l'Internet Assigned Numbers Authority (IANA), l'organisation gérant l'allocation des adresses IP sur l'Internet.\n\nIl est mort à la suite de complications d'une opération du cœur en 1998."
+    },
+    {
+      "page": null,
+      "section": "Zone racine du DNS",
+      "text": "Postel était le directeur de l'IANA, qui gère la zone racine du DNS. Pendant de nombreuses années, il traçait soigneusement dans son carnet les modifications de noms de domaine. En 1998, pour prouver la vulnérabilité d'Internet, il coupe plusieurs domaines pendant quelques heures."
+    },
+    {
+      "page": null,
+      "section": "Principe de robustesse",
+      "text": "Il est notamment célèbre pour la phrase : « Be liberal in what you accept, and conservative in what you send » : « Soyez tolérant dans ce que vous acceptez, et pointilleux dans ce que vous envoyez », qui définit le principe de robustesse (parfois appelé le principe de Postel).\n\nÉcrit dans la RFC 791, ce principe met en avant l'interopérabilité sur le respect des standards et a été l'une des plus importantes différences entre la suite des protocoles Internet et son concurrent qui a depuis disparu, le modèle OSI."
+    },
+    {
+      "page": null,
+      "section": "Hommages",
+      "text": "Le prix Jon-Postel est attribué depuis 1999 en son honneur par l'Internet Society. Il en a été le premier récipiendaire, à titre posthume.\n\nLa RFC 2468 I remember IANA de Vint Cerf (17 octobre 1998) lui rend hommage.\n\nEn 2012, il est admis à titre posthume au temple de la renommée d'Internet, dans la catégorie des pionniers."
+    }
+  ],
+  "text": "Jonathan Bruce Postel, dit Jon Postel, né le 6 août 1943 à Altadena (Californie) et mort le 16 octobre 1998 à Santa Monica (Californie), est un informaticien américain et l'un des principaux contributeurs à la création de l'Internet.\n\nJon Postel obtient son doctorat d'informatique en 1974. Il était l'éditeur des Requests for comments, série de documents visant à établir les standards de l'Internet de l'IETF. À ce poste, il a apporté une très importante contribution à la création du protocole de communication TCP/IP, utilisé notamment sur l'Internet et dans la plupart des réseaux locaux d'aujourd'hui.\n\nIl fut le premier membre de l'Internet Society et était le responsable de l'Internet Assigned Numbers Authority (IANA), l'organisation gérant l'allocation des adresses IP sur l'Internet.\n\nIl est mort à la suite de complications d'une opération du cœur en 1998.\n\nPostel était le directeur de l'IANA, qui gère la zone racine du DNS. Pendant de nombreuses années, il traçait soigneusement dans son carnet les modifications de noms de domaine. En 1998, pour prouver la vulnérabilité d'Internet, il coupe plusieurs domaines pendant quelques heures.\n\nIl est notamment célèbre pour la phrase : « Be liberal in what you accept, and conservative in what you send » : « Soyez tolérant dans ce que vous acceptez, et pointilleux dans ce que vous envoyez », qui définit le principe de robustesse (parfois appelé le principe de Postel).\n\nÉcrit dans la RFC 791, ce principe met en avant l'interopérabilité sur le respect des standards et a été l'une des plus importantes différences entre la suite des protocoles Internet et son concurrent qui a depuis disparu, le modèle OSI.\n\nLe prix Jon-Postel est attribué depuis 1999 en son honneur par l'Internet Society. Il en a été le premier récipiendaire, à titre posthume.\n\nLa RFC 2468 I remember IANA de Vint Cerf (17 octobre 1998) lui rend hommage.\n\nEn 2012, il est admis à titre posthume au temple de la renommée d'Internet, dans la catégorie des pionniers.",
+  "stats": {
+    "raw_chars": 2228,
+    "clean_chars": 1998,
+    "words": 343,
+    "units": 5,
+    "pages_total": null,
+    "removed_lines": null
+  },
+  "warnings": []
+}

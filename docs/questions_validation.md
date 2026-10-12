@@ -16,7 +16,7 @@ Types de questions :
 | # | Question | Réponse attendue | Document | Localisation | Vérifié |
 |---|---|---|---|---|---|
 | F01 | Qui a écrit la RFC 1 et à quelle date ? | Steve Crocker, 7 avril 1969 | `txt/rfc0001_host_software.txt` | en-tête, p. 1 | ☐ |
-| F02 | À quelle date la transition d'ARPANET de NCP vers TCP/IP a-t-elle eu lieu ? | 1er janvier 1983 | `html/isoc_bref_historique_internet_fr.html`, `txt/rfc0801_ncp_tcp_transition_plan.txt` | ISOC : § Transition vers une infrastructure à grande échelle ; RFC 801 : § The General Plan, p. 2 (date *prévue* : « by 1 January 1983 ») | ☐ |
+| F02 | À quelle date la transition d'ARPANET de NCP vers TCP/IP a-t-elle eu lieu ? | 1er janvier 1983 | `html/isoc_bref_historique_internet_fr.html`, `txt/rfc0801_ncp_tcp_transition_plan.txt` | ISOC : § Démontrer les idées ; RFC 801 : § The General Plan, p. 2 (date *prévue* : « by 1 January 1983 ») | ☐ |
 | F03 | Dans quelle revue et quel numéro Cerf et Kahn ont-ils publié leur protocole en 1974 ? | IEEE Transactions on Communications, vol. COM-22, n° 5, mai 1974 | `pdf/cerf_kahn_1974_protocol_packet_network.pdf` | bandeau en bas de chaque page (p. 1) | ☐ |
 | F04 | Quand le manuscrit de Cerf et Kahn a-t-il été reçu par l'éditeur ? | 5 novembre 1973 | idem | p. 1, note de bas de page (« Manuscript received November 5, 1973 ») | ☐ |
 | F05 | Selon Clark (1988), quel est l'objectif de premier niveau de l'architecture Internet ? | Développer une technique efficace pour le multiplexage des réseaux interconnectés existants | `pdf/clark_1988_design_philosophy_darpa.pdf` | § 2 « Fundamental Goal », p. 1 | ☐ |
@@ -29,7 +29,7 @@ Types de questions :
 | F12 | Où et quand le premier IMP a-t-il été installé ? | À UCLA, en septembre 1969, par BBN | idem | § Origines de l'Internet | ☐ |
 | F13 | Qui a écrit le premier logiciel de courrier électronique, et quand ? | Ray Tomlinson (BBN), mars 1972 | idem | § Origines de l'Internet | ☐ |
 | F14 | Dans le modèle initial, comment se répartissaient les 32 bits d'une adresse IP ? | 8 bits pour le réseau, 24 bits pour l'hôte | idem | § Les concepts initiaux de l'interréseautage | ☐ |
-| F15 | Qui a inventé le DNS ? | Paul Mockapetris (USC/ISI) | idem et `txt/rfc1034_domain_names_concepts.txt` | ISOC : § Transition vers une infrastructure à grande échelle ; RFC 1034 : en-tête, p. 1 | ☐ |
+| F15 | Qui a inventé le DNS ? | Paul Mockapetris (USC/ISI) | idem et `txt/rfc1034_domain_names_concepts.txt` | ISOC : § Démontrer les idées ; RFC 1034 : en-tête, p. 1 | ☐ |
 | F16 | Comment l'équipe de Cyclades avait-elle surnommé son réseau de transmission de paquets, et pourquoi ? | « Cigale » : le bruit des paquets dans le modem rappelait le grésillement des cigales | `html/interstices_louis_pouzin_tete_dans_les_reseaux.html` | fin de l'article, paragraphe sur Cyclades (pas dans le chapeau) | ☐ |
 | F17 | Quel surnom portait Cyclades à ses débuts ? | « Mitranet », parce qu'il était basé sur le mini-ordinateur Mitra 15 | `html/wikipedia_fr_cyclades_reseau.html` | introduction (avant § Genèse) | ☐ |
 | F18 | Quand Tim Berners-Lee a-t-il écrit « Information Management: A Proposal » ? | Mars 1989 | `html/w3c_little_history_www.html`, `html/berners_lee_1989_information_management_proposal.html` | W3C : entrée 1989 ; proposition : en-tête (« March 1989, May 1990 ») | ☐ |

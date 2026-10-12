@@ -1,0 +1,654 @@
+[
+  {
+    "id": "pdf01",
+    "filename": "cerf_kahn_1974_protocol_packet_network.pdf",
+    "format": "pdf",
+    "lang": "en",
+    "raw_chars": 63870,
+    "clean_chars": 63412,
+    "words": 10390,
+    "units": 13,
+    "pages_total": 13,
+    "removed_lines": 20,
+    "seconds": 2.23,
+    "warnings": [
+      "13 page(s) lue(s) en deux colonnes",
+      "1 en-tête(s)/pied(s) de page répété(s) supprimé(s)"
+    ]
+  },
+  {
+    "id": "pdf02",
+    "filename": "clark_1988_design_philosophy_darpa.pdf",
+    "format": "pdf",
+    "lang": "en",
+    "raw_chars": 49514,
+    "clean_chars": 49221,
+    "words": 7931,
+    "units": 10,
+    "pages_total": 10,
+    "removed_lines": 11,
+    "seconds": 1.8,
+    "warnings": [
+      "10 page(s) lue(s) en deux colonnes",
+      "1 en-tête(s)/pied(s) de page répété(s) supprimé(s)"
+    ]
+  },
+  {
+    "id": "pdf03",
+    "filename": "leiner_et_al_brief_history_internet.pdf",
+    "format": "pdf",
+    "lang": "en",
+    "raw_chars": 58936,
+    "clean_chars": 58683,
+    "words": 9328,
+    "units": 10,
+    "pages_total": 10,
+    "removed_lines": 11,
+    "seconds": 8.67,
+    "warnings": [
+      "espaces perdus : relu avec x_tolerance=1.5",
+      "10 page(s) lue(s) en deux colonnes",
+      "1 en-tête(s)/pied(s) de page répété(s) supprimé(s)"
+    ]
+  },
+  {
+    "id": "pdf04",
+    "filename": "baran_1964_rand_rm3420_distributed_communications.pdf",
+    "format": "pdf",
+    "lang": "en",
+    "raw_chars": 0,
+    "clean_chars": 0,
+    "words": 0,
+    "units": 0,
+    "pages_total": 51,
+    "removed_lines": 0,
+    "seconds": 0.12,
+    "warnings": [
+      "aucun texte extrait : PDF scanné, OCR nécessaire (installer Tesseract)"
+    ]
+  },
+  {
+    "id": "pdf05",
+    "filename": "licklider_taylor_1968_computer_communication_device.pdf",
+    "format": "pdf",
+    "lang": "en",
+    "raw_chars": 44680,
+    "clean_chars": 44583,
+    "words": 7253,
+    "units": 22,
+    "pages_total": 22,
+    "removed_lines": 21,
+    "seconds": 1.44,
+    "warnings": []
+  },
+  {
+    "id": "pdf06",
+    "filename": "saltzer_reed_clark_1984_end_to_end.pdf",
+    "format": "pdf",
+    "lang": "en",
+    "raw_chars": 39110,
+    "clean_chars": 38625,
+    "words": 6183,
+    "units": 10,
+    "pages_total": 10,
+    "removed_lines": 10,
+    "seconds": 1.49,
+    "warnings": [
+      "1 en-tête(s)/pied(s) de page répété(s) supprimé(s)"
+    ]
+  },
+  {
+    "id": "pdf07",
+    "filename": "bbn_1981_history_arpanet_first_decade.pdf",
+    "format": "pdf",
+    "lang": "en",
+    "raw_chars": 199483,
+    "clean_chars": 193452,
+    "words": 32276,
+    "units": 182,
+    "pages_total": 183,
+    "removed_lines": 257,
+    "seconds": 8.81,
+    "warnings": [
+      "1 page(s) sans texte ignorée(s)",
+      "2 page(s) lue(s) en deux colonnes",
+      "1 en-tête(s)/pied(s) de page répété(s) supprimé(s)"
+    ]
+  },
+  {
+    "id": "pdf08",
+    "filename": "dca_1985_arpanet_information_brochure.pdf",
+    "format": "pdf",
+    "lang": "en",
+    "raw_chars": 82268,
+    "clean_chars": 82663,
+    "words": 13375,
+    "units": 58,
+    "pages_total": 59,
+    "removed_lines": 35,
+    "seconds": 3.64,
+    "warnings": [
+      "1 page(s) sans texte ignorée(s)",
+      "3 page(s) lue(s) en deux colonnes"
+    ]
+  },
+  {
+    "id": "pdf09",
+    "filename": "inria_code_source_1988_1997.pdf",
+    "format": "pdf",
+    "lang": "fr",
+    "raw_chars": 125451,
+    "clean_chars": 125151,
+    "words": 21031,
+    "units": 20,
+    "pages_total": 20,
+    "removed_lines": 0,
+    "seconds": 5.46,
+    "warnings": [
+      "20 page(s) lue(s) en deux colonnes"
+    ]
+  },
+  {
+    "id": "pdf10",
+    "filename": "hauben_netizens_ch7_behind_the_net.pdf",
+    "format": "pdf",
+    "lang": "en",
+    "raw_chars": 42623,
+    "clean_chars": 42633,
+    "words": 7012,
+    "units": 14,
+    "pages_total": 14,
+    "removed_lines": 14,
+    "seconds": 1.88,
+    "warnings": [
+      "1 en-tête(s)/pied(s) de page répété(s) supprimé(s)"
+    ]
+  },
+  {
+    "id": "txt01",
+    "filename": "rfc0001_host_software.txt",
+    "format": "txt",
+    "lang": "en",
+    "raw_chars": 21088,
+    "clean_chars": 13570,
+    "words": 2322,
+    "units": 11,
+    "pages_total": 12,
+    "removed_lines": 85,
+    "seconds": 0.01,
+    "warnings": [
+      "85 ligne(s) d'en-tête, pied de page, sommaire ou schéma supprimée(s)"
+    ]
+  },
+  {
+    "id": "txt02",
+    "filename": "rfc0675_tcp_specification_1974.txt",
+    "format": "txt",
+    "lang": "en",
+    "raw_chars": 156874,
+    "clean_chars": 93503,
+    "words": 16079,
+    "units": 70,
+    "pages_total": 71,
+    "removed_lines": 777,
+    "seconds": 0.08,
+    "warnings": [
+      "777 ligne(s) d'en-tête, pied de page, sommaire ou schéma supprimée(s)"
+    ]
+  },
+  {
+    "id": "txt03",
+    "filename": "rfc0791_internet_protocol.txt",
+    "format": "txt",
+    "lang": "en",
+    "raw_chars": 94892,
+    "clean_chars": 62530,
+    "words": 10409,
+    "units": 44,
+    "pages_total": 52,
+    "removed_lines": 300,
+    "seconds": 0.06,
+    "warnings": [
+      "300 ligne(s) d'en-tête, pied de page, sommaire ou schéma supprimée(s)"
+    ]
+  },
+  {
+    "id": "txt04",
+    "filename": "rfc0793_transmission_control_protocol.txt",
+    "format": "txt",
+    "lang": "en",
+    "raw_chars": 172710,
+    "clean_chars": 124534,
+    "words": 20810,
+    "units": 84,
+    "pages_total": 92,
+    "removed_lines": 454,
+    "seconds": 0.08,
+    "warnings": [
+      "454 ligne(s) d'en-tête, pied de page, sommaire ou schéma supprimée(s)"
+    ]
+  },
+  {
+    "id": "txt05",
+    "filename": "rfc0801_ncp_tcp_transition_plan.txt",
+    "format": "txt",
+    "lang": "en",
+    "raw_chars": 40824,
+    "clean_chars": 28687,
+    "words": 4995,
+    "units": 21,
+    "pages_total": 22,
+    "removed_lines": 103,
+    "seconds": 0.02,
+    "warnings": [
+      "103 ligne(s) d'en-tête, pied de page, sommaire ou schéma supprimée(s)"
+    ]
+  },
+  {
+    "id": "txt06",
+    "filename": "rfc1000_rfc_reference_guide.txt",
+    "format": "txt",
+    "lang": "en",
+    "raw_chars": 315315,
+    "clean_chars": 235689,
+    "words": 38186,
+    "units": 149,
+    "pages_total": 150,
+    "removed_lines": 300,
+    "seconds": 0.16,
+    "warnings": [
+      "300 ligne(s) d'en-tête, pied de page, sommaire ou schéma supprimée(s)"
+    ]
+  },
+  {
+    "id": "txt07",
+    "filename": "rfc1034_domain_names_concepts.txt",
+    "format": "txt",
+    "lang": "en",
+    "raw_chars": 126103,
+    "clean_chars": 96114,
+    "words": 16898,
+    "units": 55,
+    "pages_total": 56,
+    "removed_lines": 298,
+    "seconds": 0.06,
+    "warnings": [
+      "298 ligne(s) d'en-tête, pied de page, sommaire ou schéma supprimée(s)"
+    ]
+  },
+  {
+    "id": "txt08",
+    "filename": "rfc1945_http_1_0.txt",
+    "format": "txt",
+    "lang": "en",
+    "raw_chars": 137582,
+    "clean_chars": 108493,
+    "words": 17925,
+    "units": 58,
+    "pages_total": 61,
+    "removed_lines": 247,
+    "seconds": 0.06,
+    "warnings": [
+      "247 ligne(s) d'en-tête, pied de page, sommaire ou schéma supprimée(s)"
+    ]
+  },
+  {
+    "id": "txt09",
+    "filename": "rfc2235_hobbes_internet_timeline.txt",
+    "format": "txt",
+    "lang": "en",
+    "raw_chars": 43060,
+    "clean_chars": 33139,
+    "words": 5268,
+    "units": 22,
+    "pages_total": 23,
+    "removed_lines": 98,
+    "seconds": 0.04,
+    "warnings": [
+      "98 ligne(s) d'en-tête, pied de page, sommaire ou schéma supprimée(s)"
+    ]
+  },
+  {
+    "id": "txt10",
+    "filename": "rfc2468_i_remember_iana.txt",
+    "format": "txt",
+    "lang": "en",
+    "raw_chars": 8543,
+    "clean_chars": 7403,
+    "words": 1246,
+    "units": 4,
+    "pages_total": 5,
+    "removed_lines": 7,
+    "seconds": 0.01,
+    "warnings": [
+      "7 ligne(s) d'en-tête, pied de page, sommaire ou schéma supprimée(s)"
+    ]
+  },
+  {
+    "id": "txt11",
+    "filename": "rfc2555_30_years_of_rfcs.txt",
+    "format": "txt",
+    "lang": "en",
+    "raw_chars": 42902,
+    "clean_chars": 37007,
+    "words": 6305,
+    "units": 18,
+    "pages_total": 19,
+    "removed_lines": 47,
+    "seconds": 0.03,
+    "warnings": [
+      "47 ligne(s) d'en-tête, pied de page, sommaire ou schéma supprimée(s)"
+    ]
+  },
+  {
+    "id": "html01",
+    "filename": "isoc_bref_historique_internet_fr.html",
+    "format": "html",
+    "lang": "fr",
+    "raw_chars": 260783,
+    "clean_chars": 64767,
+    "words": 10450,
+    "units": 11,
+    "pages_total": null,
+    "removed_lines": null,
+    "seconds": 0.12,
+    "warnings": [
+      "2 section(s) écartée(s) : Avez-vous trouvé cette ressource utile ? Votre don, quel que soit son montant, n",
+      "contenu gardé : 94 % du texte de la page"
+    ]
+  },
+  {
+    "id": "html02",
+    "filename": "w3c_little_history_www.html",
+    "format": "html",
+    "lang": "en",
+    "raw_chars": 12403,
+    "clean_chars": 7884,
+    "words": 1243,
+    "units": 10,
+    "pages_total": null,
+    "removed_lines": null,
+    "seconds": 0.03,
+    "warnings": [
+      "contenu gardé : 95 % du texte de la page"
+    ]
+  },
+  {
+    "id": "html03",
+    "filename": "berners_lee_1989_information_management_proposal.html",
+    "format": "html",
+    "lang": "en",
+    "raw_chars": 33993,
+    "clean_chars": 27181,
+    "words": 4520,
+    "units": 31,
+    "pages_total": null,
+    "removed_lines": null,
+    "seconds": 0.05,
+    "warnings": [
+      "1 section(s) écartée(s) : References",
+      "contenu gardé : 90 % du texte de la page"
+    ]
+  },
+  {
+    "id": "html04",
+    "filename": "cern_birth_of_the_web.html",
+    "format": "html",
+    "lang": "en",
+    "raw_chars": 253674,
+    "clean_chars": 1078,
+    "words": 184,
+    "units": 4,
+    "pages_total": null,
+    "removed_lines": null,
+    "seconds": 0.03,
+    "warnings": [
+      "contenu gardé : 35 % du texte de la page"
+    ]
+  },
+  {
+    "id": "html05",
+    "filename": "interstices_louis_pouzin_tete_dans_les_reseaux.html",
+    "format": "html",
+    "lang": "fr",
+    "raw_chars": 128507,
+    "clean_chars": 19488,
+    "words": 3185,
+    "units": 4,
+    "pages_total": null,
+    "removed_lines": null,
+    "seconds": 0.07,
+    "warnings": [
+      "contenu gardé : 85 % du texte de la page"
+    ]
+  },
+  {
+    "id": "html06",
+    "filename": "cigref_datagramme_louis_pouzin.html",
+    "format": "html",
+    "lang": "fr",
+    "raw_chars": 61155,
+    "clean_chars": 4695,
+    "words": 779,
+    "units": 2,
+    "pages_total": null,
+    "removed_lines": null,
+    "seconds": 0.03,
+    "warnings": [
+      "contenu gardé : 53 % du texte de la page"
+    ]
+  },
+  {
+    "id": "html07",
+    "filename": "signal_biographie_pouzin_cyclades.html",
+    "format": "html",
+    "lang": "fr",
+    "raw_chars": 46470,
+    "clean_chars": 13688,
+    "words": 2234,
+    "units": 7,
+    "pages_total": null,
+    "removed_lines": null,
+    "seconds": 0.03,
+    "warnings": [
+      "contenu gardé : 94 % du texte de la page"
+    ]
+  },
+  {
+    "id": "html08",
+    "filename": "historyofinformation_cerf_kahn_tcp.html",
+    "format": "html",
+    "lang": "en",
+    "raw_chars": 21784,
+    "clean_chars": 2287,
+    "words": 364,
+    "units": 1,
+    "pages_total": null,
+    "removed_lines": null,
+    "seconds": 0.02,
+    "warnings": [
+      "1 section(s) écartée(s) : Related Entries",
+      "contenu gardé : 73 % du texte de la page"
+    ]
+  },
+  {
+    "id": "html09",
+    "filename": "wikipedia_fr_cyclades_reseau.html",
+    "format": "html",
+    "lang": "fr",
+    "raw_chars": 218331,
+    "clean_chars": 12159,
+    "words": 2003,
+    "units": 11,
+    "pages_total": null,
+    "removed_lines": null,
+    "seconds": 0.2,
+    "warnings": [
+      "6 section(s) écartée(s) : Notes et références, Références, Annexes, Articles connexes, Bibliographie, Lien",
+      "contenu gardé : 50 % du texte de la page"
+    ]
+  },
+  {
+    "id": "html10",
+    "filename": "wikipedia_fr_louis_pouzin.html",
+    "format": "html",
+    "lang": "fr",
+    "raw_chars": 260859,
+    "clean_chars": 15187,
+    "words": 2508,
+    "units": 13,
+    "pages_total": null,
+    "removed_lines": null,
+    "seconds": 0.29,
+    "warnings": [
+      "6 section(s) écartée(s) : Notes et références, Références, Voir aussi, Bibliographie, Articles connexes, L",
+      "contenu gardé : 55 % du texte de la page"
+    ]
+  },
+  {
+    "id": "html11",
+    "filename": "wikipedia_fr_world_wide_web.html",
+    "format": "html",
+    "lang": "fr",
+    "raw_chars": 515217,
+    "clean_chars": 45442,
+    "words": 7384,
+    "units": 44,
+    "pages_total": null,
+    "removed_lines": null,
+    "seconds": 0.5,
+    "warnings": [
+      "6 section(s) écartée(s) : Bibliographie, Voir aussi, Articles connexes, Liens externes, Notes et référence",
+      "contenu gardé : 70 % du texte de la page"
+    ]
+  },
+  {
+    "id": "html12",
+    "filename": "wikipedia_fr_internet_en_france.html",
+    "format": "html",
+    "lang": "fr",
+    "raw_chars": 469873,
+    "clean_chars": 10057,
+    "words": 1717,
+    "units": 16,
+    "pages_total": null,
+    "removed_lines": null,
+    "seconds": 0.34,
+    "warnings": [
+      "4 section(s) écartée(s) : Notes et références, Voir aussi, Articles connexes, Liens externes",
+      "contenu gardé : 28 % du texte de la page"
+    ]
+  },
+  {
+    "id": "docx01",
+    "filename": "note_histoire_d_internet.docx",
+    "format": "docx",
+    "lang": "fr",
+    "raw_chars": 42114,
+    "clean_chars": 40674,
+    "words": 6502,
+    "units": 27,
+    "pages_total": null,
+    "removed_lines": null,
+    "seconds": 0.17,
+    "warnings": []
+  },
+  {
+    "id": "docx02",
+    "filename": "note_arpanet.docx",
+    "format": "docx",
+    "lang": "fr",
+    "raw_chars": 10410,
+    "clean_chars": 10202,
+    "words": 1638,
+    "units": 4,
+    "pages_total": null,
+    "removed_lines": null,
+    "seconds": 0.05,
+    "warnings": []
+  },
+  {
+    "id": "docx03",
+    "filename": "note_minitel.docx",
+    "format": "docx",
+    "lang": "fr",
+    "raw_chars": 47144,
+    "clean_chars": 46228,
+    "words": 7506,
+    "units": 35,
+    "pages_total": null,
+    "removed_lines": null,
+    "seconds": 0.18,
+    "warnings": []
+  },
+  {
+    "id": "docx04",
+    "filename": "note_transpac.docx",
+    "format": "docx",
+    "lang": "fr",
+    "raw_chars": 10445,
+    "clean_chars": 10174,
+    "words": 1672,
+    "units": 7,
+    "pages_total": null,
+    "removed_lines": null,
+    "seconds": 0.04,
+    "warnings": []
+  },
+  {
+    "id": "docx05",
+    "filename": "note_commutation_de_paquets.docx",
+    "format": "docx",
+    "lang": "fr",
+    "raw_chars": 8083,
+    "clean_chars": 7820,
+    "words": 1271,
+    "units": 5,
+    "pages_total": null,
+    "removed_lines": null,
+    "seconds": 0.03,
+    "warnings": []
+  },
+  {
+    "id": "docx06",
+    "filename": "note_bio_vint_cerf.docx",
+    "format": "docx",
+    "lang": "fr",
+    "raw_chars": 4338,
+    "clean_chars": 4150,
+    "words": 693,
+    "units": 3,
+    "pages_total": null,
+    "removed_lines": null,
+    "seconds": 0.03,
+    "warnings": []
+  },
+  {
+    "id": "docx07",
+    "filename": "note_bio_tim_berners_lee.docx",
+    "format": "docx",
+    "lang": "fr",
+    "raw_chars": 25172,
+    "clean_chars": 24667,
+    "words": 4107,
+    "units": 7,
+    "pages_total": null,
+    "removed_lines": null,
+    "seconds": 0.09,
+    "warnings": []
+  },
+  {
+    "id": "docx08",
+    "filename": "note_bio_jon_postel.docx",
+    "format": "docx",
+    "lang": "fr",
+    "raw_chars": 2228,
+    "clean_chars": 1998,
+    "words": 343,
+    "units": 5,
+    "pages_total": null,
+    "removed_lines": null,
+    "seconds": 0.03,
+    "warnings": []
+  }
+]

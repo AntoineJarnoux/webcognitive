@@ -1,0 +1,29 @@
+{
+  "id": "pdf04",
+  "filename": "baran_1964_rand_rm3420_distributed_communications.pdf",
+  "format": "pdf",
+  "title": "On Distributed Communications: I. Introduction to Distributed Communications Networks (RM-3420)",
+  "author": "Paul Baran (RAND)",
+  "year": 1964,
+  "lang": "en",
+  "url": "https://www.rand.org/content/dam/rand/pubs/research_memoranda/2006/RM3420.pdf",
+  "type": "rapport de recherche (scan OCR)",
+  "source_path": "data/raw/pdf/baran_1964_rand_rm3420_distributed_communications.pdf",
+  "sha256": "050c46ea123c5a1eaa3a1b608b2e18ce1666731d07a439b093e05cde8269ebb0",
+  "retrieved_at": null,
+  "parsed_at": "2026-10-05T10:47:38+00:00",
+  "parser": "pdfplumber",
+  "units": [],
+  "text": "",
+  "stats": {
+    "raw_chars": 0,
+    "clean_chars": 0,
+    "words": 0,
+    "units": 0,
+    "pages_total": 51,
+    "removed_lines": 0
+  },
+  "warnings": [
+    "aucun texte extrait : PDF scanné, OCR nécessaire (installer Tesseract)"
+  ]
+}
