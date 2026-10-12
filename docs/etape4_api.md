@@ -113,10 +113,15 @@ Les résultats détaillés sont dans [etape4_resultats.md](etape4_resultats.md),
 | Mode | Succès@5 | Réponse@5 | MRR@10 |
 |---|---|---|---|
 | Sémantique (étape 3, calcul exact) | 54 % | 81 % | 0,40 |
+| **Sémantique (ChromaDB)** | **54 %** | **81 %** | **0,40** |
 | Mots-clés (BM25) | 46 % | 69 % | 0,38 |
-| Sémantique (ChromaDB) et hybride | à mesurer avec `evaluate_search.py` | | |
+| Hybride (fusion des rangs) | 58 % | 77 % | 0,42 |
 
-Les deux méthodes ne réussissent pas les mêmes questions. BM25 trouve F02, F12 et F17, que la recherche sémantique rate, grâce aux mots « 1983 », « IMP » et « Mitranet ». Si la fusion récupérait toutes les réussites des deux méthodes, on atteindrait 17 questions sur 26 (65 %). Le mode par défaut reste `semantic` tant que la mesure de `hybrid` n'est pas faite.
+**Ce qu'on en retient :**
+- **ChromaDB ne dégrade rien.** Sur les questions de validation, son top 10 est identique à 100 % à celui du calcul exact de l'étape 3, et les scores sont les mêmes.
+- **BM25 seul est moins bon** (46 %), mais il ne réussit pas les mêmes questions : il trouve F02, F12 et F17 grâce aux mots « 1983 », « IMP » et « Mitranet ».
+- **L'hybride gagne une question au critère strict** (58 % contre 54 %, MRR 0,42 contre 0,40), mais en perd une en réponse@5 (77 % contre 81 %). Avec 26 questions, un écart d'une question (4 points) **n'est pas significatif**.
+- **Décision :** le mode par défaut reste `semantic`, le plus simple. Le mode `hybrid` reste disponible, et on refera la comparaison à l'étape 5 sur les réponses finales du LLM, qui sont le vrai critère du projet.
 
 ## 7. Limites et suite
 - **Les pièges ne sont pas filtrés ici** : la recherche renvoie toujours les segments « les moins éloignés ». Le refus (« je ne sais pas ») viendra du LLM à l'étape 5.
