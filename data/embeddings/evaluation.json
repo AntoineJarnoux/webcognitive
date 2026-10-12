@@ -1,0 +1,4352 @@
+[
+  {
+    "model_key": "minilm",
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "size": 250,
+    "overlap": 50,
+    "chunks": 11723,
+    "truncated": 0.0,
+    "seconds": 332.8285721000284,
+    "metrics": {
+      "success@1": 0.34615384615384615,
+      "success@5": 0.38461538461538464,
+      "doc@5": 0.46153846153846156,
+      "mrr@10": 0.3701923076923077,
+      "score_real_mean": 0.6910294684079977,
+      "score_real_min": 0.482022762298584,
+      "score_trap_max": 0.6582382917404175,
+      "questions": [
+        {
+          "id": "F01",
+          "rank": null,
+          "top1_score": 0.723,
+          "top1": "docx01_0008",
+          "doc5": false
+        },
+        {
+          "id": "F02",
+          "rank": 1,
+          "top1_score": 0.799,
+          "top1": "html01_0176",
+          "doc5": true
+        },
+        {
+          "id": "F03",
+          "rank": null,
+          "top1_score": 0.7,
+          "top1": "html01_0107",
+          "doc5": false
+        },
+        {
+          "id": "F04",
+          "rank": null,
+          "top1_score": 0.606,
+          "top1": "pdf09_0717",
+          "doc5": false
+        },
+        {
+          "id": "F05",
+          "rank": null,
+          "top1_score": 0.713,
+          "top1": "pdf09_0364",
+          "doc5": false
+        },
+        {
+          "id": "F06",
+          "rank": null,
+          "top1_score": 0.57,
+          "top1": "html07_0000",
+          "doc5": false
+        },
+        {
+          "id": "F07",
+          "rank": null,
+          "top1_score": 0.482,
+          "top1": "html07_0073",
+          "doc5": false
+        },
+        {
+          "id": "F08",
+          "rank": null,
+          "top1_score": 0.562,
+          "top1": "html01_0111",
+          "doc5": false
+        },
+        {
+          "id": "F09",
+          "rank": null,
+          "top1_score": 0.611,
+          "top1": "html05_0093",
+          "doc5": false
+        },
+        {
+          "id": "F10",
+          "rank": null,
+          "top1_score": 0.75,
+          "top1": "docx02_0018",
+          "doc5": false
+        },
+        {
+          "id": "F11",
+          "rank": 1,
+          "top1_score": 0.764,
+          "top1": "html01_0019",
+          "doc5": true
+        },
+        {
+          "id": "F12",
+          "rank": null,
+          "top1_score": 0.622,
+          "top1": "pdf09_0465",
+          "doc5": false
+        },
+        {
+          "id": "F13",
+          "rank": 1,
+          "top1_score": 0.735,
+          "top1": "html01_0055",
+          "doc5": true
+        },
+        {
+          "id": "F14",
+          "rank": 1,
+          "top1_score": 0.756,
+          "top1": "html01_0116",
+          "doc5": true
+        },
+        {
+          "id": "F15",
+          "rank": 1,
+          "top1_score": 0.714,
+          "top1": "html01_0161",
+          "doc5": true
+        },
+        {
+          "id": "F16",
+          "rank": 8,
+          "top1_score": 0.726,
+          "top1": "html01_0123",
+          "doc5": false
+        },
+        {
+          "id": "F17",
+          "rank": null,
+          "top1_score": 0.572,
+          "top1": "html05_0084",
+          "doc5": true
+        },
+        {
+          "id": "F18",
+          "rank": null,
+          "top1_score": 0.751,
+          "top1": "docx07_0010",
+          "doc5": true
+        },
+        {
+          "id": "F19",
+          "rank": null,
+          "top1_score": 0.701,
+          "top1": "docx07_0009",
+          "doc5": false
+        },
+        {
+          "id": "F20",
+          "rank": null,
+          "top1_score": 0.643,
+          "top1": "docx01_0133",
+          "doc5": false
+        },
+        {
+          "id": "F21",
+          "rank": 2,
+          "top1_score": 0.856,
+          "top1": "html01_0342",
+          "doc5": true
+        },
+        {
+          "id": "F22",
+          "rank": 1,
+          "top1_score": 0.794,
+          "top1": "html01_0315",
+          "doc5": true
+        },
+        {
+          "id": "C01",
+          "rank": 1,
+          "top1_score": 0.746,
+          "top1": "html07_0043",
+          "doc5": true
+        },
+        {
+          "id": "C02",
+          "rank": 1,
+          "top1_score": 0.704,
+          "top1": "html01_0375",
+          "doc5": true
+        },
+        {
+          "id": "C03",
+          "rank": null,
+          "top1_score": 0.72,
+          "top1": "docx01_0040",
+          "doc5": false
+        },
+        {
+          "id": "C04",
+          "rank": 1,
+          "top1_score": 0.643,
+          "top1": "docx08_0010",
+          "doc5": true
+        },
+        {
+          "id": "P01",
+          "top1_score": 0.658,
+          "top1": "docx01_0184"
+        },
+        {
+          "id": "P02",
+          "top1_score": 0.557,
+          "top1": "docx01_0192"
+        },
+        {
+          "id": "P03",
+          "top1_score": 0.633,
+          "top1": "html01_0102"
+        }
+      ]
+    },
+    "header": false,
+    "max_seq_length": null
+  },
+  {
+    "model_key": "minilm",
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "size": 300,
+    "overlap": 60,
+    "chunks": 9920,
+    "truncated": 0.0,
+    "seconds": 374.62923520058393,
+    "metrics": {
+      "success@1": 0.2692307692307692,
+      "success@5": 0.38461538461538464,
+      "doc@5": 0.46153846153846156,
+      "mrr@10": 0.3153846153846154,
+      "score_real_mean": 0.6809168068262247,
+      "score_real_min": 0.48241257667541504,
+      "score_trap_max": 0.6333156228065491,
+      "questions": [
+        {
+          "id": "F01",
+          "rank": null,
+          "top1_score": 0.704,
+          "top1": "html01_0040",
+          "doc5": false
+        },
+        {
+          "id": "F02",
+          "rank": 1,
+          "top1_score": 0.802,
+          "top1": "html01_0152",
+          "doc5": true
+        },
+        {
+          "id": "F03",
+          "rank": null,
+          "top1_score": 0.692,
+          "top1": "docx04_0010",
+          "doc5": false
+        },
+        {
+          "id": "F04",
+          "rank": null,
+          "top1_score": 0.565,
+          "top1": "html10_0067",
+          "doc5": false
+        },
+        {
+          "id": "F05",
+          "rank": null,
+          "top1_score": 0.716,
+          "top1": "html07_0065",
+          "doc5": false
+        },
+        {
+          "id": "F06",
+          "rank": null,
+          "top1_score": 0.584,
+          "top1": "html05_0068",
+          "doc5": false
+        },
+        {
+          "id": "F07",
+          "rank": null,
+          "top1_score": 0.482,
+          "top1": "docx01_0021",
+          "doc5": false
+        },
+        {
+          "id": "F08",
+          "rank": null,
+          "top1_score": 0.54,
+          "top1": "html01_0109",
+          "doc5": false
+        },
+        {
+          "id": "F09",
+          "rank": null,
+          "top1_score": 0.595,
+          "top1": "html05_0080",
+          "doc5": false
+        },
+        {
+          "id": "F10",
+          "rank": null,
+          "top1_score": 0.746,
+          "top1": "docx02_0017",
+          "doc5": false
+        },
+        {
+          "id": "F11",
+          "rank": 1,
+          "top1_score": 0.719,
+          "top1": "html01_0017",
+          "doc5": true
+        },
+        {
+          "id": "F12",
+          "rank": null,
+          "top1_score": 0.64,
+          "top1": "pdf09_0212",
+          "doc5": false
+        },
+        {
+          "id": "F13",
+          "rank": 1,
+          "top1_score": 0.678,
+          "top1": "html01_0051",
+          "doc5": true
+        },
+        {
+          "id": "F14",
+          "rank": 1,
+          "top1_score": 0.757,
+          "top1": "html01_0102",
+          "doc5": true
+        },
+        {
+          "id": "F15",
+          "rank": 3,
+          "top1_score": 0.695,
+          "top1": "docx08_0005",
+          "doc5": true
+        },
+        {
+          "id": "F16",
+          "rank": 5,
+          "top1_score": 0.717,
+          "top1": "html01_0109",
+          "doc5": true
+        },
+        {
+          "id": "F17",
+          "rank": null,
+          "top1_score": 0.564,
+          "top1": "html05_0071",
+          "doc5": true
+        },
+        {
+          "id": "F18",
+          "rank": null,
+          "top1_score": 0.816,
+          "top1": "docx07_0009",
+          "doc5": true
+        },
+        {
+          "id": "F19",
+          "rank": null,
+          "top1_score": 0.707,
+          "top1": "docx07_0008",
+          "doc5": false
+        },
+        {
+          "id": "F20",
+          "rank": null,
+          "top1_score": 0.677,
+          "top1": "html01_0040",
+          "doc5": false
+        },
+        {
+          "id": "F21",
+          "rank": 2,
+          "top1_score": 0.857,
+          "top1": "html01_0299",
+          "doc5": true
+        },
+        {
+          "id": "F22",
+          "rank": 1,
+          "top1_score": 0.73,
+          "top1": "html01_0279",
+          "doc5": true
+        },
+        {
+          "id": "C01",
+          "rank": 1,
+          "top1_score": 0.739,
+          "top1": "html07_0040",
+          "doc5": true
+        },
+        {
+          "id": "C02",
+          "rank": 1,
+          "top1_score": 0.707,
+          "top1": "html01_0327",
+          "doc5": true
+        },
+        {
+          "id": "C03",
+          "rank": null,
+          "top1_score": 0.696,
+          "top1": "html07_0041",
+          "doc5": false
+        },
+        {
+          "id": "C04",
+          "rank": 6,
+          "top1_score": 0.577,
+          "top1": "docx04_0001",
+          "doc5": false
+        },
+        {
+          "id": "P01",
+          "top1_score": 0.621,
+          "top1": "html07_0004"
+        },
+        {
+          "id": "P02",
+          "top1_score": 0.588,
+          "top1": "pdf09_0244"
+        },
+        {
+          "id": "P03",
+          "top1_score": 0.633,
+          "top1": "html01_0091"
+        }
+      ]
+    },
+    "header": false,
+    "max_seq_length": null
+  },
+  {
+    "model_key": "minilm",
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "size": 500,
+    "overlap": 100,
+    "header": false,
+    "max_seq_length": null,
+    "chunks": 5751,
+    "truncated": 0.000869414014953921,
+    "seconds": 416.5841352008283,
+    "metrics": {
+      "success@1": 0.23076923076923078,
+      "success@5": 0.4230769230769231,
+      "answer@5": 0.5384615384615384,
+      "doc@5": 0.46153846153846156,
+      "mrr@10": 0.3141025641025641,
+      "score_real_mean": 0.6614398727050195,
+      "score_real_min": 0.4931612014770508,
+      "score_trap_max": 0.6128908395767212,
+      "questions": [
+        {
+          "id": "F01",
+          "rank": null,
+          "top1_score": 0.697,
+          "top1": "html01_0136",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F02",
+          "rank": 3,
+          "top1_score": 0.758,
+          "top1": "docx01_0037",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F03",
+          "rank": null,
+          "top1_score": 0.649,
+          "top1": "html01_0057",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F04",
+          "rank": null,
+          "top1_score": 0.544,
+          "top1": "pdf09_0012",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F05",
+          "rank": null,
+          "top1_score": 0.675,
+          "top1": "html01_0203",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F06",
+          "rank": null,
+          "top1_score": 0.535,
+          "top1": "docx01_0100",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F07",
+          "rank": null,
+          "top1_score": 0.493,
+          "top1": "pdf09_0099",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F08",
+          "rank": null,
+          "top1_score": 0.612,
+          "top1": "html01_0211",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F09",
+          "rank": null,
+          "top1_score": 0.525,
+          "top1": "docx03_0039",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F10",
+          "rank": null,
+          "top1_score": 0.729,
+          "top1": "docx02_0011",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F11",
+          "rank": 1,
+          "top1_score": 0.738,
+          "top1": "html01_0010",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F12",
+          "rank": null,
+          "top1_score": 0.583,
+          "top1": "pdf09_0012",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F13",
+          "rank": 1,
+          "top1_score": 0.667,
+          "top1": "html01_0030",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F14",
+          "rank": 1,
+          "top1_score": 0.709,
+          "top1": "html01_0061",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F15",
+          "rank": 2,
+          "top1_score": 0.654,
+          "top1": "docx08_0003",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F16",
+          "rank": 3,
+          "top1_score": 0.709,
+          "top1": "html05_0039",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F17",
+          "rank": null,
+          "top1_score": 0.578,
+          "top1": "html09_0035",
+          "answer5": false,
+          "doc5": true
+        },
+        {
+          "id": "F18",
+          "rank": null,
+          "top1_score": 0.796,
+          "top1": "docx07_0007",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F19",
+          "rank": null,
+          "top1_score": 0.691,
+          "top1": "docx07_0006",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F20",
+          "rank": null,
+          "top1_score": 0.627,
+          "top1": "docx08_0006",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F21",
+          "rank": 2,
+          "top1_score": 0.827,
+          "top1": "html01_0192",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F22",
+          "rank": 1,
+          "top1_score": 0.773,
+          "top1": "html01_0176",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C01",
+          "rank": 2,
+          "top1_score": 0.728,
+          "top1": "html05_0030",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C02",
+          "rank": 1,
+          "top1_score": 0.649,
+          "top1": "html01_0211",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C03",
+          "rank": null,
+          "top1_score": 0.697,
+          "top1": "html05_0046",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "C04",
+          "rank": 1,
+          "top1_score": 0.553,
+          "top1": "docx08_0000",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "P01",
+          "top1_score": 0.603,
+          "top1": "pdf09_0260"
+        },
+        {
+          "id": "P02",
+          "top1_score": 0.496,
+          "top1": "pdf09_0147"
+        },
+        {
+          "id": "P03",
+          "top1_score": 0.613,
+          "top1": "html07_0031"
+        }
+      ]
+    }
+  },
+  {
+    "model_key": "minilm",
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "size": 800,
+    "overlap": 160,
+    "chunks": 3266,
+    "truncated": 0.026638089406001226,
+    "seconds": 188.29021430015564,
+    "metrics": {
+      "success@1": 0.3076923076923077,
+      "success@5": 0.38461538461538464,
+      "doc@5": 0.38461538461538464,
+      "mrr@10": 0.32499999999999996,
+      "score_real_mean": 0.6340544441571603,
+      "score_real_min": 0.49418753385543823,
+      "score_trap_max": 0.6047812700271606,
+      "questions": [
+        {
+          "id": "F01",
+          "rank": null,
+          "top1_score": 0.674,
+          "top1": "html01_0078",
+          "doc5": false
+        },
+        {
+          "id": "F02",
+          "rank": 1,
+          "top1_score": 0.753,
+          "top1": "html01_0054",
+          "doc5": true
+        },
+        {
+          "id": "F03",
+          "rank": null,
+          "top1_score": 0.654,
+          "top1": "html01_0033",
+          "doc5": false
+        },
+        {
+          "id": "F04",
+          "rank": null,
+          "top1_score": 0.561,
+          "top1": "pdf09_0007",
+          "doc5": false
+        },
+        {
+          "id": "F05",
+          "rank": null,
+          "top1_score": 0.711,
+          "top1": "pdf09_0111",
+          "doc5": false
+        },
+        {
+          "id": "F06",
+          "rank": null,
+          "top1_score": 0.535,
+          "top1": "html07_0007",
+          "doc5": false
+        },
+        {
+          "id": "F07",
+          "rank": null,
+          "top1_score": 0.499,
+          "top1": "pdf09_0061",
+          "doc5": false
+        },
+        {
+          "id": "F08",
+          "rank": null,
+          "top1_score": 0.495,
+          "top1": "html01_0009",
+          "doc5": false
+        },
+        {
+          "id": "F09",
+          "rank": null,
+          "top1_score": 0.525,
+          "top1": "pdf09_0084",
+          "doc5": false
+        },
+        {
+          "id": "F10",
+          "rank": null,
+          "top1_score": 0.702,
+          "top1": "docx02_0005",
+          "doc5": false
+        },
+        {
+          "id": "F11",
+          "rank": 1,
+          "top1_score": 0.655,
+          "top1": "html01_0006",
+          "doc5": true
+        },
+        {
+          "id": "F12",
+          "rank": null,
+          "top1_score": 0.599,
+          "top1": "pdf09_0061",
+          "doc5": false
+        },
+        {
+          "id": "F13",
+          "rank": 1,
+          "top1_score": 0.695,
+          "top1": "html01_0018",
+          "doc5": true
+        },
+        {
+          "id": "F14",
+          "rank": 1,
+          "top1_score": 0.71,
+          "top1": "html01_0035",
+          "doc5": true
+        },
+        {
+          "id": "F15",
+          "rank": null,
+          "top1_score": 0.61,
+          "top1": "pdf09_0197",
+          "doc5": false
+        },
+        {
+          "id": "F16",
+          "rank": 4,
+          "top1_score": 0.709,
+          "top1": "html05_0022",
+          "doc5": true
+        },
+        {
+          "id": "F17",
+          "rank": null,
+          "top1_score": 0.494,
+          "top1": "html05_0021",
+          "doc5": false
+        },
+        {
+          "id": "F18",
+          "rank": null,
+          "top1_score": 0.718,
+          "top1": "docx07_0003",
+          "doc5": false
+        },
+        {
+          "id": "F19",
+          "rank": null,
+          "top1_score": 0.563,
+          "top1": "docx07_0003",
+          "doc5": false
+        },
+        {
+          "id": "F20",
+          "rank": null,
+          "top1_score": 0.618,
+          "top1": "docx01_0037",
+          "doc5": false
+        },
+        {
+          "id": "F21",
+          "rank": 1,
+          "top1_score": 0.825,
+          "top1": "html01_0109",
+          "doc5": true
+        },
+        {
+          "id": "F22",
+          "rank": 1,
+          "top1_score": 0.636,
+          "top1": "html01_0099",
+          "doc5": true
+        },
+        {
+          "id": "C01",
+          "rank": 1,
+          "top1_score": 0.709,
+          "top1": "html07_0022",
+          "doc5": true
+        },
+        {
+          "id": "C02",
+          "rank": 1,
+          "top1_score": 0.632,
+          "top1": "html01_0120",
+          "doc5": true
+        },
+        {
+          "id": "C03",
+          "rank": null,
+          "top1_score": 0.667,
+          "top1": "html01_0038",
+          "doc5": false
+        },
+        {
+          "id": "C04",
+          "rank": 5,
+          "top1_score": 0.537,
+          "top1": "pdf09_0061",
+          "doc5": true
+        },
+        {
+          "id": "P01",
+          "top1_score": 0.605,
+          "top1": "html01_0113"
+        },
+        {
+          "id": "P02",
+          "top1_score": 0.46,
+          "top1": "html12_0016"
+        },
+        {
+          "id": "P03",
+          "top1_score": 0.562,
+          "top1": "html01_0105"
+        }
+      ]
+    },
+    "header": false,
+    "max_seq_length": null
+  },
+  {
+    "model_key": "minilm",
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "size": 1200,
+    "overlap": 240,
+    "chunks": 2059,
+    "truncated": 0.46041767848470133,
+    "seconds": 147.159149101004,
+    "metrics": {
+      "success@1": 0.19230769230769232,
+      "success@5": 0.2692307692307692,
+      "doc@5": 0.38461538461538464,
+      "mrr@10": 0.23733211233211235,
+      "score_real_mean": 0.595779076218605,
+      "score_real_min": 0.4505254626274109,
+      "score_trap_max": 0.5876898169517517,
+      "questions": [
+        {
+          "id": "F01",
+          "rank": null,
+          "top1_score": 0.651,
+          "top1": "html01_0045",
+          "doc5": false
+        },
+        {
+          "id": "F02",
+          "rank": 7,
+          "top1_score": 0.72,
+          "top1": "docx01_0015",
+          "doc5": true
+        },
+        {
+          "id": "F03",
+          "rank": null,
+          "top1_score": 0.641,
+          "top1": "html01_0019",
+          "doc5": false
+        },
+        {
+          "id": "F04",
+          "rank": null,
+          "top1_score": 0.515,
+          "top1": "pdf09_0005",
+          "doc5": false
+        },
+        {
+          "id": "F05",
+          "rank": null,
+          "top1_score": 0.676,
+          "top1": "pdf09_0070",
+          "doc5": false
+        },
+        {
+          "id": "F06",
+          "rank": null,
+          "top1_score": 0.558,
+          "top1": "html07_0005",
+          "doc5": false
+        },
+        {
+          "id": "F07",
+          "rank": null,
+          "top1_score": 0.451,
+          "top1": "pdf09_0125",
+          "doc5": false
+        },
+        {
+          "id": "F08",
+          "rank": null,
+          "top1_score": 0.486,
+          "top1": "docx01_0004",
+          "doc5": false
+        },
+        {
+          "id": "F09",
+          "rank": null,
+          "top1_score": 0.499,
+          "top1": "pdf09_0080",
+          "doc5": false
+        },
+        {
+          "id": "F10",
+          "rank": null,
+          "top1_score": 0.454,
+          "top1": "pdf09_0052",
+          "doc5": false
+        },
+        {
+          "id": "F11",
+          "rank": 1,
+          "top1_score": 0.565,
+          "top1": "html01_0003",
+          "doc5": true
+        },
+        {
+          "id": "F12",
+          "rank": null,
+          "top1_score": 0.592,
+          "top1": "pdf09_0040",
+          "doc5": false
+        },
+        {
+          "id": "F13",
+          "rank": 6,
+          "top1_score": 0.558,
+          "top1": "docx01_0024",
+          "doc5": true
+        },
+        {
+          "id": "F14",
+          "rank": 1,
+          "top1_score": 0.621,
+          "top1": "html01_0021",
+          "doc5": true
+        },
+        {
+          "id": "F15",
+          "rank": 2,
+          "top1_score": 0.591,
+          "top1": "pdf09_0123",
+          "doc5": true
+        },
+        {
+          "id": "F16",
+          "rank": 4,
+          "top1_score": 0.713,
+          "top1": "html05_0014",
+          "doc5": true
+        },
+        {
+          "id": "F17",
+          "rank": null,
+          "top1_score": 0.568,
+          "top1": "html09_0013",
+          "doc5": true
+        },
+        {
+          "id": "F18",
+          "rank": null,
+          "top1_score": 0.637,
+          "top1": "docx07_0002",
+          "doc5": false
+        },
+        {
+          "id": "F19",
+          "rank": null,
+          "top1_score": 0.535,
+          "top1": "docx07_0001",
+          "doc5": false
+        },
+        {
+          "id": "F20",
+          "rank": null,
+          "top1_score": 0.572,
+          "top1": "html01_0046",
+          "doc5": false
+        },
+        {
+          "id": "F21",
+          "rank": 1,
+          "top1_score": 0.798,
+          "top1": "html01_0064",
+          "doc5": true
+        },
+        {
+          "id": "F22",
+          "rank": 1,
+          "top1_score": 0.721,
+          "top1": "html01_0059",
+          "doc5": true
+        },
+        {
+          "id": "C01",
+          "rank": 1,
+          "top1_score": 0.699,
+          "top1": "html07_0008",
+          "doc5": true
+        },
+        {
+          "id": "C02",
+          "rank": 9,
+          "top1_score": 0.505,
+          "top1": "docx02_0006",
+          "doc5": false
+        },
+        {
+          "id": "C03",
+          "rank": null,
+          "top1_score": 0.66,
+          "top1": "html06_0000",
+          "doc5": false
+        },
+        {
+          "id": "C04",
+          "rank": null,
+          "top1_score": 0.506,
+          "top1": "pdf09_0080",
+          "doc5": false
+        },
+        {
+          "id": "P01",
+          "top1_score": 0.588,
+          "top1": "html09_0012"
+        },
+        {
+          "id": "P02",
+          "top1_score": 0.452,
+          "top1": "html12_0010"
+        },
+        {
+          "id": "P03",
+          "top1_score": 0.585,
+          "top1": "pdf09_0071"
+        }
+      ]
+    },
+    "header": false,
+    "max_seq_length": null
+  },
+  {
+    "model_key": "multi-minilm",
+    "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "size": 250,
+    "overlap": 50,
+    "chunks": 11723,
+    "truncated": 0.0003412095879894225,
+    "seconds": 652.4840631000698,
+    "metrics": {
+      "success@1": 0.15384615384615385,
+      "success@5": 0.4230769230769231,
+      "doc@5": 0.6153846153846154,
+      "mrr@10": 0.28696581196581195,
+      "score_real_mean": 0.7036299590881054,
+      "score_real_min": 0.5754475593566895,
+      "score_trap_max": 0.6709561347961426,
+      "questions": [
+        {
+          "id": "F01",
+          "rank": null,
+          "top1_score": 0.682,
+          "top1": "pdf10_0225",
+          "doc5": false
+        },
+        {
+          "id": "F02",
+          "rank": 4,
+          "top1_score": 0.82,
+          "top1": "pdf03_0178",
+          "doc5": true
+        },
+        {
+          "id": "F03",
+          "rank": null,
+          "top1_score": 0.719,
+          "top1": "html05_0095",
+          "doc5": false
+        },
+        {
+          "id": "F04",
+          "rank": 10,
+          "top1_score": 0.575,
+          "top1": "html01_0108",
+          "doc5": false
+        },
+        {
+          "id": "F05",
+          "rank": null,
+          "top1_score": 0.726,
+          "top1": "pdf02_0166",
+          "doc5": true
+        },
+        {
+          "id": "F06",
+          "rank": null,
+          "top1_score": 0.649,
+          "top1": "pdf02_0033",
+          "doc5": true
+        },
+        {
+          "id": "F07",
+          "rank": null,
+          "top1_score": 0.597,
+          "top1": "pdf07_0803",
+          "doc5": false
+        },
+        {
+          "id": "F08",
+          "rank": null,
+          "top1_score": 0.586,
+          "top1": "txt06_0633",
+          "doc5": false
+        },
+        {
+          "id": "F09",
+          "rank": null,
+          "top1_score": 0.615,
+          "top1": "pdf07_0300",
+          "doc5": false
+        },
+        {
+          "id": "F10",
+          "rank": 9,
+          "top1_score": 0.796,
+          "top1": "pdf05_0000",
+          "doc5": true
+        },
+        {
+          "id": "F11",
+          "rank": 2,
+          "top1_score": 0.622,
+          "top1": "docx01_0012",
+          "doc5": true
+        },
+        {
+          "id": "F12",
+          "rank": null,
+          "top1_score": 0.729,
+          "top1": "pdf07_0422",
+          "doc5": false
+        },
+        {
+          "id": "F13",
+          "rank": 3,
+          "top1_score": 0.756,
+          "top1": "pdf03_0073",
+          "doc5": true
+        },
+        {
+          "id": "F14",
+          "rank": 1,
+          "top1_score": 0.864,
+          "top1": "html01_0116",
+          "doc5": true
+        },
+        {
+          "id": "F15",
+          "rank": 1,
+          "top1_score": 0.768,
+          "top1": "html01_0162",
+          "doc5": true
+        },
+        {
+          "id": "F16",
+          "rank": 2,
+          "top1_score": 0.763,
+          "top1": "html05_0088",
+          "doc5": true
+        },
+        {
+          "id": "F17",
+          "rank": null,
+          "top1_score": 0.639,
+          "top1": "html05_0085",
+          "doc5": false
+        },
+        {
+          "id": "F18",
+          "rank": null,
+          "top1_score": 0.682,
+          "top1": "docx07_0013",
+          "doc5": true
+        },
+        {
+          "id": "F19",
+          "rank": 2,
+          "top1_score": 0.693,
+          "top1": "html11_0089",
+          "doc5": true
+        },
+        {
+          "id": "F20",
+          "rank": null,
+          "top1_score": 0.665,
+          "top1": "txt11_0214",
+          "doc5": false
+        },
+        {
+          "id": "F21",
+          "rank": null,
+          "top1_score": 0.769,
+          "top1": "html01_0342",
+          "doc5": true
+        },
+        {
+          "id": "F22",
+          "rank": 1,
+          "top1_score": 0.709,
+          "top1": "html01_0315",
+          "doc5": true
+        },
+        {
+          "id": "C01",
+          "rank": 1,
+          "top1_score": 0.761,
+          "top1": "html07_0043",
+          "doc5": true
+        },
+        {
+          "id": "C02",
+          "rank": 2,
+          "top1_score": 0.757,
+          "top1": "pdf03_0060",
+          "doc5": true
+        },
+        {
+          "id": "C03",
+          "rank": 6,
+          "top1_score": 0.711,
+          "top1": "txt03_0176",
+          "doc5": false
+        },
+        {
+          "id": "C04",
+          "rank": 2,
+          "top1_score": 0.64,
+          "top1": "txt11_0082",
+          "doc5": true
+        },
+        {
+          "id": "P01",
+          "top1_score": 0.572,
+          "top1": "docx01_0184"
+        },
+        {
+          "id": "P02",
+          "top1_score": 0.33,
+          "top1": "pdf07_0570"
+        },
+        {
+          "id": "P03",
+          "top1_score": 0.671,
+          "top1": "pdf07_0306"
+        }
+      ]
+    },
+    "header": false,
+    "max_seq_length": null
+  },
+  {
+    "model_key": "multi-minilm",
+    "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "size": 300,
+    "overlap": 60,
+    "chunks": 9920,
+    "truncated": 0.004435483870967742,
+    "seconds": 587.3466980010271,
+    "metrics": {
+      "success@1": 0.3076923076923077,
+      "success@5": 0.46153846153846156,
+      "doc@5": 0.6923076923076923,
+      "mrr@10": 0.3685897435897436,
+      "score_real_mean": 0.6981358046715076,
+      "score_real_min": 0.5575835704803467,
+      "score_trap_max": 0.6510394215583801,
+      "questions": [
+        {
+          "id": "F01",
+          "rank": null,
+          "top1_score": 0.682,
+          "top1": "pdf10_0193",
+          "doc5": false
+        },
+        {
+          "id": "F02",
+          "rank": 3,
+          "top1_score": 0.811,
+          "top1": "pdf03_0156",
+          "doc5": true
+        },
+        {
+          "id": "F03",
+          "rank": null,
+          "top1_score": 0.714,
+          "top1": "docx01_0055",
+          "doc5": false
+        },
+        {
+          "id": "F04",
+          "rank": null,
+          "top1_score": 0.575,
+          "top1": "html01_0096",
+          "doc5": false
+        },
+        {
+          "id": "F05",
+          "rank": null,
+          "top1_score": 0.733,
+          "top1": "pdf02_0146",
+          "doc5": true
+        },
+        {
+          "id": "F06",
+          "rank": null,
+          "top1_score": 0.649,
+          "top1": "pdf02_0028",
+          "doc5": true
+        },
+        {
+          "id": "F07",
+          "rank": null,
+          "top1_score": 0.583,
+          "top1": "pdf07_0697",
+          "doc5": true
+        },
+        {
+          "id": "F08",
+          "rank": null,
+          "top1_score": 0.585,
+          "top1": "pdf10_0186",
+          "doc5": false
+        },
+        {
+          "id": "F09",
+          "rank": null,
+          "top1_score": 0.558,
+          "top1": "txt11_0005",
+          "doc5": false
+        },
+        {
+          "id": "F10",
+          "rank": null,
+          "top1_score": 0.812,
+          "top1": "pdf05_0000",
+          "doc5": true
+        },
+        {
+          "id": "F11",
+          "rank": 1,
+          "top1_score": 0.684,
+          "top1": "html01_0016",
+          "doc5": true
+        },
+        {
+          "id": "F12",
+          "rank": null,
+          "top1_score": 0.779,
+          "top1": "pdf10_0205",
+          "doc5": false
+        },
+        {
+          "id": "F13",
+          "rank": 1,
+          "top1_score": 0.756,
+          "top1": "html01_0051",
+          "doc5": true
+        },
+        {
+          "id": "F14",
+          "rank": 1,
+          "top1_score": 0.85,
+          "top1": "html01_0102",
+          "doc5": true
+        },
+        {
+          "id": "F15",
+          "rank": 1,
+          "top1_score": 0.77,
+          "top1": "html01_0140",
+          "doc5": true
+        },
+        {
+          "id": "F16",
+          "rank": 1,
+          "top1_score": 0.741,
+          "top1": "html05_0070",
+          "doc5": true
+        },
+        {
+          "id": "F17",
+          "rank": null,
+          "top1_score": 0.591,
+          "top1": "html07_0057",
+          "doc5": false
+        },
+        {
+          "id": "F18",
+          "rank": null,
+          "top1_score": 0.71,
+          "top1": "docx07_0009",
+          "doc5": true
+        },
+        {
+          "id": "F19",
+          "rank": 4,
+          "top1_score": 0.682,
+          "top1": "docx07_0008",
+          "doc5": true
+        },
+        {
+          "id": "F20",
+          "rank": null,
+          "top1_score": 0.646,
+          "top1": "pdf10_0193",
+          "doc5": false
+        },
+        {
+          "id": "F21",
+          "rank": null,
+          "top1_score": 0.776,
+          "top1": "html01_0299",
+          "doc5": true
+        },
+        {
+          "id": "F22",
+          "rank": 1,
+          "top1_score": 0.626,
+          "top1": "html01_0276",
+          "doc5": true
+        },
+        {
+          "id": "C01",
+          "rank": 1,
+          "top1_score": 0.758,
+          "top1": "html07_0040",
+          "doc5": true
+        },
+        {
+          "id": "C02",
+          "rank": 2,
+          "top1_score": 0.749,
+          "top1": "pdf03_0052",
+          "doc5": true
+        },
+        {
+          "id": "C03",
+          "rank": 2,
+          "top1_score": 0.651,
+          "top1": "txt03_0048",
+          "doc5": true
+        },
+        {
+          "id": "C04",
+          "rank": 1,
+          "top1_score": 0.682,
+          "top1": "docx08_0000",
+          "doc5": true
+        },
+        {
+          "id": "P01",
+          "top1_score": 0.579,
+          "top1": "docx01_0161"
+        },
+        {
+          "id": "P02",
+          "top1_score": 0.285,
+          "top1": "pdf09_0015"
+        },
+        {
+          "id": "P03",
+          "top1_score": 0.651,
+          "top1": "pdf02_0001"
+        }
+      ]
+    },
+    "header": false,
+    "max_seq_length": null
+  },
+  {
+    "model_key": "multi-minilm",
+    "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "size": 500,
+    "overlap": 100,
+    "header": false,
+    "max_seq_length": null,
+    "chunks": 5751,
+    "truncated": 0.13180316466701444,
+    "seconds": 632.723955899477,
+    "metrics": {
+      "success@1": 0.3076923076923077,
+      "success@5": 0.5384615384615384,
+      "answer@5": 0.8076923076923077,
+      "doc@5": 0.6153846153846154,
+      "mrr@10": 0.40100732600732597,
+      "score_real_mean": 0.6936009709651654,
+      "score_real_min": 0.5324101448059082,
+      "score_trap_max": 0.6921137571334839,
+      "questions": [
+        {
+          "id": "F01",
+          "rank": null,
+          "top1_score": 0.648,
+          "top1": "txt11_0062",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F02",
+          "rank": 7,
+          "top1_score": 0.807,
+          "top1": "docx01_0037",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F03",
+          "rank": null,
+          "top1_score": 0.768,
+          "top1": "html01_0057",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F04",
+          "rank": 2,
+          "top1_score": 0.621,
+          "top1": "html01_0057",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F05",
+          "rank": null,
+          "top1_score": 0.734,
+          "top1": "pdf02_0087",
+          "answer5": false,
+          "doc5": true
+        },
+        {
+          "id": "F06",
+          "rank": 1,
+          "top1_score": 0.595,
+          "top1": "pdf02_0018",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F07",
+          "rank": null,
+          "top1_score": 0.54,
+          "top1": "pdf10_0131",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F08",
+          "rank": null,
+          "top1_score": 0.578,
+          "top1": "pdf08_0177",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F09",
+          "rank": null,
+          "top1_score": 0.532,
+          "top1": "pdf07_0163",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F10",
+          "rank": null,
+          "top1_score": 0.792,
+          "top1": "pdf05_0000",
+          "answer5": false,
+          "doc5": true
+        },
+        {
+          "id": "F11",
+          "rank": 1,
+          "top1_score": 0.657,
+          "top1": "html01_0009",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F12",
+          "rank": null,
+          "top1_score": 0.793,
+          "top1": "pdf10_0123",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F13",
+          "rank": 1,
+          "top1_score": 0.778,
+          "top1": "html01_0030",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F14",
+          "rank": 4,
+          "top1_score": 0.741,
+          "top1": "pdf03_0064",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F15",
+          "rank": 1,
+          "top1_score": 0.769,
+          "top1": "html01_0087",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F16",
+          "rank": 3,
+          "top1_score": 0.762,
+          "top1": "html05_0039",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F17",
+          "rank": null,
+          "top1_score": 0.611,
+          "top1": "html05_0037",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F18",
+          "rank": null,
+          "top1_score": 0.72,
+          "top1": "docx07_0007",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F19",
+          "rank": 2,
+          "top1_score": 0.667,
+          "top1": "docx07_0007",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F20",
+          "rank": null,
+          "top1_score": 0.579,
+          "top1": "txt06_0001",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F21",
+          "rank": 1,
+          "top1_score": 0.784,
+          "top1": "html01_0191",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F22",
+          "rank": 1,
+          "top1_score": 0.725,
+          "top1": "html01_0176",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C01",
+          "rank": 1,
+          "top1_score": 0.767,
+          "top1": "html07_0024",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C02",
+          "rank": 2,
+          "top1_score": 0.69,
+          "top1": "pdf03_0028",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C03",
+          "rank": 5,
+          "top1_score": 0.68,
+          "top1": "txt03_0082",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C04",
+          "rank": 1,
+          "top1_score": 0.698,
+          "top1": "docx08_0000",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "P01",
+          "top1_score": 0.585,
+          "top1": "docx01_0100"
+        },
+        {
+          "id": "P02",
+          "top1_score": 0.301,
+          "top1": "docx01_0055"
+        },
+        {
+          "id": "P03",
+          "top1_score": 0.692,
+          "top1": "pdf02_0000"
+        }
+      ]
+    }
+  },
+  {
+    "model_key": "multi-minilm",
+    "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "size": 800,
+    "overlap": 160,
+    "chunks": 3266,
+    "truncated": 0.9540722596448254,
+    "seconds": 308.5528334006667,
+    "metrics": {
+      "success@1": 0.3076923076923077,
+      "success@5": 0.4230769230769231,
+      "doc@5": 0.6153846153846154,
+      "mrr@10": 0.3812423687423688,
+      "score_real_mean": 0.6820309299689072,
+      "score_real_min": 0.5403374433517456,
+      "score_trap_max": 0.661383867263794,
+      "questions": [
+        {
+          "id": "F01",
+          "rank": null,
+          "top1_score": 0.691,
+          "top1": "txt11_0033",
+          "doc5": false
+        },
+        {
+          "id": "F02",
+          "rank": 7,
+          "top1_score": 0.829,
+          "top1": "pdf03_0048",
+          "doc5": false
+        },
+        {
+          "id": "F03",
+          "rank": null,
+          "top1_score": 0.707,
+          "top1": "docx01_0018",
+          "doc5": true
+        },
+        {
+          "id": "F04",
+          "rank": 1,
+          "top1_score": 0.668,
+          "top1": "pdf01_0004",
+          "doc5": true
+        },
+        {
+          "id": "F05",
+          "rank": 9,
+          "top1_score": 0.725,
+          "top1": "pdf02_0048",
+          "doc5": true
+        },
+        {
+          "id": "F06",
+          "rank": 1,
+          "top1_score": 0.575,
+          "top1": "pdf02_0010",
+          "doc5": true
+        },
+        {
+          "id": "F07",
+          "rank": null,
+          "top1_score": 0.54,
+          "top1": "pdf10_0071",
+          "doc5": false
+        },
+        {
+          "id": "F08",
+          "rank": null,
+          "top1_score": 0.562,
+          "top1": "pdf08_0006",
+          "doc5": false
+        },
+        {
+          "id": "F09",
+          "rank": null,
+          "top1_score": 0.55,
+          "top1": "pdf07_0251",
+          "doc5": false
+        },
+        {
+          "id": "F10",
+          "rank": null,
+          "top1_score": 0.783,
+          "top1": "pdf05_0000",
+          "doc5": true
+        },
+        {
+          "id": "F11",
+          "rank": 1,
+          "top1_score": 0.609,
+          "top1": "html01_0006",
+          "doc5": true
+        },
+        {
+          "id": "F12",
+          "rank": null,
+          "top1_score": 0.715,
+          "top1": "pdf07_0129",
+          "doc5": false
+        },
+        {
+          "id": "F13",
+          "rank": 1,
+          "top1_score": 0.781,
+          "top1": "html01_0018",
+          "doc5": true
+        },
+        {
+          "id": "F14",
+          "rank": 10,
+          "top1_score": 0.73,
+          "top1": "txt03_0059",
+          "doc5": false
+        },
+        {
+          "id": "F15",
+          "rank": null,
+          "top1_score": 0.645,
+          "top1": "docx01_0040",
+          "doc5": true
+        },
+        {
+          "id": "F16",
+          "rank": 2,
+          "top1_score": 0.762,
+          "top1": "html05_0022",
+          "doc5": true
+        },
+        {
+          "id": "F17",
+          "rank": 8,
+          "top1_score": 0.578,
+          "top1": "html05_0021",
+          "doc5": false
+        },
+        {
+          "id": "F18",
+          "rank": null,
+          "top1_score": 0.703,
+          "top1": "docx01_0049",
+          "doc5": false
+        },
+        {
+          "id": "F19",
+          "rank": 3,
+          "top1_score": 0.742,
+          "top1": "docx07_0003",
+          "doc5": true
+        },
+        {
+          "id": "F20",
+          "rank": null,
+          "top1_score": 0.588,
+          "top1": "pdf10_0062",
+          "doc5": false
+        },
+        {
+          "id": "F21",
+          "rank": 10,
+          "top1_score": 0.757,
+          "top1": "html01_0110",
+          "doc5": true
+        },
+        {
+          "id": "F22",
+          "rank": 1,
+          "top1_score": 0.566,
+          "top1": "html01_0099",
+          "doc5": true
+        },
+        {
+          "id": "C01",
+          "rank": 1,
+          "top1_score": 0.767,
+          "top1": "html07_0013",
+          "doc5": true
+        },
+        {
+          "id": "C02",
+          "rank": 1,
+          "top1_score": 0.788,
+          "top1": "html01_0120",
+          "doc5": true
+        },
+        {
+          "id": "C03",
+          "rank": 2,
+          "top1_score": 0.661,
+          "top1": "pdf02_0066",
+          "doc5": true
+        },
+        {
+          "id": "C04",
+          "rank": 1,
+          "top1_score": 0.712,
+          "top1": "docx08_0000",
+          "doc5": true
+        },
+        {
+          "id": "P01",
+          "top1_score": 0.588,
+          "top1": "docx01_0054"
+        },
+        {
+          "id": "P02",
+          "top1_score": 0.295,
+          "top1": "txt09_0020"
+        },
+        {
+          "id": "P03",
+          "top1_score": 0.661,
+          "top1": "pdf02_0000"
+        }
+      ]
+    },
+    "header": false,
+    "max_seq_length": null
+  },
+  {
+    "model_key": "multi-minilm",
+    "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "size": 1200,
+    "overlap": 240,
+    "chunks": 2059,
+    "truncated": 0.9951432734337057,
+    "seconds": 204.67554430104792,
+    "metrics": {
+      "success@1": 0.3076923076923077,
+      "success@5": 0.46153846153846156,
+      "doc@5": 0.5384615384615384,
+      "mrr@10": 0.39171245421245426,
+      "score_real_mean": 0.6656801803753927,
+      "score_real_min": 0.48977169394493103,
+      "score_trap_max": 0.661383867263794,
+      "questions": [
+        {
+          "id": "F01",
+          "rank": null,
+          "top1_score": 0.598,
+          "top1": "pdf10_0040",
+          "doc5": false
+        },
+        {
+          "id": "F02",
+          "rank": 4,
+          "top1_score": 0.836,
+          "top1": "html08_0002",
+          "doc5": true
+        },
+        {
+          "id": "F03",
+          "rank": null,
+          "top1_score": 0.664,
+          "top1": "pdf03_0019",
+          "doc5": false
+        },
+        {
+          "id": "F04",
+          "rank": null,
+          "top1_score": 0.563,
+          "top1": "pdf06_0003",
+          "doc5": false
+        },
+        {
+          "id": "F05",
+          "rank": 2,
+          "top1_score": 0.725,
+          "top1": "pdf02_0029",
+          "doc5": true
+        },
+        {
+          "id": "F06",
+          "rank": null,
+          "top1_score": 0.49,
+          "top1": "pdf09_0100",
+          "doc5": false
+        },
+        {
+          "id": "F07",
+          "rank": null,
+          "top1_score": 0.528,
+          "top1": "pdf09_0013",
+          "doc5": false
+        },
+        {
+          "id": "F08",
+          "rank": null,
+          "top1_score": 0.566,
+          "top1": "pdf08_0004",
+          "doc5": false
+        },
+        {
+          "id": "F09",
+          "rank": null,
+          "top1_score": 0.513,
+          "top1": "pdf07_0056",
+          "doc5": false
+        },
+        {
+          "id": "F10",
+          "rank": 1,
+          "top1_score": 0.783,
+          "top1": "pdf05_0000",
+          "doc5": true
+        },
+        {
+          "id": "F11",
+          "rank": 8,
+          "top1_score": 0.561,
+          "top1": "pdf07_0057",
+          "doc5": false
+        },
+        {
+          "id": "F12",
+          "rank": null,
+          "top1_score": 0.66,
+          "top1": "txt06_0007",
+          "doc5": false
+        },
+        {
+          "id": "F13",
+          "rank": null,
+          "top1_score": 0.723,
+          "top1": "pdf03_0012",
+          "doc5": true
+        },
+        {
+          "id": "F14",
+          "rank": 1,
+          "top1_score": 0.76,
+          "top1": "html01_0021",
+          "doc5": true
+        },
+        {
+          "id": "F15",
+          "rank": 1,
+          "top1_score": 0.769,
+          "top1": "html01_0029",
+          "doc5": true
+        },
+        {
+          "id": "F16",
+          "rank": 2,
+          "top1_score": 0.788,
+          "top1": "html05_0014",
+          "doc5": true
+        },
+        {
+          "id": "F17",
+          "rank": 7,
+          "top1_score": 0.567,
+          "top1": "html05_0014",
+          "doc5": false
+        },
+        {
+          "id": "F18",
+          "rank": null,
+          "top1_score": 0.679,
+          "top1": "docx07_0013",
+          "doc5": false
+        },
+        {
+          "id": "F19",
+          "rank": 2,
+          "top1_score": 0.718,
+          "top1": "docx07_0002",
+          "doc5": true
+        },
+        {
+          "id": "F20",
+          "rank": null,
+          "top1_score": 0.588,
+          "top1": "pdf10_0040",
+          "doc5": false
+        },
+        {
+          "id": "F21",
+          "rank": 1,
+          "top1_score": 0.802,
+          "top1": "html01_0064",
+          "doc5": true
+        },
+        {
+          "id": "F22",
+          "rank": 1,
+          "top1_score": 0.691,
+          "top1": "html01_0059",
+          "doc5": true
+        },
+        {
+          "id": "C01",
+          "rank": 1,
+          "top1_score": 0.741,
+          "top1": "html07_0013",
+          "doc5": true
+        },
+        {
+          "id": "C02",
+          "rank": 1,
+          "top1_score": 0.623,
+          "top1": "html01_0070",
+          "doc5": true
+        },
+        {
+          "id": "C03",
+          "rank": 6,
+          "top1_score": 0.661,
+          "top1": "pdf02_0040",
+          "doc5": true
+        },
+        {
+          "id": "C04",
+          "rank": 1,
+          "top1_score": 0.712,
+          "top1": "docx08_0000",
+          "doc5": true
+        },
+        {
+          "id": "P01",
+          "top1_score": 0.512,
+          "top1": "docx01_0030"
+        },
+        {
+          "id": "P02",
+          "top1_score": 0.278,
+          "top1": "docx07_0019"
+        },
+        {
+          "id": "P03",
+          "top1_score": 0.661,
+          "top1": "pdf02_0000"
+        }
+      ]
+    },
+    "header": false,
+    "max_seq_length": null
+  },
+  {
+    "model_key": "multi-minilm",
+    "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "size": 300,
+    "overlap": 60,
+    "header": true,
+    "max_seq_length": null,
+    "chunks": 9920,
+    "truncated": 0.019254032258064515,
+    "seconds": 516.3220211006701,
+    "metrics": {
+      "success@1": 0.23076923076923078,
+      "success@5": 0.4230769230769231,
+      "answer@5": 0.7307692307692307,
+      "doc@5": 0.7307692307692307,
+      "mrr@10": 0.3288919413919414,
+      "score_real_mean": 0.6908134749302497,
+      "score_real_min": 0.5329862833023071,
+      "score_trap_max": 0.6721736788749695,
+      "questions": [
+        {
+          "id": "F01",
+          "rank": null,
+          "top1_score": 0.68,
+          "top1": "txt11_0101",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F02",
+          "rank": 10,
+          "top1_score": 0.822,
+          "top1": "txt05_0014",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F03",
+          "rank": null,
+          "top1_score": 0.726,
+          "top1": "html08_0000",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F04",
+          "rank": null,
+          "top1_score": 0.58,
+          "top1": "pdf03_0006",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F05",
+          "rank": null,
+          "top1_score": 0.731,
+          "top1": "pdf02_0146",
+          "answer5": false,
+          "doc5": true
+        },
+        {
+          "id": "F06",
+          "rank": null,
+          "top1_score": 0.557,
+          "top1": "pdf02_0028",
+          "answer5": false,
+          "doc5": true
+        },
+        {
+          "id": "F07",
+          "rank": 10,
+          "top1_score": 0.552,
+          "top1": "pdf06_0016",
+          "answer5": false,
+          "doc5": true
+        },
+        {
+          "id": "F08",
+          "rank": null,
+          "top1_score": 0.622,
+          "top1": "pdf08_0017",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F09",
+          "rank": null,
+          "top1_score": 0.533,
+          "top1": "pdf09_0147",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F10",
+          "rank": 1,
+          "top1_score": 0.86,
+          "top1": "pdf05_0004",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F11",
+          "rank": 2,
+          "top1_score": 0.581,
+          "top1": "pdf05_0230",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F12",
+          "rank": null,
+          "top1_score": 0.723,
+          "top1": "pdf10_0205",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F13",
+          "rank": 1,
+          "top1_score": 0.769,
+          "top1": "html01_0051",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F14",
+          "rank": 1,
+          "top1_score": 0.775,
+          "top1": "html01_0102",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F15",
+          "rank": 1,
+          "top1_score": 0.75,
+          "top1": "html01_0140",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F16",
+          "rank": 2,
+          "top1_score": 0.662,
+          "top1": "html09_0019",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F17",
+          "rank": 4,
+          "top1_score": 0.589,
+          "top1": "html07_0053",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F18",
+          "rank": 8,
+          "top1_score": 0.796,
+          "top1": "html03_0043",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F19",
+          "rank": null,
+          "top1_score": 0.687,
+          "top1": "html11_0073",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F20",
+          "rank": null,
+          "top1_score": 0.672,
+          "top1": "txt11_0005",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F21",
+          "rank": 2,
+          "top1_score": 0.83,
+          "top1": "html01_0299",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F22",
+          "rank": 1,
+          "top1_score": 0.605,
+          "top1": "html01_0276",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C01",
+          "rank": null,
+          "top1_score": 0.778,
+          "top1": "html09_0019",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C02",
+          "rank": 3,
+          "top1_score": 0.723,
+          "top1": "docx02_0029",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C03",
+          "rank": 7,
+          "top1_score": 0.611,
+          "top1": "txt03_0288",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "C04",
+          "rank": 1,
+          "top1_score": 0.746,
+          "top1": "docx08_0000",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "P01",
+          "top1_score": 0.565,
+          "top1": "docx01_0161"
+        },
+        {
+          "id": "P02",
+          "top1_score": 0.287,
+          "top1": "docx07_0118"
+        },
+        {
+          "id": "P03",
+          "top1_score": 0.672,
+          "top1": "pdf02_0001"
+        }
+      ]
+    }
+  },
+  {
+    "model_key": "multi-minilm",
+    "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "size": 500,
+    "overlap": 100,
+    "header": true,
+    "max_seq_length": null,
+    "chunks": 5751,
+    "truncated": 0.5480785950269519,
+    "seconds": 290.97585699893534,
+    "metrics": {
+      "success@1": 0.3076923076923077,
+      "success@5": 0.46153846153846156,
+      "answer@5": 0.7692307692307693,
+      "doc@5": 0.7307692307692307,
+      "mrr@10": 0.36681929181929185,
+      "score_real_mean": 0.6832442042919306,
+      "score_real_min": 0.46971043944358826,
+      "score_trap_max": 0.6938532590866089,
+      "questions": [
+        {
+          "id": "F01",
+          "rank": null,
+          "top1_score": 0.69,
+          "top1": "txt11_0062",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F02",
+          "rank": null,
+          "top1_score": 0.807,
+          "top1": "docx01_0037",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F03",
+          "rank": null,
+          "top1_score": 0.738,
+          "top1": "html01_0057",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F04",
+          "rank": null,
+          "top1_score": 0.586,
+          "top1": "html01_0057",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F05",
+          "rank": null,
+          "top1_score": 0.721,
+          "top1": "html01_0034",
+          "answer5": false,
+          "doc5": true
+        },
+        {
+          "id": "F06",
+          "rank": 1,
+          "top1_score": 0.47,
+          "top1": "pdf02_0018",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F07",
+          "rank": 7,
+          "top1_score": 0.519,
+          "top1": "pdf06_0007",
+          "answer5": false,
+          "doc5": true
+        },
+        {
+          "id": "F08",
+          "rank": null,
+          "top1_score": 0.601,
+          "top1": "pdf08_0177",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F09",
+          "rank": null,
+          "top1_score": 0.537,
+          "top1": "pdf07_0162",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F10",
+          "rank": 5,
+          "top1_score": 0.841,
+          "top1": "pdf05_0034",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F11",
+          "rank": 2,
+          "top1_score": 0.591,
+          "top1": "pdf05_0141",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F12",
+          "rank": null,
+          "top1_score": 0.695,
+          "top1": "pdf10_0123",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F13",
+          "rank": 1,
+          "top1_score": 0.766,
+          "top1": "html01_0030",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F14",
+          "rank": 1,
+          "top1_score": 0.705,
+          "top1": "html01_0061",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F15",
+          "rank": 1,
+          "top1_score": 0.776,
+          "top1": "html01_0087",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F16",
+          "rank": 3,
+          "top1_score": 0.741,
+          "top1": "html05_0039",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F17",
+          "rank": null,
+          "top1_score": 0.589,
+          "top1": "html05_0037",
+          "answer5": false,
+          "doc5": true
+        },
+        {
+          "id": "F18",
+          "rank": null,
+          "top1_score": 0.745,
+          "top1": "html03_0022",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F19",
+          "rank": null,
+          "top1_score": 0.719,
+          "top1": "docx07_0007",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F20",
+          "rank": null,
+          "top1_score": 0.664,
+          "top1": "txt11_0107",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F21",
+          "rank": 1,
+          "top1_score": 0.814,
+          "top1": "html01_0191",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F22",
+          "rank": 1,
+          "top1_score": 0.646,
+          "top1": "html01_0176",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C01",
+          "rank": 4,
+          "top1_score": 0.754,
+          "top1": "html09_0002",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C02",
+          "rank": 1,
+          "top1_score": 0.648,
+          "top1": "html01_0211",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C03",
+          "rank": 9,
+          "top1_score": 0.645,
+          "top1": "txt03_0082",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C04",
+          "rank": 1,
+          "top1_score": 0.755,
+          "top1": "docx08_0000",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "P01",
+          "top1_score": 0.553,
+          "top1": "docx01_0100"
+        },
+        {
+          "id": "P02",
+          "top1_score": 0.285,
+          "top1": "docx01_0055"
+        },
+        {
+          "id": "P03",
+          "top1_score": 0.694,
+          "top1": "html01_0054"
+        }
+      ]
+    }
+  },
+  {
+    "model_key": "multi-minilm",
+    "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "size": 500,
+    "overlap": 100,
+    "header": true,
+    "max_seq_length": 256,
+    "chunks": 5751,
+    "truncated": 0.0020865936358894104,
+    "seconds": 944.0662431996316,
+    "metrics": {
+      "success@1": 0.23076923076923078,
+      "success@5": 0.38461538461538464,
+      "answer@5": 0.6923076923076923,
+      "doc@5": 0.6538461538461539,
+      "mrr@10": 0.3058608058608059,
+      "score_real_mean": 0.6788884332546821,
+      "score_real_min": 0.4721238613128662,
+      "score_trap_max": 0.6974215507507324,
+      "questions": [
+        {
+          "id": "F01",
+          "rank": null,
+          "top1_score": 0.69,
+          "top1": "txt11_0062",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F02",
+          "rank": null,
+          "top1_score": 0.807,
+          "top1": "docx01_0037",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F03",
+          "rank": null,
+          "top1_score": 0.741,
+          "top1": "html01_0057",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F04",
+          "rank": null,
+          "top1_score": 0.59,
+          "top1": "html01_0057",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F05",
+          "rank": null,
+          "top1_score": 0.719,
+          "top1": "html01_0034",
+          "answer5": false,
+          "doc5": true
+        },
+        {
+          "id": "F06",
+          "rank": 2,
+          "top1_score": 0.472,
+          "top1": "pdf06_0058",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F07",
+          "rank": null,
+          "top1_score": 0.521,
+          "top1": "pdf06_0007",
+          "answer5": false,
+          "doc5": true
+        },
+        {
+          "id": "F08",
+          "rank": null,
+          "top1_score": 0.557,
+          "top1": "pdf07_0203",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F09",
+          "rank": null,
+          "top1_score": 0.511,
+          "top1": "pdf09_0102",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F10",
+          "rank": 4,
+          "top1_score": 0.841,
+          "top1": "pdf05_0034",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F11",
+          "rank": 2,
+          "top1_score": 0.591,
+          "top1": "pdf05_0141",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F12",
+          "rank": null,
+          "top1_score": 0.695,
+          "top1": "pdf10_0123",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F13",
+          "rank": 1,
+          "top1_score": 0.766,
+          "top1": "html01_0030",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F14",
+          "rank": 7,
+          "top1_score": 0.698,
+          "top1": "txt02_0104",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F15",
+          "rank": 1,
+          "top1_score": 0.783,
+          "top1": "html01_0087",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F16",
+          "rank": 6,
+          "top1_score": 0.754,
+          "top1": "html05_0039",
+          "answer5": false,
+          "doc5": true
+        },
+        {
+          "id": "F17",
+          "rank": null,
+          "top1_score": 0.589,
+          "top1": "html09_0025",
+          "answer5": false,
+          "doc5": true
+        },
+        {
+          "id": "F18",
+          "rank": null,
+          "top1_score": 0.725,
+          "top1": "docx07_0007",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F19",
+          "rank": null,
+          "top1_score": 0.719,
+          "top1": "docx07_0007",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F20",
+          "rank": null,
+          "top1_score": 0.637,
+          "top1": "txt11_0035",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F21",
+          "rank": 1,
+          "top1_score": 0.814,
+          "top1": "html01_0191",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F22",
+          "rank": 1,
+          "top1_score": 0.646,
+          "top1": "html01_0176",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C01",
+          "rank": 4,
+          "top1_score": 0.754,
+          "top1": "html09_0002",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C02",
+          "rank": 1,
+          "top1_score": 0.631,
+          "top1": "html01_0211",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C03",
+          "rank": 7,
+          "top1_score": 0.645,
+          "top1": "txt03_0082",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C04",
+          "rank": 1,
+          "top1_score": 0.755,
+          "top1": "docx08_0000",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "P01",
+          "top1_score": 0.553,
+          "top1": "docx01_0100"
+        },
+        {
+          "id": "P02",
+          "top1_score": 0.291,
+          "top1": "docx01_0055"
+        },
+        {
+          "id": "P03",
+          "top1_score": 0.697,
+          "top1": "html01_0054"
+        }
+      ]
+    }
+  },
+  {
+    "model_key": "e5-small",
+    "model": "intfloat/multilingual-e5-small",
+    "size": 250,
+    "overlap": 50,
+    "chunks": 11723,
+    "truncated": 0.0,
+    "seconds": 684.3327185008675,
+    "metrics": {
+      "success@1": 0.3076923076923077,
+      "success@5": 0.46153846153846156,
+      "doc@5": 0.46153846153846156,
+      "mrr@10": 0.3685897435897436,
+      "score_real_mean": 0.8768053238208477,
+      "score_real_min": 0.816402792930603,
+      "score_trap_max": 0.8423154354095459,
+      "questions": [
+        {
+          "id": "F01",
+          "rank": null,
+          "top1_score": 0.883,
+          "top1": "docx01_0035",
+          "doc5": false
+        },
+        {
+          "id": "F02",
+          "rank": 1,
+          "top1_score": 0.914,
+          "top1": "html01_0175",
+          "doc5": true
+        },
+        {
+          "id": "F03",
+          "rank": null,
+          "top1_score": 0.863,
+          "top1": "html01_0107",
+          "doc5": false
+        },
+        {
+          "id": "F04",
+          "rank": null,
+          "top1_score": 0.852,
+          "top1": "html01_0107",
+          "doc5": false
+        },
+        {
+          "id": "F05",
+          "rank": null,
+          "top1_score": 0.854,
+          "top1": "html01_0064",
+          "doc5": false
+        },
+        {
+          "id": "F06",
+          "rank": null,
+          "top1_score": 0.816,
+          "top1": "docx02_0021",
+          "doc5": false
+        },
+        {
+          "id": "F07",
+          "rank": null,
+          "top1_score": 0.868,
+          "top1": "pdf09_0477",
+          "doc5": false
+        },
+        {
+          "id": "F08",
+          "rank": null,
+          "top1_score": 0.87,
+          "top1": "html01_0111",
+          "doc5": false
+        },
+        {
+          "id": "F09",
+          "rank": null,
+          "top1_score": 0.835,
+          "top1": "html05_0093",
+          "doc5": false
+        },
+        {
+          "id": "F10",
+          "rank": null,
+          "top1_score": 0.868,
+          "top1": "docx02_0018",
+          "doc5": false
+        },
+        {
+          "id": "F11",
+          "rank": 1,
+          "top1_score": 0.885,
+          "top1": "html01_0019",
+          "doc5": true
+        },
+        {
+          "id": "F12",
+          "rank": null,
+          "top1_score": 0.883,
+          "top1": "txt06_0044",
+          "doc5": false
+        },
+        {
+          "id": "F13",
+          "rank": 1,
+          "top1_score": 0.891,
+          "top1": "html01_0055",
+          "doc5": true
+        },
+        {
+          "id": "F14",
+          "rank": 1,
+          "top1_score": 0.88,
+          "top1": "html01_0116",
+          "doc5": true
+        },
+        {
+          "id": "F15",
+          "rank": 1,
+          "top1_score": 0.9,
+          "top1": "html01_0162",
+          "doc5": true
+        },
+        {
+          "id": "F16",
+          "rank": 3,
+          "top1_score": 0.88,
+          "top1": "html05_0088",
+          "doc5": true
+        },
+        {
+          "id": "F17",
+          "rank": 2,
+          "top1_score": 0.854,
+          "top1": "html05_0078",
+          "doc5": true
+        },
+        {
+          "id": "F18",
+          "rank": null,
+          "top1_score": 0.885,
+          "top1": "docx07_0010",
+          "doc5": false
+        },
+        {
+          "id": "F19",
+          "rank": null,
+          "top1_score": 0.881,
+          "top1": "docx07_0009",
+          "doc5": false
+        },
+        {
+          "id": "F20",
+          "rank": null,
+          "top1_score": 0.872,
+          "top1": "txt11_0091",
+          "doc5": false
+        },
+        {
+          "id": "F21",
+          "rank": 1,
+          "top1_score": 0.92,
+          "top1": "html01_0341",
+          "doc5": true
+        },
+        {
+          "id": "F22",
+          "rank": 1,
+          "top1_score": 0.911,
+          "top1": "html01_0315",
+          "doc5": true
+        },
+        {
+          "id": "C01",
+          "rank": 2,
+          "top1_score": 0.886,
+          "top1": "html07_0063",
+          "doc5": true
+        },
+        {
+          "id": "C02",
+          "rank": 4,
+          "top1_score": 0.897,
+          "top1": "pdf03_0060",
+          "doc5": true
+        },
+        {
+          "id": "C03",
+          "rank": null,
+          "top1_score": 0.869,
+          "top1": "pdf09_0529",
+          "doc5": false
+        },
+        {
+          "id": "C04",
+          "rank": 1,
+          "top1_score": 0.88,
+          "top1": "docx08_0000",
+          "doc5": true
+        },
+        {
+          "id": "P01",
+          "top1_score": 0.842,
+          "top1": "html12_0053"
+        },
+        {
+          "id": "P02",
+          "top1_score": 0.792,
+          "top1": "pdf09_0148"
+        },
+        {
+          "id": "P03",
+          "top1_score": 0.842,
+          "top1": "html01_0102"
+        }
+      ]
+    },
+    "header": false,
+    "max_seq_length": null
+  },
+  {
+    "model_key": "e5-small",
+    "model": "intfloat/multilingual-e5-small",
+    "size": 300,
+    "overlap": 60,
+    "chunks": 9920,
+    "truncated": 0.0,
+    "seconds": 660.6368061006069,
+    "metrics": {
+      "success@1": 0.38461538461538464,
+      "success@5": 0.38461538461538464,
+      "doc@5": 0.46153846153846156,
+      "mrr@10": 0.3901098901098901,
+      "score_real_mean": 0.8747654144580548,
+      "score_real_min": 0.816402792930603,
+      "score_trap_max": 0.8423154354095459,
+      "questions": [
+        {
+          "id": "F01",
+          "rank": null,
+          "top1_score": 0.884,
+          "top1": "docx01_0032",
+          "doc5": false
+        },
+        {
+          "id": "F02",
+          "rank": 1,
+          "top1_score": 0.914,
+          "top1": "html01_0152",
+          "doc5": true
+        },
+        {
+          "id": "F03",
+          "rank": null,
+          "top1_score": 0.861,
+          "top1": "docx01_0055",
+          "doc5": false
+        },
+        {
+          "id": "F04",
+          "rank": null,
+          "top1_score": 0.838,
+          "top1": "html01_0104",
+          "doc5": false
+        },
+        {
+          "id": "F05",
+          "rank": null,
+          "top1_score": 0.846,
+          "top1": "docx01_0042",
+          "doc5": false
+        },
+        {
+          "id": "F06",
+          "rank": null,
+          "top1_score": 0.816,
+          "top1": "docx02_0020",
+          "doc5": false
+        },
+        {
+          "id": "F07",
+          "rank": null,
+          "top1_score": 0.858,
+          "top1": "pdf09_0228",
+          "doc5": false
+        },
+        {
+          "id": "F08",
+          "rank": null,
+          "top1_score": 0.865,
+          "top1": "docx02_0000",
+          "doc5": false
+        },
+        {
+          "id": "F09",
+          "rank": null,
+          "top1_score": 0.834,
+          "top1": "html05_0080",
+          "doc5": false
+        },
+        {
+          "id": "F10",
+          "rank": null,
+          "top1_score": 0.859,
+          "top1": "html01_0018",
+          "doc5": false
+        },
+        {
+          "id": "F11",
+          "rank": 1,
+          "top1_score": 0.88,
+          "top1": "html01_0016",
+          "doc5": true
+        },
+        {
+          "id": "F12",
+          "rank": null,
+          "top1_score": 0.881,
+          "top1": "pdf10_0205",
+          "doc5": false
+        },
+        {
+          "id": "F13",
+          "rank": 1,
+          "top1_score": 0.905,
+          "top1": "html01_0051",
+          "doc5": true
+        },
+        {
+          "id": "F14",
+          "rank": 1,
+          "top1_score": 0.88,
+          "top1": "html01_0102",
+          "doc5": true
+        },
+        {
+          "id": "F15",
+          "rank": 1,
+          "top1_score": 0.883,
+          "top1": "html01_0140",
+          "doc5": true
+        },
+        {
+          "id": "F16",
+          "rank": null,
+          "top1_score": 0.869,
+          "top1": "html01_0079",
+          "doc5": true
+        },
+        {
+          "id": "F17",
+          "rank": 1,
+          "top1_score": 0.852,
+          "top1": "html09_0000",
+          "doc5": true
+        },
+        {
+          "id": "F18",
+          "rank": null,
+          "top1_score": 0.917,
+          "top1": "docx07_0009",
+          "doc5": false
+        },
+        {
+          "id": "F19",
+          "rank": null,
+          "top1_score": 0.893,
+          "top1": "docx07_0008",
+          "doc5": false
+        },
+        {
+          "id": "F20",
+          "rank": null,
+          "top1_score": 0.848,
+          "top1": "html05_0103",
+          "doc5": false
+        },
+        {
+          "id": "F21",
+          "rank": 1,
+          "top1_score": 0.92,
+          "top1": "html01_0298",
+          "doc5": true
+        },
+        {
+          "id": "F22",
+          "rank": 1,
+          "top1_score": 0.902,
+          "top1": "html01_0276",
+          "doc5": true
+        },
+        {
+          "id": "C01",
+          "rank": 7,
+          "top1_score": 0.891,
+          "top1": "html09_0019",
+          "doc5": true
+        },
+        {
+          "id": "C02",
+          "rank": 1,
+          "top1_score": 0.895,
+          "top1": "html01_0326",
+          "doc5": true
+        },
+        {
+          "id": "C03",
+          "rank": null,
+          "top1_score": 0.869,
+          "top1": "pdf09_0438",
+          "doc5": false
+        },
+        {
+          "id": "C04",
+          "rank": 1,
+          "top1_score": 0.882,
+          "top1": "docx08_0000",
+          "doc5": true
+        },
+        {
+          "id": "P01",
+          "top1_score": 0.832,
+          "top1": "docx01_0161"
+        },
+        {
+          "id": "P02",
+          "top1_score": 0.792,
+          "top1": "docx01_0090"
+        },
+        {
+          "id": "P03",
+          "top1_score": 0.842,
+          "top1": "html01_0091"
+        }
+      ]
+    },
+    "header": false,
+    "max_seq_length": null
+  },
+  {
+    "model_key": "e5-small",
+    "model": "intfloat/multilingual-e5-small",
+    "size": 500,
+    "overlap": 100,
+    "chunks": 5751,
+    "truncated": 0.0,
+    "seconds": 455.3994754999876,
+    "metrics": {
+      "success@1": 0.34615384615384615,
+      "success@5": 0.46153846153846156,
+      "doc@5": 0.5384615384615384,
+      "mrr@10": 0.39780219780219783,
+      "score_real_mean": 0.8757397807561434,
+      "score_real_min": 0.8173266649246216,
+      "score_trap_max": 0.8379429578781128,
+      "questions": [
+        {
+          "id": "F01",
+          "rank": null,
+          "top1_score": 0.873,
+          "top1": "docx01_0019",
+          "doc5": false
+        },
+        {
+          "id": "F02",
+          "rank": 3,
+          "top1_score": 0.912,
+          "top1": "pdf03_0092",
+          "doc5": true
+        },
+        {
+          "id": "F03",
+          "rank": null,
+          "top1_score": 0.885,
+          "top1": "html01_0056",
+          "doc5": false
+        },
+        {
+          "id": "F04",
+          "rank": null,
+          "top1_score": 0.856,
+          "top1": "html01_0056",
+          "doc5": false
+        },
+        {
+          "id": "F05",
+          "rank": 1,
+          "top1_score": 0.855,
+          "top1": "pdf02_0009",
+          "doc5": true
+        },
+        {
+          "id": "F06",
+          "rank": null,
+          "top1_score": 0.817,
+          "top1": "html01_0137",
+          "doc5": false
+        },
+        {
+          "id": "F07",
+          "rank": null,
+          "top1_score": 0.864,
+          "top1": "pdf09_0319",
+          "doc5": false
+        },
+        {
+          "id": "F08",
+          "rank": null,
+          "top1_score": 0.861,
+          "top1": "docx02_0000",
+          "doc5": false
+        },
+        {
+          "id": "F09",
+          "rank": null,
+          "top1_score": 0.819,
+          "top1": "docx05_0004",
+          "doc5": false
+        },
+        {
+          "id": "F10",
+          "rank": null,
+          "top1_score": 0.857,
+          "top1": "html01_0010",
+          "doc5": false
+        },
+        {
+          "id": "F11",
+          "rank": 1,
+          "top1_score": 0.896,
+          "top1": "html01_0009",
+          "doc5": true
+        },
+        {
+          "id": "F12",
+          "rank": null,
+          "top1_score": 0.873,
+          "top1": "pdf10_0123",
+          "doc5": false
+        },
+        {
+          "id": "F13",
+          "rank": 1,
+          "top1_score": 0.898,
+          "top1": "html01_0030",
+          "doc5": true
+        },
+        {
+          "id": "F14",
+          "rank": 2,
+          "top1_score": 0.868,
+          "top1": "pdf03_0063",
+          "doc5": true
+        },
+        {
+          "id": "F15",
+          "rank": 1,
+          "top1_score": 0.902,
+          "top1": "html01_0087",
+          "doc5": true
+        },
+        {
+          "id": "F16",
+          "rank": 5,
+          "top1_score": 0.881,
+          "top1": "html05_0039",
+          "doc5": true
+        },
+        {
+          "id": "F17",
+          "rank": 1,
+          "top1_score": 0.852,
+          "top1": "html09_0000",
+          "doc5": true
+        },
+        {
+          "id": "F18",
+          "rank": null,
+          "top1_score": 0.902,
+          "top1": "docx07_0007",
+          "doc5": false
+        },
+        {
+          "id": "F19",
+          "rank": null,
+          "top1_score": 0.879,
+          "top1": "docx07_0006",
+          "doc5": false
+        },
+        {
+          "id": "F20",
+          "rank": null,
+          "top1_score": 0.847,
+          "top1": "txt11_0043",
+          "doc5": false
+        },
+        {
+          "id": "F21",
+          "rank": 1,
+          "top1_score": 0.933,
+          "top1": "html01_0191",
+          "doc5": true
+        },
+        {
+          "id": "F22",
+          "rank": 1,
+          "top1_score": 0.908,
+          "top1": "html01_0176",
+          "doc5": true
+        },
+        {
+          "id": "C01",
+          "rank": 6,
+          "top1_score": 0.892,
+          "top1": "html09_0002",
+          "doc5": true
+        },
+        {
+          "id": "C02",
+          "rank": 1,
+          "top1_score": 0.89,
+          "top1": "html01_0210",
+          "doc5": true
+        },
+        {
+          "id": "C03",
+          "rank": 7,
+          "top1_score": 0.863,
+          "top1": "html05_0056",
+          "doc5": true
+        },
+        {
+          "id": "C04",
+          "rank": 1,
+          "top1_score": 0.883,
+          "top1": "docx08_0000",
+          "doc5": true
+        },
+        {
+          "id": "P01",
+          "top1_score": 0.837,
+          "top1": "docx01_0100"
+        },
+        {
+          "id": "P02",
+          "top1_score": 0.792,
+          "top1": "docx01_0055"
+        },
+        {
+          "id": "P03",
+          "top1_score": 0.838,
+          "top1": "docx05_0004"
+        }
+      ]
+    },
+    "header": false,
+    "max_seq_length": null
+  },
+  {
+    "model_key": "e5-small",
+    "model": "intfloat/multilingual-e5-small",
+    "size": 800,
+    "overlap": 160,
+    "header": false,
+    "max_seq_length": null,
+    "chunks": 3266,
+    "truncated": 0.0,
+    "seconds": 785.8308071997017,
+    "metrics": {
+      "success@1": 0.38461538461538464,
+      "success@5": 0.5,
+      "answer@5": 0.6923076923076923,
+      "doc@5": 0.5384615384615384,
+      "mrr@10": 0.4176282051282051,
+      "score_real_mean": 0.8715559129531567,
+      "score_real_min": 0.8226140737533569,
+      "score_trap_max": 0.8403772711753845,
+      "questions": [
+        {
+          "id": "F01",
+          "rank": null,
+          "top1_score": 0.851,
+          "top1": "docx01_0010",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F02",
+          "rank": 1,
+          "top1_score": 0.9,
+          "top1": "html01_0054",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F03",
+          "rank": null,
+          "top1_score": 0.884,
+          "top1": "html01_0033",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F04",
+          "rank": null,
+          "top1_score": 0.847,
+          "top1": "html01_0033",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F05",
+          "rank": 5,
+          "top1_score": 0.858,
+          "top1": "html01_0045",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F06",
+          "rank": null,
+          "top1_score": 0.826,
+          "top1": "html01_0045",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F07",
+          "rank": null,
+          "top1_score": 0.856,
+          "top1": "pdf09_0193",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F08",
+          "rank": null,
+          "top1_score": 0.864,
+          "top1": "docx02_0000",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F09",
+          "rank": null,
+          "top1_score": 0.823,
+          "top1": "docx05_0002",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F10",
+          "rank": null,
+          "top1_score": 0.857,
+          "top1": "html01_0008",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F11",
+          "rank": 1,
+          "top1_score": 0.9,
+          "top1": "html01_0005",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F12",
+          "rank": null,
+          "top1_score": 0.859,
+          "top1": "html05_0018",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F13",
+          "rank": 1,
+          "top1_score": 0.896,
+          "top1": "html01_0018",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F14",
+          "rank": 1,
+          "top1_score": 0.865,
+          "top1": "html01_0035",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F15",
+          "rank": 1,
+          "top1_score": 0.877,
+          "top1": "html01_0049",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F16",
+          "rank": 3,
+          "top1_score": 0.881,
+          "top1": "html05_0022",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F17",
+          "rank": 1,
+          "top1_score": 0.856,
+          "top1": "html09_0000",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F18",
+          "rank": null,
+          "top1_score": 0.887,
+          "top1": "docx07_0003",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F19",
+          "rank": null,
+          "top1_score": 0.89,
+          "top1": "docx07_0003",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F20",
+          "rank": null,
+          "top1_score": 0.848,
+          "top1": "html05_0032",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F21",
+          "rank": 1,
+          "top1_score": 0.924,
+          "top1": "html01_0109",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F22",
+          "rank": 1,
+          "top1_score": 0.905,
+          "top1": "html01_0099",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C01",
+          "rank": 8,
+          "top1_score": 0.892,
+          "top1": "html05_0026",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C02",
+          "rank": 1,
+          "top1_score": 0.876,
+          "top1": "html01_0120",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C03",
+          "rank": 5,
+          "top1_score": 0.862,
+          "top1": "html05_0032",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C04",
+          "rank": 1,
+          "top1_score": 0.878,
+          "top1": "docx08_0000",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "P01",
+          "top1_score": 0.827,
+          "top1": "html11_0035"
+        },
+        {
+          "id": "P02",
+          "top1_score": 0.791,
+          "top1": "html05_0032"
+        },
+        {
+          "id": "P03",
+          "top1_score": 0.84,
+          "top1": "html01_0017"
+        }
+      ]
+    }
+  },
+  {
+    "model_key": "e5-small",
+    "model": "intfloat/multilingual-e5-small",
+    "size": 1200,
+    "overlap": 240,
+    "chunks": 2059,
+    "truncated": 0.003399708596406022,
+    "seconds": 329.28865619935095,
+    "metrics": {
+      "success@1": 0.38461538461538464,
+      "success@5": 0.46153846153846156,
+      "doc@5": 0.46153846153846156,
+      "mrr@10": 0.4166666666666667,
+      "score_real_mean": 0.8643906299884503,
+      "score_real_min": 0.811070442199707,
+      "score_trap_max": 0.8426834344863892,
+      "questions": [
+        {
+          "id": "F01",
+          "rank": null,
+          "top1_score": 0.856,
+          "top1": "html01_0044",
+          "doc5": false
+        },
+        {
+          "id": "F02",
+          "rank": 2,
+          "top1_score": 0.881,
+          "top1": "docx02_0000",
+          "doc5": true
+        },
+        {
+          "id": "F03",
+          "rank": null,
+          "top1_score": 0.869,
+          "top1": "html01_0019",
+          "doc5": false
+        },
+        {
+          "id": "F04",
+          "rank": null,
+          "top1_score": 0.848,
+          "top1": "html01_0019",
+          "doc5": false
+        },
+        {
+          "id": "F05",
+          "rank": null,
+          "top1_score": 0.85,
+          "top1": "docx01_0005",
+          "doc5": false
+        },
+        {
+          "id": "F06",
+          "rank": null,
+          "top1_score": 0.811,
+          "top1": "html01_0026",
+          "doc5": false
+        },
+        {
+          "id": "F07",
+          "rank": null,
+          "top1_score": 0.846,
+          "top1": "pdf09_0053",
+          "doc5": false
+        },
+        {
+          "id": "F08",
+          "rank": null,
+          "top1_score": 0.855,
+          "top1": "docx02_0000",
+          "doc5": false
+        },
+        {
+          "id": "F09",
+          "rank": null,
+          "top1_score": 0.824,
+          "top1": "docx05_0001",
+          "doc5": false
+        },
+        {
+          "id": "F10",
+          "rank": null,
+          "top1_score": 0.857,
+          "top1": "docx01_0003",
+          "doc5": false
+        },
+        {
+          "id": "F11",
+          "rank": 1,
+          "top1_score": 0.889,
+          "top1": "html01_0003",
+          "doc5": true
+        },
+        {
+          "id": "F12",
+          "rank": null,
+          "top1_score": 0.85,
+          "top1": "docx02_0009",
+          "doc5": false
+        },
+        {
+          "id": "F13",
+          "rank": 1,
+          "top1_score": 0.882,
+          "top1": "html01_0010",
+          "doc5": true
+        },
+        {
+          "id": "F14",
+          "rank": 1,
+          "top1_score": 0.86,
+          "top1": "html01_0020",
+          "doc5": true
+        },
+        {
+          "id": "F15",
+          "rank": 1,
+          "top1_score": 0.879,
+          "top1": "html01_0029",
+          "doc5": true
+        },
+        {
+          "id": "F16",
+          "rank": 3,
+          "top1_score": 0.875,
+          "top1": "html05_0014",
+          "doc5": true
+        },
+        {
+          "id": "F17",
+          "rank": 1,
+          "top1_score": 0.84,
+          "top1": "html09_0000",
+          "doc5": true
+        },
+        {
+          "id": "F18",
+          "rank": null,
+          "top1_score": 0.89,
+          "top1": "docx07_0002",
+          "doc5": false
+        },
+        {
+          "id": "F19",
+          "rank": null,
+          "top1_score": 0.886,
+          "top1": "docx07_0002",
+          "doc5": false
+        },
+        {
+          "id": "F20",
+          "rank": null,
+          "top1_score": 0.84,
+          "top1": "html01_0044",
+          "doc5": false
+        },
+        {
+          "id": "F21",
+          "rank": 1,
+          "top1_score": 0.927,
+          "top1": "html01_0064",
+          "doc5": true
+        },
+        {
+          "id": "F22",
+          "rank": 1,
+          "top1_score": 0.891,
+          "top1": "html01_0059",
+          "doc5": true
+        },
+        {
+          "id": "C01",
+          "rank": 1,
+          "top1_score": 0.88,
+          "top1": "html07_0012",
+          "doc5": true
+        },
+        {
+          "id": "C02",
+          "rank": 1,
+          "top1_score": 0.865,
+          "top1": "html01_0069",
+          "doc5": true
+        },
+        {
+          "id": "C03",
+          "rank": null,
+          "top1_score": 0.852,
+          "top1": "pdf09_0109",
+          "doc5": false
+        },
+        {
+          "id": "C04",
+          "rank": 1,
+          "top1_score": 0.871,
+          "top1": "docx08_0000",
+          "doc5": true
+        },
+        {
+          "id": "P01",
+          "top1_score": 0.824,
+          "top1": "html12_0009"
+        },
+        {
+          "id": "P02",
+          "top1_score": 0.786,
+          "top1": "docx01_0016"
+        },
+        {
+          "id": "P03",
+          "top1_score": 0.843,
+          "top1": "docx02_0004"
+        }
+      ]
+    },
+    "header": false,
+    "max_seq_length": null
+  },
+  {
+    "model_key": "e5-small",
+    "model": "intfloat/multilingual-e5-small",
+    "size": 800,
+    "overlap": 160,
+    "header": true,
+    "max_seq_length": null,
+    "chunks": 3266,
+    "truncated": 0.0,
+    "seconds": 836.8308256007731,
+    "metrics": {
+      "success@1": 0.34615384615384615,
+      "success@5": 0.5,
+      "answer@5": 0.8076923076923077,
+      "doc@5": 0.7307692307692307,
+      "mrr@10": 0.43722527472527467,
+      "score_real_mean": 0.8666825936390803,
+      "score_real_min": 0.8100699186325073,
+      "score_trap_max": 0.8397926092147827,
+      "questions": [
+        {
+          "id": "F01",
+          "rank": null,
+          "top1_score": 0.86,
+          "top1": "html01_0078",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F02",
+          "rank": 2,
+          "top1_score": 0.887,
+          "top1": "docx02_0000",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F03",
+          "rank": null,
+          "top1_score": 0.878,
+          "top1": "html01_0033",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F04",
+          "rank": null,
+          "top1_score": 0.848,
+          "top1": "html01_0033",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F05",
+          "rank": 2,
+          "top1_score": 0.865,
+          "top1": "html01_0045",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F06",
+          "rank": 2,
+          "top1_score": 0.822,
+          "top1": "html01_0045",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F07",
+          "rank": null,
+          "top1_score": 0.834,
+          "top1": "pdf09_0216",
+          "answer5": false,
+          "doc5": true
+        },
+        {
+          "id": "F08",
+          "rank": null,
+          "top1_score": 0.864,
+          "top1": "docx02_0000",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F09",
+          "rank": null,
+          "top1_score": 0.81,
+          "top1": "docx05_0002",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F10",
+          "rank": null,
+          "top1_score": 0.854,
+          "top1": "docx01_0005",
+          "answer5": false,
+          "doc5": true
+        },
+        {
+          "id": "F11",
+          "rank": 1,
+          "top1_score": 0.884,
+          "top1": "html01_0006",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F12",
+          "rank": null,
+          "top1_score": 0.852,
+          "top1": "html05_0018",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F13",
+          "rank": 1,
+          "top1_score": 0.901,
+          "top1": "html01_0018",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F14",
+          "rank": 1,
+          "top1_score": 0.86,
+          "top1": "html01_0035",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F15",
+          "rank": 1,
+          "top1_score": 0.872,
+          "top1": "html01_0049",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F16",
+          "rank": 2,
+          "top1_score": 0.873,
+          "top1": "html05_0022",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F17",
+          "rank": 1,
+          "top1_score": 0.865,
+          "top1": "html09_0000",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F18",
+          "rank": 7,
+          "top1_score": 0.882,
+          "top1": "docx07_0003",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F19",
+          "rank": null,
+          "top1_score": 0.895,
+          "top1": "docx07_0003",
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F20",
+          "rank": null,
+          "top1_score": 0.837,
+          "top1": "txt10_0012",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F21",
+          "rank": 1,
+          "top1_score": 0.916,
+          "top1": "html01_0109",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F22",
+          "rank": 1,
+          "top1_score": 0.879,
+          "top1": "html01_0099",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C01",
+          "rank": 10,
+          "top1_score": 0.891,
+          "top1": "html09_0001",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C02",
+          "rank": 1,
+          "top1_score": 0.88,
+          "top1": "html01_0120",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C03",
+          "rank": 8,
+          "top1_score": 0.845,
+          "top1": "html06_0000",
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "C04",
+          "rank": 1,
+          "top1_score": 0.878,
+          "top1": "docx08_0000",
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "P01",
+          "top1_score": 0.821,
+          "top1": "html11_0035"
+        },
+        {
+          "id": "P02",
+          "top1_score": 0.784,
+          "top1": "docx01_0030"
+        },
+        {
+          "id": "P03",
+          "top1_score": 0.84,
+          "top1": "html05_0027"
+        }
+      ]
+    }
+  }
+]

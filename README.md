@@ -65,15 +65,28 @@ webcognitive/
 ├── data/
 │   ├── sources.json            # liste des sources (URL, format, métadonnées)
 │   ├── corpus_metadata.json    # inventaire généré (taille, sha256, date)
+│   ├── validation_questions.json # questions de validation, version machine (étape 3)
 │   ├── raw/                    # documents bruts, jamais modifiés à la main
 │   │   ├── pdf/  html/  docx/  txt/
-│   └── processed/              # sorties du pipeline (étape 2)
+│   ├── processed/              # un JSON propre par document (étape 2)
+│   └── embeddings/             # segments, vecteurs et évaluation (étape 3)
 ├── docs/
 │   ├── questions_validation.md # questions dont la réponse est dans le corpus
-│   └── journal_audit.md        # notes de l'exploration manuelle
+│   ├── journal_audit.md        # notes de l'exploration manuelle
+│   ├── etape2_parsing.md       # choix et résultats du parsing
+│   ├── etape3_chunking_embeddings.md  # choix et résultats du chunking / des embeddings
+│   └── etape3_resultats.md     # tableau généré par l'évaluation
 ├── scripts/
-│   └── download_corpus.py      # constitution reproductible du corpus
-├── src/                        # code de l'application (étapes 2 et suivantes)
+│   ├── download_corpus.py      # étape 1 : constitution reproductible du corpus
+│   ├── parse_corpus.py         # étape 2 : extraction et nettoyage
+│   ├── build_embeddings.py     # étape 3 : chunking et vectorisation
+│   ├── evaluate_chunking.py    # étape 3 : comparaison tailles de segments / modèles
+│   └── search.py               # étape 3 : recherche sémantique de démonstration
+├── src/webcognitive/
+│   ├── config.py               # chemins et paramètres retenus
+│   ├── parsing/                # un parseur par format + nettoyage regex
+│   ├── chunking.py             # découpage avec chevauchement
+│   └── embeddings.py           # vectorisation locale (sentence-transformers)
 ├── requirements.txt
 └── README.md
 ```
@@ -89,6 +102,15 @@ python scripts/download_corpus.py      # récupère les 41 documents
 ```
 
 Le script n'écrase pas ce qui est déjà présent. Il signale les éventuels échecs, par exemple un site avec une protection anti-robots, et indique où déposer le fichier récupéré à la main. Relance-le ensuite : il complète l'inventaire.
+
+```bash
+python scripts/parse_corpus.py         # étape 2 : data/processed/<id>.json
+python scripts/build_embeddings.py     # étape 3 : data/embeddings/ (télécharge le modèle au 1er lancement)
+python scripts/search.py "Qui a inventé le DNS ?"
+python scripts/evaluate_chunking.py    # étape 3 : comparaison des réglages (~15 min sur CPU)
+```
+
+**OCR (facultatif).** Le PDF de Baran (`pdf04`) est un scan sans texte. Pour le lire, installe [Tesseract](https://github.com/UB-Mannheim/tesseract/wiki) puis `pip install pytesseract`, et relance `parse_corpus.py --only pdf04`.
 
 ## 4. Sources et licences
 Les documents restent la propriété de leurs auteurs et éditeurs. Les notes DOCX sont dérivées de Wikipédia (licence CC BY-SA 4.0, source indiquée en tête de chaque fichier). Le corpus est utilisé à des fins strictement pédagogiques.
