@@ -18,3 +18,13 @@ EMBEDDING_HEADER = False         # « titre (auteur, année) » avant chaque seg
 EMBEDDING_MAX_SEQ_LENGTH = None  # tokens lus par le modèle (None : 128, sa valeur d'entraînement ; 256 testé, moins bon)
 QUERY_PREFIX = ""                # préfixes exigés par certains modèles (e5 : « query: » / « passage: »)
 PASSAGE_PREFIX = ""
+
+# Étape 4 : base vectorielle (ChromaDB) et API REST (FastAPI)
+VECTORDB_DIR = DATA_DIR / "vectordb"  # base ChromaDB enregistrée sur disque (régénérable, ignorée par Git)
+COLLECTION_NAME = "corpus"
+SEARCH_K = 5             # nombre de segments renvoyés par défaut
+SEARCH_K_MAX = 50
+HYBRID_CANDIDATES = 50   # recherche hybride : candidats pris de chaque côté avant la fusion
+RRF_K = 60               # constante de la fusion par rangs (Reciprocal Rank Fusion), valeur usuelle
+API_HOST = "127.0.0.1"
+API_PORT = 8000

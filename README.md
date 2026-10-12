@@ -69,24 +69,36 @@ webcognitive/
 │   ├── raw/                    # documents bruts, jamais modifiés à la main
 │   │   ├── pdf/  html/  docx/  txt/
 │   ├── processed/              # un JSON propre par document (étape 2)
-│   └── embeddings/             # segments, vecteurs et évaluation (étape 3)
+│   ├── embeddings/             # segments, vecteurs et évaluation (étape 3)
+│   └── vectordb/               # base ChromaDB, régénérable, ignorée par Git (étape 4)
 ├── docs/
 │   ├── questions_validation.md # questions dont la réponse est dans le corpus
 │   ├── journal_audit.md        # notes de l'exploration manuelle
 │   ├── etape2_parsing.md       # choix et résultats du parsing
 │   ├── etape3_chunking_embeddings.md  # choix et résultats du chunking / des embeddings
-│   └── etape3_resultats.md     # tableau généré par l'évaluation
+│   ├── etape3_resultats.md     # tableau généré par l'évaluation
+│   ├── etape4_api.md           # base vectorielle, recherche et API REST
+│   └── etape4_resultats.md     # évaluation de la recherche servie par l'API
 ├── scripts/
 │   ├── download_corpus.py      # étape 1 : constitution reproductible du corpus
 │   ├── parse_corpus.py         # étape 2 : extraction et nettoyage
 │   ├── build_embeddings.py     # étape 3 : chunking et vectorisation
 │   ├── evaluate_chunking.py    # étape 3 : comparaison tailles de segments / modèles
-│   └── search.py               # étape 3 : recherche sémantique de démonstration
+│   ├── search.py               # étape 3 : recherche sémantique de démonstration
+│   ├── build_vectordb.py       # étape 4 : chargement dans ChromaDB
+│   ├── serve_api.py            # étape 4 : lancement de l'API
+│   └── evaluate_search.py      # étape 4 : évaluation des modes de recherche
 ├── src/webcognitive/
 │   ├── config.py               # chemins et paramètres retenus
 │   ├── parsing/                # un parseur par format + nettoyage regex
 │   ├── chunking.py             # découpage avec chevauchement
-│   └── embeddings.py           # vectorisation locale (sentence-transformers)
+│   ├── embeddings.py           # vectorisation locale (sentence-transformers)
+│   ├── indexing.py             # chaîne d'indexation (scripts et API)
+│   ├── vectordb.py             # base vectorielle ChromaDB
+│   ├── lexical.py              # recherche par mots-clés (BM25)
+│   ├── search_engine.py        # recherche sémantique, mots-clés ou hybride
+│   └── api.py                  # API REST (FastAPI)
+├── tests/test_api.py           # tests automatiques de l'étape 4
 ├── requirements.txt
 └── README.md
 ```
@@ -108,7 +120,14 @@ python scripts/parse_corpus.py         # étape 2 : data/processed/<id>.json
 python scripts/build_embeddings.py     # étape 3 : data/embeddings/ (télécharge le modèle au 1er lancement)
 python scripts/search.py "Qui a inventé le DNS ?"
 python scripts/evaluate_chunking.py    # étape 3 : comparaison des réglages (~15 min sur CPU)
+
+python scripts/build_vectordb.py       # étape 4 : charge les vecteurs dans ChromaDB (data/vectordb/)
+python scripts/serve_api.py            # étape 4 : API sur http://127.0.0.1:8000 (documentation : /docs)
+python scripts/evaluate_search.py      # étape 4 : compare recherche sémantique, BM25 et hybride
+python -m pytest tests -q              # tests automatiques
 ```
+
+Exemple : http://127.0.0.1:8000/search?q=Qui%20a%20invent%C3%A9%20le%20DNS%20%3F&k=3
 
 **OCR (facultatif).** Le PDF de Baran (`pdf04`) est un scan sans texte. Pour le lire, installe [Tesseract](https://github.com/UB-Mannheim/tesseract/wiki) puis `pip install pytesseract`, et relance `parse_corpus.py --only pdf04`.
 

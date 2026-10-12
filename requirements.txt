@@ -12,3 +12,12 @@ lxml>=5.0
 # Étape 3 : chunking et embeddings
 numpy>=1.26
 sentence-transformers>=3.0
+
+# Étape 4 : base vectorielle et API
+chromadb>=1.0
+fastapi>=0.115
+uvicorn[standard]>=0.30
+rank-bm25>=0.2.2
+# Tests automatiques :
+pytest>=8.0
+httpx>=0.27

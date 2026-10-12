@@ -1,0 +1,555 @@
+{
+  "results": [
+    {
+      "mode": "lexical",
+      "success@1": 0.3076923076923077,
+      "success@5": 0.46153846153846156,
+      "answer@5": 0.6923076923076923,
+      "doc@5": 0.6538461538461539,
+      "mrr@10": 0.3760683760683761,
+      "ms_per_query": 47.17622596551556,
+      "questions": [
+        {
+          "id": "F01",
+          "top1": "txt08_0305",
+          "top10": [
+            "txt08_0305",
+            "txt08_0207",
+            "txt08_0068",
+            "txt08_0304",
+            "pdf10_0122",
+            "txt06_0199",
+            "txt08_0070",
+            "txt08_0299",
+            "txt08_0067",
+            "txt08_0069"
+          ],
+          "rank": null,
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F02",
+          "top1": "html01_0096",
+          "top10": [
+            "html01_0096",
+            "pdf03_0092",
+            "html01_0099",
+            "html01_0095",
+            "docx01_0037",
+            "html08_0006",
+            "html01_0097",
+            "txt06_0373",
+            "html01_0100",
+            "docx01_0051"
+          ],
+          "rank": 3,
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F03",
+          "top1": "html01_0213",
+          "top10": [
+            "html01_0213",
+            "html08_0000",
+            "html01_0056",
+            "html05_0046",
+            "html01_0057",
+            "html01_0055",
+            "html01_0063",
+            "html08_0002",
+            "html01_0062",
+            "html01_0208"
+          ],
+          "rank": null,
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F04",
+          "top1": "docx06_0009",
+          "top10": [
+            "docx06_0009",
+            "html08_0000",
+            "html01_0057",
+            "html08_0002",
+            "html01_0055",
+            "pdf03_0073",
+            "docx06_0000",
+            "docx06_0008",
+            "txt09_0010",
+            "txt09_0011"
+          ],
+          "rank": null,
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F05",
+          "top1": "html01_0034",
+          "top10": [
+            "html01_0034",
+            "html01_0035",
+            "html01_0156",
+            "pdf02_0000",
+            "pdf03_0117",
+            "html01_0122",
+            "pdf03_0118",
+            "docx01_0109",
+            "html05_0056",
+            "pdf09_0156"
+          ],
+          "rank": null,
+          "answer5": false,
+          "doc5": true
+        },
+        {
+          "id": "F06",
+          "top1": "pdf09_0227",
+          "top10": [
+            "pdf09_0227",
+            "pdf09_0263",
+            "html01_0022",
+            "docx04_0023",
+            "html01_0156",
+            "pdf09_0359",
+            "html01_0078",
+            "html01_0077",
+            "html01_0010",
+            "docx01_0074"
+          ],
+          "rank": null,
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F07",
+          "top1": "pdf06_0007",
+          "top10": [
+            "pdf06_0007",
+            "pdf06_0000",
+            "pdf06_0006",
+            "txt05_0075",
+            "pdf03_0077",
+            "pdf06_0123",
+            "pdf06_0010",
+            "html01_0077",
+            "html01_0017",
+            "pdf06_0122"
+          ],
+          "rank": null,
+          "answer5": false,
+          "doc5": true
+        },
+        {
+          "id": "F08",
+          "top1": "html01_0058",
+          "top10": [
+            "html01_0058",
+            "html01_0059",
+            "html09_0002",
+            "docx05_0009",
+            "docx03_0136",
+            "docx05_0010",
+            "html07_0025",
+            "html01_0018",
+            "docx04_0027",
+            "pdf09_0370"
+          ],
+          "rank": null,
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F09",
+          "top1": "pdf07_0159",
+          "top10": [
+            "pdf07_0159",
+            "pdf07_0162",
+            "pdf07_0161",
+            "pdf07_0160",
+            "html05_0041",
+            "pdf07_0163",
+            "pdf07_0034",
+            "docx01_0014",
+            "docx01_0013",
+            "docx05_0004"
+          ],
+          "rank": null,
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F10",
+          "top1": "pdf05_0000",
+          "top10": [
+            "pdf05_0000",
+            "pdf10_0112",
+            "pdf10_0011",
+            "docx02_0012",
+            "docx01_0006",
+            "pdf09_0038",
+            "docx02_0011",
+            "html10_0042",
+            "pdf05_0141",
+            "docx02_0013"
+          ],
+          "rank": null,
+          "answer5": false,
+          "doc5": true
+        },
+        {
+          "id": "F11",
+          "top1": "html01_0009",
+          "top10": [
+            "html01_0009",
+            "html01_0010",
+            "pdf03_0015",
+            "docx01_0010",
+            "html01_0016",
+            "pdf10_0005",
+            "html01_0017",
+            "docx01_0123",
+            "docx01_0006",
+            "docx03_0092"
+          ],
+          "rank": 1,
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F12",
+          "top1": "docx02_0029",
+          "top10": [
+            "docx02_0029",
+            "docx02_0030",
+            "html01_0022",
+            "docx03_0118",
+            "pdf09_0145",
+            "txt06_0102",
+            "docx03_0052",
+            "html09_0010",
+            "pdf09_0144",
+            "docx03_0053"
+          ],
+          "rank": 3,
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F13",
+          "top1": "html01_0030",
+          "top10": [
+            "html01_0030",
+            "html11_0107",
+            "html11_0072",
+            "html01_0031",
+            "html11_0071",
+            "html01_0214",
+            "html01_0212",
+            "docx02_0032",
+            "docx01_0028",
+            "docx01_0082"
+          ],
+          "rank": 1,
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F14",
+          "top1": "html01_0061",
+          "top10": [
+            "html01_0061",
+            "txt04_0081",
+            "html07_0026",
+            "txt02_0098",
+            "txt02_0107",
+            "txt03_0060",
+            "txt04_0082",
+            "html07_0027",
+            "docx05_0012",
+            "pdf03_0063"
+          ],
+          "rank": 1,
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F15",
+          "top1": "html01_0087",
+          "top10": [
+            "html01_0087",
+            "html01_0086",
+            "txt07_0010",
+            "html07_0009",
+            "txt07_0031",
+            "txt07_0181",
+            "txt07_0063",
+            "txt07_0270",
+            "txt07_0032",
+            "html05_0045"
+          ],
+          "rank": 1,
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F16",
+          "top1": "html05_0039",
+          "top10": [
+            "html05_0039",
+            "html05_0036",
+            "html05_0038",
+            "html05_0035",
+            "html10_0022",
+            "docx05_0000",
+            "html01_0021",
+            "docx05_0007",
+            "html01_0020",
+            "docx05_0008"
+          ],
+          "rank": 2,
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F17",
+          "top1": "html07_0016",
+          "top10": [
+            "html07_0016",
+            "html09_0000",
+            "html07_0017",
+            "docx01_0035",
+            "html01_0066",
+            "html05_0037",
+            "html01_0210",
+            "html01_0211",
+            "html05_0038",
+            "html01_0131"
+          ],
+          "rank": 2,
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F18",
+          "top1": "docx07_0007",
+          "top10": [
+            "docx07_0007",
+            "html11_0047",
+            "html03_0002",
+            "docx01_0092",
+            "html04_0000",
+            "docx07_0008",
+            "pdf09_0079",
+            "html11_0041",
+            "html06_0011",
+            "docx07_0004"
+          ],
+          "rank": null,
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F19",
+          "top1": "docx07_0006",
+          "top10": [
+            "docx07_0006",
+            "docx01_0092",
+            "html04_0000",
+            "docx07_0008",
+            "html11_0041",
+            "docx07_0024",
+            "pdf09_0083",
+            "pdf09_0079",
+            "html02_0000",
+            "html11_0042"
+          ],
+          "rank": 9,
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "F20",
+          "top1": "docx08_0006",
+          "top10": [
+            "docx08_0006",
+            "txt11_0043",
+            "txt11_0044",
+            "docx08_0005",
+            "docx02_0005",
+            "pdf09_0163",
+            "txt10_0000",
+            "docx03_0127",
+            "html06_0010",
+            "html01_0017"
+          ],
+          "rank": null,
+          "answer5": true,
+          "doc5": false
+        },
+        {
+          "id": "F21",
+          "top1": "html01_0191",
+          "top10": [
+            "html01_0191",
+            "html01_0192",
+            "pdf03_0177",
+            "pdf03_0178",
+            "html01_0116",
+            "pdf03_0110",
+            "pdf03_0111",
+            "pdf03_0117",
+            "html01_0018",
+            "pdf03_0119"
+          ],
+          "rank": 1,
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "F22",
+          "top1": "html01_0176",
+          "top10": [
+            "html01_0176",
+            "html01_0177",
+            "html01_0178",
+            "docx02_0029",
+            "html01_0217",
+            "pdf03_0164",
+            "html01_0022",
+            "docx01_0064",
+            "pdf09_0189",
+            "html12_0004"
+          ],
+          "rank": 1,
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C01",
+          "top1": "html07_0033",
+          "top10": [
+            "html07_0033",
+            "html09_0002",
+            "html07_0032",
+            "html11_0075",
+            "pdf09_0289",
+            "html09_0014",
+            "html07_0019",
+            "html07_0014",
+            "html05_0004",
+            "html07_0017"
+          ],
+          "rank": null,
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C02",
+          "top1": "html01_0210",
+          "top10": [
+            "html01_0210",
+            "html01_0211",
+            "docx02_0000",
+            "docx02_0019",
+            "html05_0042",
+            "html01_0039",
+            "html05_0047",
+            "pdf09_0227",
+            "html01_0034",
+            "docx07_0006"
+          ],
+          "rank": 1,
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "C03",
+          "top1": "html01_0036",
+          "top10": [
+            "html01_0036",
+            "html01_0037",
+            "html01_0035",
+            "html01_0044",
+            "html01_0050",
+            "html01_0041",
+            "html01_0154",
+            "html07_0040",
+            "html01_0051",
+            "html01_0043"
+          ],
+          "rank": null,
+          "answer5": false,
+          "doc5": false
+        },
+        {
+          "id": "C04",
+          "top1": "docx08_0000",
+          "top10": [
+            "docx08_0000",
+            "pdf03_0129",
+            "html01_0136",
+            "txt06_0277",
+            "docx01_0072",
+            "txt10_0016",
+            "txt11_0002",
+            "html01_0217",
+            "txt06_0276",
+            "docx01_0073"
+          ],
+          "rank": 1,
+          "answer5": true,
+          "doc5": true
+        },
+        {
+          "id": "P01",
+          "top1": "docx03_0074",
+          "top10": [
+            "docx03_0074",
+            "docx03_0075",
+            "pdf09_0077",
+            "docx03_0056",
+            "pdf09_0052",
+            "docx03_0134",
+            "html11_0063",
+            "html12_0003",
+            "docx03_0135",
+            "pdf09_0117"
+          ]
+        },
+        {
+          "id": "P02",
+          "top1": "pdf09_0146",
+          "top10": [
+            "pdf09_0146",
+            "docx01_0027",
+            "docx01_0026",
+            "pdf09_0147",
+            "pdf09_0354",
+            "pdf09_0072",
+            "pdf09_0346"
+          ]
+        },
+        {
+          "id": "P03",
+          "top1": "html05_0045",
+          "top10": [
+            "html05_0045",
+            "html06_0002",
+            "docx07_0001",
+            "docx07_0002",
+            "html11_0012",
+            "html01_0045",
+            "html10_0025",
+            "html07_0009",
+            "html01_0186",
+            "docx01_0044"
+          ]
+        }
+      ]
+    }
+  ],
+  "hnsw_exact_agreement": null
+}
