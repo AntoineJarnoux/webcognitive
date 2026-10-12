@@ -1,4 +1,5 @@
 """Chemins et paramètres partagés par tout le projet."""
+import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -20,7 +21,25 @@ QUERY_PREFIX = ""                # préfixes exigés par certains modèles (e5 :
 PASSAGE_PREFIX = ""
 
 # Étape 4 : base vectorielle (ChromaDB) et API REST (FastAPI)
-VECTORDB_DIR = DATA_DIR / "vectordb"  # base ChromaDB enregistrée sur disque (régénérable, ignorée par Git)
+
+
+def _vectordb_dir() -> Path:
+    """Dossier de la base ChromaDB (régénérable, ignoré par Git).
+
+    Sous Windows, ChromaDB n'arrive pas à relire son index HNSW si le chemin contient
+    des accents (ex. « D:\\école\\… »). Dans ce cas, la base est rangée dans
+    %LOCALAPPDATA%\\webcognitive\\vectordb. La variable d'environnement
+    WEBCOGNITIVE_VECTORDB_DIR permet de choisir un autre dossier.
+    """
+    if os.environ.get("WEBCOGNITIVE_VECTORDB_DIR"):
+        return Path(os.environ["WEBCOGNITIVE_VECTORDB_DIR"])
+    default = DATA_DIR / "vectordb"
+    if os.name == "nt" and not str(default).isascii():
+        return Path(os.environ.get("LOCALAPPDATA", Path.home())) / "webcognitive" / "vectordb"
+    return default
+
+
+VECTORDB_DIR = _vectordb_dir()  # base ChromaDB enregistrée sur disque
 COLLECTION_NAME = "corpus"
 SEARCH_K = 5             # nombre de segments renvoyés par défaut
 SEARCH_K_MAX = 50
