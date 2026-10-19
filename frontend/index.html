@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WebCognitive Engine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- En-tête inspiré de celui des RFC : nom à gauche, état du système à droite -->
+  <header class="rfc-head">
+    <div>
+      <h1>WebCognitive Engine</h1>
+      <p class="tagline">Assistant documentaire sur l'histoire d'Internet, 1960-2000</p>
+    </div>
+    <div class="status" id="status" aria-live="polite">
+      <span class="dot" id="status-dot"></span><span id="status-text">Connexion à l'API…</span>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" id="tab-chat" aria-selected="true" aria-controls="view-chat">Assistant</button>
+    <button role="tab" id="tab-search" aria-selected="false" aria-controls="view-search">Recherche dans le corpus</button>
+  </nav>
+
+  <!-- Vue 1 : le chat (étape 5 + 6) -->
+  <main id="view-chat" class="layout" role="tabpanel">
+    <section class="conversation" aria-label="Conversation">
+      <div id="messages" class="messages">
+        <div class="empty" id="empty">
+          <h2>Posez une question sur l'histoire d'Internet</h2>
+          <p>Les réponses sont rédigées par un modèle de langage qui tourne sur cet ordinateur, uniquement à partir des 41 documents du corpus. Chaque information renvoie à son extrait source.</p>
+          <div class="examples" id="examples">
+            <button>Qui a inventé le DNS ?</button>
+            <button>Quel lien existe-t-il entre Cyclades et TCP ?</button>
+            <button>Où et quand le premier IMP a-t-il été installé ?</button>
+            <button>Pourquoi dit-on qu'ARPANET devait résister à une guerre nucléaire ?</button>
+          </div>
+        </div>
+      </div>
+
+      <form id="ask-form" class="composer">
+        <label for="question" class="sr-only">Votre question</label>
+        <textarea id="question" rows="2" placeholder="Votre question…" required maxlength="1000"></textarea>
+        <button type="submit" id="send">Envoyer</button>
+        <div class="options">
+          <label>Recherche
+            <select id="opt-mode">
+              <option value="semantic">par le sens</option>
+              <option value="hybrid">sens + mots-clés</option>
+              <option value="lexical">mots-clés</option>
+            </select>
+          </label>
+          <label>Extraits
+            <select id="opt-k"><option>3</option><option selected>5</option><option>8</option></select>
+          </label>
+          <label>Langue des sources
+            <select id="opt-lang"><option value="">toutes</option><option value="fr">français</option><option value="en">anglais</option></select>
+          </label>
+        </div>
+      </form>
+    </section>
+
+    <aside class="sources" aria-label="Sources de la réponse">
+      <h2>Sources</h2>
+      <div id="sources" class="source-list">
+        <p class="hint">Les extraits utilisés pour répondre s'afficheront ici, avec leur fichier et leur page.</p>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Vue 2 : la recherche seule (étape 4) -->
+  <main id="view-search" class="search-view" role="tabpanel" hidden>
+    <form id="search-form" class="search-bar">
+      <label for="search-q" class="sr-only">Recherche</label>
+      <input id="search-q" type="search" placeholder="Rechercher un passage (ex. commutation de paquets)" required>
+      <select id="search-mode" aria-label="Mode de recherche">
+        <option value="semantic">par le sens</option>
+        <option value="hybrid">sens + mots-clés</option>
+        <option value="lexical">mots-clés</option>
+      </select>
+      <button type="submit">Rechercher</button>
+    </form>
+    <p class="search-meta" id="search-meta"></p>
+    <ol id="search-results" class="search-results"></ol>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

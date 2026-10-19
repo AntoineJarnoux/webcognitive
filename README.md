@@ -78,7 +78,9 @@ webcognitive/
 │   ├── etape3_chunking_embeddings.md  # choix et résultats du chunking / des embeddings
 │   ├── etape3_resultats.md     # tableau généré par l'évaluation
 │   ├── etape4_api.md           # base vectorielle, recherche et API REST
-│   └── etape4_resultats.md     # évaluation de la recherche servie par l'API
+│   ├── etape4_resultats.md     # évaluation de la recherche servie par l'API
+│   ├── etape5_rag.md           # pipeline RAG, prompt, LLM local (Ollama)
+│   └── etape6_interface.md     # interface web de chat avec les sources
 ├── scripts/
 │   ├── download_corpus.py      # étape 1 : constitution reproductible du corpus
 │   ├── parse_corpus.py         # étape 2 : extraction et nettoyage
@@ -87,7 +89,8 @@ webcognitive/
 │   ├── search.py               # étape 3 : recherche sémantique de démonstration
 │   ├── build_vectordb.py       # étape 4 : chargement dans ChromaDB
 │   ├── serve_api.py            # étape 4 : lancement de l'API
-│   └── evaluate_search.py      # étape 4 : évaluation des modes de recherche
+│   ├── evaluate_search.py      # étape 4 : évaluation des modes de recherche
+│   └── evaluate_rag.py         # étape 5 : évaluation des réponses du LLM
 ├── src/webcognitive/
 │   ├── config.py               # chemins et paramètres retenus
 │   ├── parsing/                # un parseur par format + nettoyage regex
@@ -97,8 +100,10 @@ webcognitive/
 │   ├── vectordb.py             # base vectorielle ChromaDB
 │   ├── lexical.py              # recherche par mots-clés (BM25)
 │   ├── search_engine.py        # recherche sémantique, mots-clés ou hybride
-│   └── api.py                  # API REST (FastAPI)
-├── tests/test_api.py           # tests automatiques de l'étape 4
+│   ├── rag.py                  # pipeline RAG : extraits + consigne -> LLM local (Ollama)
+│   └── api.py                  # API REST (FastAPI) : /search, /ask… et service de l'interface
+├── frontend/                   # interface web (étape 6) : index.html, style.css, app.js
+├── tests/                      # tests automatiques (étapes 4, 5 et 6)
 ├── requirements.txt
 └── README.md
 ```
@@ -128,6 +133,14 @@ python -m pytest tests -q              # tests automatiques
 ```
 
 Exemple : http://127.0.0.1:8000/search?q=Qui%20a%20invent%C3%A9%20le%20DNS%20%3F&k=3
+
+**LLM local (étapes 5 et 6).** Installe [Ollama](https://ollama.com/download), puis télécharge le modèle une fois :
+
+```bash
+ollama pull mistral                    # ≈ 4 Go ; plus léger : ollama pull llama3.2:3b puis WEBCOGNITIVE_LLM=llama3.2:3b
+python scripts/serve_api.py            # interface web : http://127.0.0.1:8000/  (API : /docs)
+python scripts/evaluate_rag.py         # étape 5 : évaluation des réponses sur les questions de validation
+```
 
 **OCR (facultatif).** Le PDF de Baran (`pdf04`) est un scan sans texte. Pour le lire, installe [Tesseract](https://github.com/UB-Mannheim/tesseract/wiki) puis `pip install pytesseract`, et relance `parse_corpus.py --only pdf04`.
 

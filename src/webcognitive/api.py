@@ -1,7 +1,8 @@
-"""API REST (FastAPI) du moteur WebCognitive (étapes 4 et 5).
+"""API REST (FastAPI) du moteur WebCognitive (étapes 4, 5 et 6).
 
 Lancement :
     python scripts/serve_api.py          (ou : uvicorn webcognitive.api:app --app-dir src)
+Interface web (étape 6)                    : http://127.0.0.1:8000/
 Documentation interactive générée par FastAPI : http://127.0.0.1:8000/docs
 
 Routes :
@@ -25,12 +26,15 @@ from datetime import datetime, timezone
 from typing import Callable, Literal
 
 from fastapi import BackgroundTasks, FastAPI, HTTPException, Query
-from fastapi.responses import StreamingResponse
+from fastapi.responses import RedirectResponse, StreamingResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from . import config
 from .rag import LLMUnavailable, RagPipeline
 from .search_engine import Filters, SearchEngine
+
+FRONTEND_DIR = config.ROOT / "frontend"
 
 Mode = Literal["semantic", "lexical", "hybrid"]
 Format = Literal["pdf", "txt", "html", "docx"]
@@ -222,8 +226,8 @@ def create_app(engine_factory: Callable[[], SearchEngine] = SearchEngine, warmup
     app = FastAPI(
         title="WebCognitive Engine",
         description="Recherche sémantique et assistant RAG local sur un corpus d'histoire d'Internet "
-                    "(ChromaDB + FastAPI + Ollama).",
-        version="0.5.0",
+                    "(ChromaDB + FastAPI + Ollama). Interface web : /",
+        version="0.6.0",
         lifespan=lifespan,
     )
 
@@ -326,6 +330,14 @@ def create_app(engine_factory: Callable[[], SearchEngine] = SearchEngine, warmup
         except LLMUnavailable as exc:
             raise HTTPException(503, str(exc)) from exc
         return {**result, "question": req.question}
+
+    # Étape 6 : l'interface web est servie par la même application (pas de problème de CORS)
+    if FRONTEND_DIR.exists():
+        app.mount("/app", StaticFiles(directory=FRONTEND_DIR, html=True), name="frontend")
+
+        @app.get("/", include_in_schema=False)
+        def home():
+            return RedirectResponse("/app/")
 
     return app
 
