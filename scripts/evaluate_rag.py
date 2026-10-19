@@ -5,17 +5,21 @@
 Pour chaque question de data/validation_questions.json, on obtient la réponse du
 LLM (exactement comme POST /ask), puis on vérifie :
 - réponse correcte : la réponse contient l'information attendue (`rag_pattern`) ;
-- bonne source     : un des extraits cités ([n]) vient d'un document attendu ;
+- bonne source     : un des extraits cités ([n]) justifie la réponse : il vient d'un document
+                     attendu, ou son texte contient lui-même l'information attendue (le corpus
+                     répète certains faits : la date de 1983 est dans trois documents) ;
 - succès           : les deux à la fois, c'est le critère du projet (objectif : 80 %) ;
 - pièges (P)       : le moteur doit répondre « je ne sais pas ».
 
 Ollama doit être lancé, avec le modèle téléchargé (ollama pull mistral).
 
+Chaque réglage mesuré (modèle, mode de recherche, k) est ajouté au tableau comparatif.
+
 Sorties : data/evaluation_rag.json et docs/etape5_resultats.md
 
 Usage :
     python scripts/evaluate_rag.py                       # mode de recherche par défaut
-    python scripts/evaluate_rag.py --mode hybrid --k 5
+    python scripts/evaluate_rag.py --mode hybrid --k 8
     python scripts/evaluate_rag.py --only F15 P02        # quelques questions
 """
 from __future__ import annotations
@@ -35,6 +39,44 @@ from webcognitive.search_engine import MODES, SearchEngine  # noqa: E402
 
 RESULTS_FILE = config.DATA_DIR / "evaluation_rag.json"
 REPORT_FILE = config.ROOT / "docs" / "etape5_resultats.md"
+
+
+def write_markdown(runs: list[dict]) -> None:
+    lines = [
+        "# Étape 5 : évaluation de l'assistant RAG",
+        "",
+        "Fichier généré par `scripts/evaluate_rag.py` (une ligne par réglage mesuré). Critère du projet : "
+        "**succès** = réponse correcte **et** extrait cité qui la justifie, objectif 80 % ; pièges refusés, "
+        "objectif 100 %. Explications : `docs/etape5_rag.md`.",
+        "",
+        "| LLM | Recherche | k | Réponse correcte | Bonne source | **Succès** | Pièges refusés | Refus à tort | s/question |",
+        "|---|---|---|---|---|---|---|---|---|",
+    ]
+    for run in runs:
+        m = run["summary"]
+        lines.append(f"| {m['model']} | {m['mode']} | {m['k']} | {pct(m['correct'])} | {pct(m['good_source'])} | "
+                     f"**{pct(m['success'])}** | {pct(m['traps_refused'])} | {m['false_refusals']} | "
+                     f"{m['seconds_per_question']:.1f} |")
+    best = max(runs, key=lambda r: (r["summary"]["success"] or 0, r["summary"]["traps_refused"] or 0))
+    m = best["summary"]
+    lines += ["", f"## Détail du meilleur réglage : {m['model']}, recherche {m['mode']}, k = {m['k']}", "",
+              "| Question | Succès | Réponse | Documents cités |", "|---|---|---|---|"]
+    for r in best["questions"]:
+        answer = r["answer"].replace("\n", " ").replace("|", "/")
+        answer = answer[:220] + ("…" if len(answer) > 220 else "")
+        lines.append(f"| {r['id']} | {'✅' if r['ok'] else '❌'} | {answer} | {', '.join(r['cited_docs']) or '–'} |")
+    REPORT_FILE.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def supports(source: dict, q: dict) -> bool:
+    """L'extrait cité justifie-t-il la réponse attendue ?"""
+    return (source["doc_id"] in q["expected_docs"]
+            or re.search(q["answer_pattern"], source["text"], re.I | re.S) is not None
+            or re.search(q["rag_pattern"], source["text"], re.I | re.S) is not None)
+
+
+def pct(v) -> str:
+    return "–" if v is None else f"{v:.0%}".replace("%", " %")
 
 
 def main() -> int:
@@ -66,7 +108,8 @@ def main() -> int:
         except LLMUnavailable as exc:
             print(exc)
             return 1
-        cited_docs = sorted({s["doc_id"] for s in r["sources"] if s["cited"]})
+        cited = [s for s in r["sources"] if s["cited"]]
+        cited_docs = sorted({s["doc_id"] for s in cited})
         row = {"id": q["id"], "type": q["type"], "question": q["question"], "answer": r["answer"],
                "refused": r["refused"], "guard": r["guard"], "cited_docs": cited_docs,
                "seconds": round(time.perf_counter() - start, 1)}
@@ -74,7 +117,7 @@ def main() -> int:
             row["ok"] = r["refused"]
         else:
             row["correct"] = not r["refused"] and re.search(q["rag_pattern"], r["answer"], re.I) is not None
-            row["good_source"] = any(d in q["expected_docs"] for d in cited_docs)
+            row["good_source"] = any(supports(s, q) for s in cited)
             row["ok"] = row["correct"] and row["good_source"]
         rows.append(row)
         mark = "OK " if row["ok"] else "-- "
@@ -91,37 +134,18 @@ def main() -> int:
         "false_refusals": sum(r["refused"] for r in real),
         "seconds_per_question": sum(r["seconds"] for r in rows) / len(rows),
     }
-    pct = lambda v: "–" if v is None else f"{v:.0%}".replace("%", " %")  # noqa: E731
     print(f"\nRéponse correcte {pct(summary['correct'])} · bonne source {pct(summary['good_source'])} · "
           f"succès {pct(summary['success'])} · pièges refusés {pct(summary['traps_refused'])}")
 
     if not args.only:
-        RESULTS_FILE.write_text(json.dumps({"summary": summary, "questions": rows}, ensure_ascii=False, indent=2),
-                                encoding="utf-8")
-        lines = [
-            "# Étape 5 : évaluation de l'assistant RAG",
-            "",
-            f"Fichier généré par `scripts/evaluate_rag.py`. LLM : `{summary['model']}` (Ollama) · recherche : "
-            f"`{args.mode}` · {args.k} extraits par question. Explications : `docs/etape5_rag.md`.",
-            "",
-            "| Mesure | Résultat |",
-            "|---|---|",
-            f"| Réponse correcte | {pct(summary['correct'])} |",
-            f"| Bonne source citée | {pct(summary['good_source'])} |",
-            f"| **Succès (réponse correcte + bonne source)**, objectif 80 % | **{pct(summary['success'])}** |",
-            f"| Pièges hors corpus refusés, objectif 100 % | {pct(summary['traps_refused'])} |",
-            f"| Refus à tort (vraies questions) | {summary['false_refusals']} |",
-            f"| Temps moyen par question | {summary['seconds_per_question']:.1f} s |",
-            "",
-            "| Question | Succès | Réponse | Sources citées |",
-            "|---|---|---|---|",
-        ]
-        for r in rows:
-            answer = r["answer"].replace("\n", " ").replace("|", "/")
-            answer = answer[:220] + ("…" if len(answer) > 220 else "")
-            ok = "✅" if r["ok"] else "❌"
-            lines.append(f"| {r['id']} | {ok} | {answer} | {', '.join(r['cited_docs']) or '–'} |")
-        REPORT_FILE.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        previous = json.loads(RESULTS_FILE.read_text(encoding="utf-8")) if RESULTS_FILE.exists() else []
+        if isinstance(previous, dict):  # ancien format : une seule évaluation
+            previous = []
+        same = ("model", "mode", "k")
+        runs = [p for p in previous if any(p["summary"][key] != summary[key] for key in same)]
+        runs.append({"summary": summary, "questions": rows})
+        RESULTS_FILE.write_text(json.dumps(runs, ensure_ascii=False, indent=2), encoding="utf-8")
+        write_markdown(runs)
         print(f"Résultats : {REPORT_FILE.relative_to(config.ROOT)}")
     return 0
 

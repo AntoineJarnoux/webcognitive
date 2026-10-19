@@ -39,7 +39,7 @@ L'interface est faite de **3 fichiers statiques** dans `frontend/` (`index.html`
   - « Voir le contexte » affiche les extraits voisins, l'extrait cité étant surligné ;
   - les extraits transmis au LLM mais non cités restent consultables, repliés.
 - **Refus** : « Je ne sais pas » s'affiche avec une marge orange, et le panneau explique qu'aucun extrait ne contenait la réponse.
-- **Options** : mode de recherche (sens, sens + mots-clés, mots-clés), nombre d'extraits, langue des sources.
+- **Options** : mode de recherche (par défaut sens + mots-clés), nombre d'extraits (8 par défaut), langue des sources. Ces valeurs par défaut sont celles qui ont donné le meilleur résultat à l'étape 5.
 - **Onglet Recherche** : la recherche seule (`GET /search`, étape 4), sans LLM, avec le score de chaque passage.
 - **État** en haut à droite (`GET /health`) : nombre d'extraits indexés, et si Ollama et le modèle sont prêts. En cas de problème, il affiche la commande à lancer.
 

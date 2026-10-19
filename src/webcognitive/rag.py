@@ -40,7 +40,9 @@ Règles :
 2. Si les extraits ne contiennent pas la réponse, réponds exactement : « {REFUSAL} » et rien d'autre.
 3. Réponds en français, de façon précise et concise (quelques phrases), même si les extraits sont en anglais.
 4. Après chaque information, indique entre crochets le numéro de l'extrait qui la justifie, par exemple [2].
-   N'invente jamais de numéro d'extrait."""
+   N'invente jamais de numéro d'extrait.
+5. N'affirme que ce qui est écrit explicitement dans un extrait : ne déduis pas une date, un auteur ou un lieu
+   qui n'y figure pas, et ne mélange pas des informations qui concernent des personnes ou des documents différents."""
 
 
 class LLMUnavailable(RuntimeError):

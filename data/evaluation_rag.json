@@ -1,0 +1,896 @@
+[
+  {
+    "summary": {
+      "model": "mistral",
+      "mode": "semantic",
+      "k": 5,
+      "correct": 0.7307692307692307,
+      "good_source": 0.8461538461538461,
+      "success": 0.7307692307692307,
+      "traps_refused": 1.0,
+      "false_refusals": 2,
+      "seconds_per_question": 1.8758620689655172
+    },
+    "questions": [
+      {
+        "id": "F01",
+        "type": "F",
+        "question": "Qui a écrit la RFC 1 et à quelle date ?",
+        "answer": "Steve Crocker a écrit la RFC 1 et elle a été publiée le 7 avril 1969 [1].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "txt11"
+        ],
+        "seconds": 14.3,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F02",
+        "type": "F",
+        "question": "À quelle date la transition d'ARPANET de NCP vers TCP/IP a-t-elle eu lieu ?",
+        "answer": "La transition d'ARPANET de NCP vers TCP/IP a eu lieu le 1er janvier 1983 [1, 3].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "docx01",
+          "pdf03"
+        ],
+        "seconds": 1.3,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F03",
+        "type": "F",
+        "question": "Dans quelle revue et quel numéro Cerf et Kahn ont-ils publié leur protocole en 1974 ?",
+        "answer": "Les auteurs Cerf et Kahn ont publié leur protocole en 1974 dans la revue IEEE Transactions on Communications, dans le numéro 5, comme indiqué dans l'extrait [2]. [2]",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "html08"
+        ],
+        "seconds": 1.9,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F04",
+        "type": "F",
+        "question": "Quand le manuscrit de Cerf et Kahn a-t-il été reçu par l'éditeur ?",
+        "answer": "Le manuscrit de Cerf et Kahn a été reçu par l'éditeur le 5 novembre 1973 [2].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "pdf01"
+        ],
+        "seconds": 1.3,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F05",
+        "type": "F",
+        "question": "Selon Clark (1988), quel est l'objectif de premier niveau de l'architecture Internet ?",
+        "answer": "L'objectif de premier niveau de l'architecture Internet, selon Clark (1988), est de fournir une grande flexibilité dans les services offerts [1].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "pdf02"
+        ],
+        "seconds": 1.5,
+        "correct": false,
+        "good_source": true,
+        "ok": false
+      },
+      {
+        "id": "F06",
+        "type": "F",
+        "question": "Quel est le premier des objectifs de second niveau listés par Clark ?",
+        "answer": "Le premier des objectifs de second niveau listés par Clark est \"Internet communication must continue despite loss of networks or gateways\" [1].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "pdf02"
+        ],
+        "seconds": 1.2,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F07",
+        "type": "F",
+        "question": "Dans l'article de Saltzer, Reed et Clark, à quelle fréquence la passerelle défectueuse du MIT inversait-elle une paire d'octets ?",
+        "answer": "Je ne sais pas : cette information n'est pas dans le corpus. [1, 2, 3, 4, 5]",
+        "refused": true,
+        "guard": false,
+        "cited_docs": [],
+        "seconds": 1.4,
+        "correct": false,
+        "good_source": false,
+        "ok": false
+      },
+      {
+        "id": "F08",
+        "type": "F",
+        "question": "Comment s'appelle le paquet d'accusé de réception renvoyé par l'ARPANET, cité par Saltzer et al. ?",
+        "answer": "Le paquet d'accusé de réception renvoyé par l'ARPANET, cité par Saltzer et al., est appelé \"Implicit Acknowledgement\" [4].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "pdf03"
+        ],
+        "seconds": 1.7,
+        "correct": false,
+        "good_source": false,
+        "ok": false
+      },
+      {
+        "id": "F09",
+        "type": "F",
+        "question": "Quand et pour qui Paul Baran a-t-il publié le mémorandum RM-3420 ?",
+        "answer": "Paul Baran a publié le mémorandum RM-3420 en février 1966 [1].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "pdf07"
+        ],
+        "seconds": 1.4,
+        "correct": false,
+        "good_source": true,
+        "ok": false
+      },
+      {
+        "id": "F10",
+        "type": "F",
+        "question": "Selon Licklider et Taylor (1968), qu'a permis la réunion technique tenue via un ordinateur ?",
+        "answer": "La réunion technique tenue via un ordinateur a été permise par l'article \"The Computer as a Communication Device\" de J.C.R. Licklider et Robert W. Taylor (1968) [1].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "pdf05"
+        ],
+        "seconds": 2.0,
+        "correct": false,
+        "good_source": true,
+        "ok": false
+      },
+      {
+        "id": "F11",
+        "type": "F",
+        "question": "Quand Licklider a-t-il écrit ses mémos sur le « réseau galactique » ?",
+        "answer": "Licklider a écrit ses mémos sur le « réseau galactique » en août 1962 [2].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "html01"
+        ],
+        "seconds": 1.3,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F12",
+        "type": "F",
+        "question": "Où et quand le premier IMP a-t-il été installé ?",
+        "answer": "Le premier IMP a été installé à UCLA le 1er septembre 1969 [1].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "pdf10"
+        ],
+        "seconds": 1.1,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F13",
+        "type": "F",
+        "question": "Qui a écrit le premier logiciel de courrier électronique, et quand ?",
+        "answer": "Le premier logiciel de courrier électronique a été écrit par Ray Tomlinson en mars 1972 [1, 2, 4, 5].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "html01",
+          "pdf03",
+          "txt09"
+        ],
+        "seconds": 1.4,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F14",
+        "type": "F",
+        "question": "Dans le modèle initial, comment se répartissaient les 32 bits d'une adresse IP ?",
+        "answer": "Les 32 bits d'une adresse IP se répartissaient de la manière suivante dans le modèle initial :\n- 8 premiers bits signifiaient le réseau [4]\n- 24 bits restants désignaient l'hôte sur ce réseau [1, 4]",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "html01",
+          "pdf03"
+        ],
+        "seconds": 2.3,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F15",
+        "type": "F",
+        "question": "Qui a inventé le DNS ?",
+        "answer": "Le DNS a été inventé par Paul Mockapetris [1].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "html01"
+        ],
+        "seconds": 0.9,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F16",
+        "type": "F",
+        "question": "Comment l'équipe de Cyclades avait-elle surnommé son réseau de transmission de paquets, et pourquoi ?",
+        "answer": "Le réseau de transmission de paquets de Cyclades a été surnommé « Cigale » ([3]). Cela est dû au fait que chaque fois qu'un paquet passait dans le modem, le bruit ressemblait au grésillement des cigales !",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "html05"
+        ],
+        "seconds": 2.1,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F17",
+        "type": "F",
+        "question": "Quel surnom portait Cyclades à ses débuts ?",
+        "answer": "Le surnom de Cyclades à ses débuts n'est pas mentionné dans le contexte fourni. [1, 2, 3, 4, 5]",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "html05",
+          "html07",
+          "html10"
+        ],
+        "seconds": 1.5,
+        "correct": false,
+        "good_source": false,
+        "ok": false
+      },
+      {
+        "id": "F18",
+        "type": "F",
+        "question": "Quand Tim Berners-Lee a-t-il écrit « Information Management: A Proposal » ?",
+        "answer": "Tim Berners-Lee a écrit « Information Management: A Proposal » le 13 mars 1989 [1].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "docx07"
+        ],
+        "seconds": 1.3,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F19",
+        "type": "F",
+        "question": "Quel programme Tim Berners-Lee a-t-il écrit au CERN en 1980 ?",
+        "answer": "Le programme que Tim Berners-Lee a écrit au CERN en 1980 s'appelle \"Enquire-Within-Upon-Everything\" [2].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "html02"
+        ],
+        "seconds": 1.4,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F20",
+        "type": "F",
+        "question": "Qui a écrit la RFC 2468, et en hommage à qui ?",
+        "answer": "La RFC 2468 n'est pas mentionnée dans le contexte fourni. Je ne sais pas : cette information n'est pas dans le corpus.",
+        "refused": true,
+        "guard": false,
+        "cited_docs": [],
+        "seconds": 1.5,
+        "correct": false,
+        "good_source": false,
+        "ok": false
+      },
+      {
+        "id": "F21",
+        "type": "F",
+        "question": "À quelle date le Federal Networking Council a-t-il adopté sa définition du mot « Internet » ?",
+        "answer": "Le 24 octobre 1995 [1, 2].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "html01",
+          "pdf03"
+        ],
+        "seconds": 0.9,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F22",
+        "type": "F",
+        "question": "Combien d'entreprises et de visiteurs y avait-il au premier salon Interop, en septembre 1988 ?",
+        "answer": "Il y avait 50 entreprises et 5 000 visiteurs au premier salon Interop, en septembre 1988 [4].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "pdf03"
+        ],
+        "seconds": 1.4,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "C01",
+        "type": "C",
+        "question": "Quel lien existe-t-il entre Cyclades et TCP ?",
+        "answer": "Les idées du datagramme, de la fenêtre glissante et de l'interconnexion des réseaux développées dans le projet Cyclades ont été reprises dans TCP/IP. [1] [2] [4] [5]",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "html07",
+          "txt02",
+          "txt04"
+        ],
+        "seconds": 1.8,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "C02",
+        "type": "C",
+        "question": "Pourquoi l'idée qu'ARPANET a été conçu pour résister à une guerre nucléaire est-elle une rumeur ?",
+        "answer": "L'idée selon laquelle ARPANET a été conçu pour résister à une guerre nucléaire est une rumeur car, selon les extraits [1] et [2], il n'y a jamais eu de lien entre ARPANET et la construction d'un réseau résistant à la guerre nucléaire. Seule l'étude sans rapport de RAND portait sur la transmission sécurisée de la voix en cas de guerre nucléaire [3].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "html01",
+          "pdf03"
+        ],
+        "seconds": 2.0,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "C03",
+        "type": "C",
+        "question": "Quel point commun y a-t-il entre l'argument de bout en bout et le choix du datagramme dans IP ?",
+        "answer": "L'argument de bout en bout et le choix du datagramme dans IP sont liés par le principe de décentralisation et de simplicité. En effet, l'argument de bout en bout est une philosophie de conception de système qui stipule que les fonctions critiques doivent être gérées par les nœuds de bout en bout (les terminaux) plutôt que par les nœuds intermédiaires (les réseaux). Le choix du datagramme dans IP est une technique de transmission de données qui suit cette philosophie, car elle permet aux nœuds de bout en bout de gérer la séquence et la suppression des doublons des paquets, plutôt que cela étant géré par les réseaux intermédiaires [5].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "pdf06"
+        ],
+        "seconds": 2.3,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "C04",
+        "type": "C",
+        "question": "Qui était Jon Postel, et quels rôles a-t-il tenus ?",
+        "answer": "Jon Postel était un informaticien américain, né le 6 août 1943 à Altadena (Californie) et mort le 16 octobre 1998 à Santa Monica (Californie) [1]. Il est connu pour être l'un des principaux contributeurs à la création de l'Internet [1]. Jon Postel était l'éditeur des Requests for comments (RFC), série de documents visant à établir les standards de l'Internet de l'IETF [1]. Il a également été le patron de l'IANA (Internet Assigned Numbers Authority) jusqu'à sa mort en 1998 [5].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "docx01",
+          "docx08"
+        ],
+        "seconds": 2.0,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "P01",
+        "type": "P",
+        "question": "Quel est le chiffre d'affaires de Google en 2024 ?",
+        "answer": "Je ne sais pas : cette information n'est pas dans le corpus. [1, 4]",
+        "refused": true,
+        "guard": false,
+        "cited_docs": [],
+        "seconds": 0.6,
+        "ok": true
+      },
+      {
+        "id": "P02",
+        "type": "P",
+        "question": "Quelle est la capitale de l'Australie ?",
+        "answer": "Je ne sais pas : cette information n'est pas dans le corpus.",
+        "refused": true,
+        "guard": true,
+        "cited_docs": [],
+        "seconds": 0.0,
+        "ok": true
+      },
+      {
+        "id": "P03",
+        "type": "P",
+        "question": "Qui a inventé le protocole QUIC ?",
+        "answer": "Je ne sais pas : cette information n'est pas dans le corpus.",
+        "refused": true,
+        "guard": false,
+        "cited_docs": [],
+        "seconds": 0.6,
+        "ok": true
+      }
+    ]
+  },
+  {
+    "summary": {
+      "model": "mistral",
+      "mode": "hybrid",
+      "k": 8,
+      "correct": 0.8461538461538461,
+      "good_source": 0.8076923076923077,
+      "success": 0.8076923076923077,
+      "traps_refused": 1.0,
+      "false_refusals": 1,
+      "seconds_per_question": 2.086206896551724
+    },
+    "questions": [
+      {
+        "id": "F01",
+        "type": "F",
+        "question": "Qui a écrit la RFC 1 et à quelle date ?",
+        "answer": "Steve Crocker a écrit la RFC 1 et à la date du 7 avril 1969 [4].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "txt11"
+        ],
+        "seconds": 12.8,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F02",
+        "type": "F",
+        "question": "À quelle date la transition d'ARPANET de NCP vers TCP/IP a-t-elle eu lieu ?",
+        "answer": "Le 1er janvier 1983 ([1], [2], [5], [6]).",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "docx01",
+          "html08",
+          "pdf03"
+        ],
+        "seconds": 0.8,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F03",
+        "type": "F",
+        "question": "Dans quelle revue et quel numéro Cerf et Kahn ont-ils publié leur protocole en 1974 ?",
+        "answer": "Les auteurs Vinton Cerf et Robert Kahn ont publié leur protocole en 1974 dans la revue IEEE Transactions on Communications, dans le volume COM-22, V 5, pages 627-641 [3 et 7].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "html01",
+          "html08"
+        ],
+        "seconds": 1.2,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F04",
+        "type": "F",
+        "question": "Quand le manuscrit de Cerf et Kahn a-t-il été reçu par l'éditeur ?",
+        "answer": "Le manuscrit de Cerf et Kahn a été reçu par l'éditeur en mai 1974 [2].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "html08"
+        ],
+        "seconds": 0.8,
+        "correct": false,
+        "good_source": false,
+        "ok": false
+      },
+      {
+        "id": "F05",
+        "type": "F",
+        "question": "Selon Clark (1988), quel est l'objectif de premier niveau de l'architecture Internet ?",
+        "answer": "L'objectif de premier niveau de l'architecture Internet, selon Clark (1988), est de développer une technique efficace pour la multiplexation de l'utilisation de réseaux existants interconnectés [2].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "pdf02"
+        ],
+        "seconds": 1.0,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F06",
+        "type": "F",
+        "question": "Quel est le premier des objectifs de second niveau listés par Clark ?",
+        "answer": "Le premier des objectifs de second niveau listés par Clark est \"Internet communication must continue despite loss of networks or gateways\" [5, 1].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "pdf02",
+          "pdf09"
+        ],
+        "seconds": 0.9,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F07",
+        "type": "F",
+        "question": "Dans l'article de Saltzer, Reed et Clark, à quelle fréquence la passerelle défectueuse du MIT inversait-elle une paire d'octets ?",
+        "answer": "Je ne sais pas : cette information n'est pas dans le corpus. [6]",
+        "refused": true,
+        "guard": false,
+        "cited_docs": [],
+        "seconds": 0.9,
+        "correct": false,
+        "good_source": false,
+        "ok": false
+      },
+      {
+        "id": "F08",
+        "type": "F",
+        "question": "Comment s'appelle le paquet d'accusé de réception renvoyé par l'ARPANET, cité par Saltzer et al. ?",
+        "answer": "Le paquet d'accusé de réception renvoyé par l'ARPANET, cité par Saltzer et al., n'est pas spécifiquement nommé dans les extraits fournis. [2] et [4] mentionnent que chaque ACK (Accusé de réception) renvoyé est cumulé pour tous les paquets reçus à ce point, mais ils ne donnent pas de nom spécifique à ce paquet.",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "html01"
+        ],
+        "seconds": 1.8,
+        "correct": false,
+        "good_source": false,
+        "ok": false
+      },
+      {
+        "id": "F09",
+        "type": "F",
+        "question": "Quand et pour qui Paul Baran a-t-il publié le mémorandum RM-3420 ?",
+        "answer": "Paul Baran a publié le mémorandum RM-3420 en août 1964 pour la RAND Corporation. [1]",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "pdf07"
+        ],
+        "seconds": 1.1,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F10",
+        "type": "F",
+        "question": "Selon Licklider et Taylor (1968), qu'a permis la réunion technique tenue via un ordinateur ?",
+        "answer": "La réunion technique tenue via un ordinateur a été permise par l'idée avancée par Licklider et Taylor (1968) de « réseaux de tels [ordinateurs], connectés les uns aux autres par des lignes de télécommunications large bande » qui fournissait « les fonctions de communication entre les utilisateurs » [4, p. 22].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [],
+        "seconds": 1.6,
+        "correct": false,
+        "good_source": false,
+        "ok": false
+      },
+      {
+        "id": "F11",
+        "type": "F",
+        "question": "Quand Licklider a-t-il écrit ses mémos sur le « réseau galactique » ?",
+        "answer": "Licklider a écrit ses mémos sur le « réseau galactique » en août 1962 [2].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "html01"
+        ],
+        "seconds": 0.8,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F12",
+        "type": "F",
+        "question": "Où et quand le premier IMP a-t-il été installé ?",
+        "answer": "Le premier IMP a été installé à l'UCLA le 2 septembre 1969 [2].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "pdf07"
+        ],
+        "seconds": 0.8,
+        "correct": true,
+        "good_source": false,
+        "ok": false
+      },
+      {
+        "id": "F13",
+        "type": "F",
+        "question": "Qui a écrit le premier logiciel de courrier électronique, et quand ?",
+        "answer": "Le premier logiciel de courrier électronique a été écrit par Ray Tomlinson en mars 1972 [1].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "html01"
+        ],
+        "seconds": 0.9,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F14",
+        "type": "F",
+        "question": "Dans le modèle initial, comment se répartissaient les 32 bits d'une adresse IP ?",
+        "answer": "Dans le modèle initial, les 32 bits d'une adresse IP se répartissaient de la manière suivante : les 8 premiers bits signifiaient le réseau et les 24 bits restants désignaient l'hôte sur ce réseau [1, 3].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "html01",
+          "pdf03"
+        ],
+        "seconds": 2.2,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F15",
+        "type": "F",
+        "question": "Qui a inventé le DNS ?",
+        "answer": "Le DNS a été inventé par Paul Mockapetris de l'USC/ISI [1, 3].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "html01",
+          "pdf03"
+        ],
+        "seconds": 1.4,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F16",
+        "type": "F",
+        "question": "Comment l'équipe de Cyclades avait-elle surnommé son réseau de transmission de paquets, et pourquoi ?",
+        "answer": "Le réseau de transmission de paquets de Cyclades a été surnommé « Cigale » [2]. Le nom a été choisi car chaque fois qu'un paquet passait dans le modem, le bruit ressemblait au grésillement des cigales ! [2]",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "html05"
+        ],
+        "seconds": 2.3,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F17",
+        "type": "F",
+        "question": "Quel surnom portait Cyclades à ses débuts ?",
+        "answer": "Mitranet ([7])",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "html09"
+        ],
+        "seconds": 1.0,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F18",
+        "type": "F",
+        "question": "Quand Tim Berners-Lee a-t-il écrit « Information Management: A Proposal » ?",
+        "answer": "Le 13 mars 1989 ([1], [3]).",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "docx07",
+          "html11"
+        ],
+        "seconds": 1.1,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F19",
+        "type": "F",
+        "question": "Quel programme Tim Berners-Lee a-t-il écrit au CERN en 1980 ?",
+        "answer": "Tim Berners-Lee a écrit un programme intitulé \"Enquire-Within-Upon-Everything\" au CERN en 1980 [3].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "html02"
+        ],
+        "seconds": 1.7,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F20",
+        "type": "F",
+        "question": "Qui a écrit la RFC 2468, et en hommage à qui ?",
+        "answer": "La RFC 2468 a été écrite par Vint Cerf [2]. Elle rend hommage à Jon Postel [2].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "docx08"
+        ],
+        "seconds": 1.6,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F21",
+        "type": "F",
+        "question": "À quelle date le Federal Networking Council a-t-il adopté sa définition du mot « Internet » ?",
+        "answer": "Le Federal Networking Council (FNC) a adopté sa définition du mot « Internet » le 24 octobre 1995 [1, 2].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "html01",
+          "pdf03"
+        ],
+        "seconds": 1.7,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "F22",
+        "type": "F",
+        "question": "Combien d'entreprises et de visiteurs y avait-il au premier salon Interop, en septembre 1988 ?",
+        "answer": "Il y avait 50 entreprises et 5 000 visiteurs au premier salon Interop, en septembre 1988 [1, 3].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "html01",
+          "pdf03"
+        ],
+        "seconds": 1.6,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "C01",
+        "type": "C",
+        "question": "Quel lien existe-t-il entre Cyclades et TCP ?",
+        "answer": "Le réseau Cyclades a eu une influence reconnue sur le protocole de communication TCP, car ses travaux ont été cités par Vint Cerf dans une de ses premières spécifications du protocole de transport d'Internet TCP [8]. De plus, Vinton Cerf et Robert Kahn s'en sont emparés pour concevoir le futur protocole de communication d'Internet, le TCP/IP, en s'inspirant de nos solutions, en particulier de la notion d'indépendance de paquets [6].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "html05",
+          "html10"
+        ],
+        "seconds": 3.7,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "C02",
+        "type": "C",
+        "question": "Pourquoi l'idée qu'ARPANET a été conçu pour résister à une guerre nucléaire est-elle une rumeur ?",
+        "answer": "L'idée selon laquelle ARPANET a été conçu pour résister à une guerre nucléaire est une rumeur ([1], [4], [6], [8]). En effet, aucun document officiel ne soutient cette légende, et seule une étude sans rapport de RAND portait sur la transmission sécurisée de la voix en cas de guerre nucléaire, mais ARPANET n'a jamais abordé ce sujet ([1], [2]).",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "docx02",
+          "html01",
+          "pdf03",
+          "pdf09"
+        ],
+        "seconds": 3.8,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "C03",
+        "type": "C",
+        "question": "Quel point commun y a-t-il entre l'argument de bout en bout et le choix du datagramme dans IP ?",
+        "answer": "Les deux concepts sont liés car l'argument de bout en bout est un principe de conception de système qui stipule que certaines fonctions doivent être implémentées à l'application plutôt qu'au niveau inférieur du protocole. Le datagramme est un principe de communication de données utilisé dans IP, et l'argument de bout en bout a été appliqué pour justifier que certaines fonctions telles que la manipulation des paquets (ordre, suppression de doublons, etc.) doivent être implémentées à l'application plutôt qu'au niveau du protocole IP [3]. [7]",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "pdf06"
+        ],
+        "seconds": 4.4,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "C04",
+        "type": "C",
+        "question": "Qui était Jon Postel, et quels rôles a-t-il tenus ?",
+        "answer": "Jon Postel était un informaticien américain, né le 6 août 1943 à Altadena (Californie) et mort le 16 octobre 1998 à Santa Monica (Californie) [1]. Il est considéré comme l'un des principaux contributeurs à la création de l'Internet [1]. Jon Postel a été l'éditeur des Requests for comments (RFC), série de documents visant à établir les standards de l'Internet de l'IETF [1]. Il a également occupé le poste de directeur de la division des réseaux informatiques de l'Information Sciences Institute de l'Université de Californie du Sud jusqu'à sa mort [8]. En plus de son rôle d'éditeur RFC, Jon Postel était le patron de l'IANA jusqu'à sa mort en 1998 [5]. Il a également été le gestionnaire de l'administration centralisée chargée des affectations des numéros de protocoles nécessaires [7]. Jon Postel a été le rédacteur des RFC et a travaillé à SRI dans son rôle de centre d'information de réseau, maintenant les répertoires en ligne [7].",
+        "refused": false,
+        "guard": false,
+        "cited_docs": [
+          "docx01",
+          "docx08",
+          "html01"
+        ],
+        "seconds": 5.8,
+        "correct": true,
+        "good_source": true,
+        "ok": true
+      },
+      {
+        "id": "P01",
+        "type": "P",
+        "question": "Quel est le chiffre d'affaires de Google en 2024 ?",
+        "answer": "Je ne sais pas : cette information n'est pas dans le corpus.",
+        "refused": true,
+        "guard": false,
+        "cited_docs": [],
+        "seconds": 1.1,
+        "ok": true
+      },
+      {
+        "id": "P02",
+        "type": "P",
+        "question": "Quelle est la capitale de l'Australie ?",
+        "answer": "Je ne sais pas : cette information n'est pas dans le corpus.",
+        "refused": true,
+        "guard": true,
+        "cited_docs": [],
+        "seconds": 0.1,
+        "ok": true
+      },
+      {
+        "id": "P03",
+        "type": "P",
+        "question": "Qui a inventé le protocole QUIC ?",
+        "answer": "Je ne sais pas : cette information n'est pas dans le corpus.",
+        "refused": true,
+        "guard": false,
+        "cited_docs": [],
+        "seconds": 1.6,
+        "ok": true
+      }
+    ]
+  }
+]
