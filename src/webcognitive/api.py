@@ -1,4 +1,4 @@
-"""Étape 4 : API REST (FastAPI) du moteur WebCognitive.
+"""API REST (FastAPI) du moteur WebCognitive (étapes 4 et 5).
 
 Lancement :
     python scripts/serve_api.py          (ou : uvicorn webcognitive.api:app --app-dir src)
@@ -13,9 +13,11 @@ Routes :
     POST /search                 même recherche, paramètres dans un corps JSON
     POST /ingest                 relance l'indexation en arrière-plan
     GET  /ingest                 état de la dernière indexation
+    POST /ask                    question -> réponse rédigée par le LLM local, avec ses sources (étape 5)
 """
 from __future__ import annotations
 
+import json
 import threading
 import time
 from contextlib import asynccontextmanager
@@ -23,9 +25,11 @@ from datetime import datetime, timezone
 from typing import Callable, Literal
 
 from fastapi import BackgroundTasks, FastAPI, HTTPException, Query
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel, Field
 
 from . import config
+from .rag import LLMUnavailable, RagPipeline
 from .search_engine import Filters, SearchEngine
 
 Mode = Literal["semantic", "lexical", "hybrid"]
@@ -113,6 +117,53 @@ class DocumentDetail(Document):
     content: list[dict] | None = Field(None, description="pages ou sections, si include_text=true")
 
 
+class AskRequest(BaseModel):
+    question: str = Field(..., min_length=1, max_length=1000)
+    k: int = Field(config.RAG_K, ge=1, le=10, description="nombre d'extraits donnés au LLM")
+    mode: Mode = config.RAG_MODE
+    stream: bool = Field(False, description="true : réponse envoyée au fil de l'eau (NDJSON), pour l'interface")
+    doc_id: list[str] | None = None
+    format: list[Format] | None = None
+    lang: Lang | None = None
+    year_min: int | None = None
+    year_max: int | None = None
+
+    def filters(self) -> Filters:
+        return Filters(self.doc_id, self.format, self.lang, self.year_min, self.year_max)
+
+
+class Source(BaseModel):
+    number: int = Field(..., description="numéro de l'extrait, tel que cité dans la réponse : [1], [2]…")
+    cited: bool = Field(..., description="l'extrait est cité dans la réponse")
+    chunk_id: str
+    doc_id: str
+    filename: str
+    format: str
+    title: str | None = None
+    author: str | None = None
+    year: int | None = None
+    lang: str | None = None
+    page: int | None = None
+    page_end: int | None = None
+    section: str | None = None
+    location: str = ""
+    citation: str = ""
+    text: str
+    score: float
+
+
+class AskResponse(BaseModel):
+    question: str
+    answer: str
+    refused: bool = Field(..., description="le moteur a répondu « je ne sais pas »")
+    guard: bool = Field(..., description="refus décidé par le garde-fou (question hors sujet), sans appeler le LLM")
+    cited: list[int]
+    sources: list[Source]
+    model: str | None
+    retrieval_ms: int
+    total_ms: int
+
+
 class IngestRequest(BaseModel):
     reembed: bool = Field(False, description="refaire aussi le découpage et la vectorisation (étape 3, ~10 min sur CPU)")
 
@@ -152,8 +203,9 @@ class IngestJob:
 # --------------------------------------------------------------------------- #
 # Application
 # --------------------------------------------------------------------------- #
-def create_app(engine_factory: Callable[[], SearchEngine] = SearchEngine, warmup: bool = True) -> FastAPI:
-    """`engine_factory` est remplaçable dans les tests (base temporaire, faux modèle)."""
+def create_app(engine_factory: Callable[[], SearchEngine] = SearchEngine, warmup: bool = True,
+               rag_factory: Callable[[SearchEngine], RagPipeline] = RagPipeline) -> FastAPI:
+    """`engine_factory` et `rag_factory` sont remplaçables dans les tests (base temporaire, faux modèles)."""
     state: dict = {}
 
     @asynccontextmanager
@@ -164,13 +216,14 @@ def create_app(engine_factory: Callable[[], SearchEngine] = SearchEngine, warmup
                 engine.warmup()  # charge le modèle au démarrage plutôt qu'à la première question
             except Exception as exc:  # noqa: BLE001 - le catalogue et la recherche BM25 restent utilisables
                 print(f"Attention : modèle d'embedding non chargé ({exc}). La recherche sémantique échouera.")
-        state["engine"], state["ingest"] = engine, IngestJob()
+        state["engine"], state["ingest"], state["rag"] = engine, IngestJob(), rag_factory(engine)
         yield
 
     app = FastAPI(
         title="WebCognitive Engine",
-        description="Recherche sémantique dans un corpus sur l'histoire d'Internet (étape 4 : ChromaDB + FastAPI).",
-        version="0.4.0",
+        description="Recherche sémantique et assistant RAG local sur un corpus d'histoire d'Internet "
+                    "(ChromaDB + FastAPI + Ollama).",
+        version="0.5.0",
         lifespan=lifespan,
     )
 
@@ -190,6 +243,7 @@ def create_app(engine_factory: Callable[[], SearchEngine] = SearchEngine, warmup
             "model": e.manifest.get("model"),
             "chunk_size": e.manifest.get("chunk_size"),
             "index_created_at": e.manifest.get("created_at"),
+            "llm": state["rag"].llm.status(),
         }
 
     @app.get("/documents", response_model=list[Document], tags=["corpus"])
@@ -251,6 +305,27 @@ def create_app(engine_factory: Callable[[], SearchEngine] = SearchEngine, warmup
     @app.get("/ingest", tags=["indexation"])
     def ingest_status():
         return state["ingest"].status
+
+    @app.post("/ask", response_model=AskResponse, tags=["assistant (RAG)"],
+              responses={200: {"content": {"application/x-ndjson": {}},
+                               "description": "JSON complet, ou flux NDJSON d'événements si stream=true"}})
+    def ask(req: AskRequest):
+        """Recherche les extraits pertinents, puis demande au LLM local une réponse fondée sur eux, avec citations."""
+        engine()  # 503 si la base est vide
+        rag: RagPipeline = state["rag"]
+        if req.stream:
+            def events():
+                # une ligne JSON par événement : sources, morceaux de réponse, puis fin
+                for event in rag.stream(req.question, req.k, req.mode, req.filters()):
+                    if event["type"] == "done":
+                        event["question"] = req.question
+                    yield json.dumps(event, ensure_ascii=False) + "\n"
+            return StreamingResponse(events(), media_type="application/x-ndjson")
+        try:
+            result = rag.ask(req.question, req.k, req.mode, req.filters())
+        except LLMUnavailable as exc:
+            raise HTTPException(503, str(exc)) from exc
+        return {**result, "question": req.question}
 
     return app
 

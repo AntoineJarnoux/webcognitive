@@ -47,3 +47,13 @@ HYBRID_CANDIDATES = 50   # recherche hybride : candidats pris de chaque côté a
 RRF_K = 60               # constante de la fusion par rangs (Reciprocal Rank Fusion), valeur usuelle
 API_HOST = "127.0.0.1"
 API_PORT = 8000
+
+# Étape 5 : RAG avec un LLM local (Ollama)
+OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://127.0.0.1:11434")
+LLM_MODEL = os.environ.get("WEBCOGNITIVE_LLM", "mistral")  # autre choix plus léger : llama3.2:3b
+LLM_TEMPERATURE = 0.1    # proche de 0 : réponses factuelles et stables, peu d'« imagination »
+LLM_NUM_CTX = 4096       # tokens que le LLM peut lire (consigne + extraits + question)
+LLM_TIMEOUT = 300        # secondes (le premier appel charge le modèle en mémoire)
+RAG_K = 5                # extraits donnés au LLM
+RAG_MODE = "semantic"    # mode de recherche utilisé pour trouver les extraits (voir étape 4)
+RAG_MIN_SCORE = 0.35     # garde-fou : sous ce cosinus, la question est jugée hors sujet sans appeler le LLM
