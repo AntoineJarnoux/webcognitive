@@ -10,7 +10,7 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-# Sorties régénérables (étapes suivantes)
+# Sorties régénérables
 data/vectordb/
 data/logs/
 data/embeddings/embeddings.npy
