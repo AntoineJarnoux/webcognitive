@@ -145,6 +145,9 @@ webcognitive/
 ├── frontend/                      # interface web : index.html, style.css, app.js, dashboard.js (étapes 6-7)
 ├── scripts/                       # points d'entrée en ligne de commande (voir § 5 et § 9)
 ├── tests/                         # tests automatiques (pytest)
+├── installer.bat / installer.ps1  # installation automatique (Windows)
+├── lancer.bat                     # démarrage de l'application (Windows)
+├── install.sh / lancer.sh         # équivalents Linux / macOS
 ├── docs/                          # documentation de chaque étape, résultats, manuel utilisateur
 ├── requirements.txt
 └── README.md
@@ -153,6 +156,27 @@ webcognitive/
 ---
 
 ## 5. Installation pas à pas
+
+### Installation automatique (recommandée)
+**Windows :**
+1. Récupérez le projet : `git clone https://github.com/AntoineJarnoux/webcognitive.git`, ou « Code → Download ZIP » sur GitHub, puis décompressez.
+2. Double-cliquez sur **`installer.bat`**. Le script fait toutes les étapes ci-dessous :
+   - il vérifie Python ;
+   - il crée l'environnement virtuel et installe les dépendances ;
+   - il installe Ollama (avec winget) s'il est absent, et le démarre ;
+   - il télécharge Mistral ;
+   - il calcule les vecteurs et remplit la base.
+
+   On peut le relancer sans risque, il saute ce qui est déjà fait. Comptez 15 à 20 minutes la première fois, surtout pour les téléchargements et le calcul des vecteurs.
+3. Ensuite, pour chaque utilisation, double-cliquez sur **`lancer.bat`** : l'application démarre et le navigateur s'ouvre sur [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
+
+**Linux / macOS :** `bash install.sh`, puis `bash lancer.sh`.
+
+Pour un PC peu puissant, prenez un modèle plus léger :
+- Windows : `installer.bat -Modele llama3.2:3b` ;
+- Linux / macOS : `bash install.sh llama3.2:3b`.
+
+Les sections suivantes décrivent les mêmes étapes **à la main**.
 
 ### 5.1 Prérequis
 - **Python 3.12** (testé avec 3.12 sous Windows 11 ; 3.10 minimum) et **Git**.
