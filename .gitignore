@@ -12,6 +12,7 @@ Thumbs.db
 
 # Sorties régénérables (étapes suivantes)
 data/vectordb/
+data/logs/
 data/embeddings/embeddings.npy
 docs/carte_vecteurs.html
 *.log

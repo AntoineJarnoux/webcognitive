@@ -1,4 +1,4 @@
-"""API REST (FastAPI) du moteur WebCognitive (étapes 4, 5 et 6).
+"""API REST (FastAPI) du moteur WebCognitive (étapes 4 à 7).
 
 Lancement :
     python scripts/serve_api.py          (ou : uvicorn webcognitive.api:app --app-dir src)
@@ -15,6 +15,9 @@ Routes :
     POST /ingest                 relance l'indexation en arrière-plan
     GET  /ingest                 état de la dernière indexation
     POST /ask                    question -> réponse rédigée par le LLM local, avec ses sources (étape 5)
+    GET  /stats                  indicateurs du corpus et de l'index, pour le tableau de bord (étape 7)
+    GET  /stats/questions        statistiques des questions posées à l'assistant (étape 7)
+    GET  /stats/map              carte 2D des segments (projection t-SNE) (étape 7)
 """
 from __future__ import annotations
 
@@ -26,11 +29,12 @@ from datetime import datetime, timezone
 from typing import Callable, Literal
 
 from fastapi import BackgroundTasks, FastAPI, HTTPException, Query
-from fastapi.responses import RedirectResponse, StreamingResponse
+from fastapi.responses import RedirectResponse, Response, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from . import config
+from .analytics import QuestionLog, corpus_stats, load_map
 from .rag import LLMUnavailable, RagPipeline
 from .search_engine import Filters, SearchEngine
 
@@ -208,8 +212,10 @@ class IngestJob:
 # Application
 # --------------------------------------------------------------------------- #
 def create_app(engine_factory: Callable[[], SearchEngine] = SearchEngine, warmup: bool = True,
-               rag_factory: Callable[[SearchEngine], RagPipeline] = RagPipeline) -> FastAPI:
-    """`engine_factory` et `rag_factory` sont remplaçables dans les tests (base temporaire, faux modèles)."""
+               rag_factory: Callable[[SearchEngine], RagPipeline] = RagPipeline,
+               question_log: QuestionLog | None = None) -> FastAPI:
+    """`engine_factory`, `rag_factory` et `question_log` sont remplaçables dans les tests
+    (base temporaire, faux modèles, journal temporaire)."""
     state: dict = {}
 
     @asynccontextmanager
@@ -221,13 +227,14 @@ def create_app(engine_factory: Callable[[], SearchEngine] = SearchEngine, warmup
             except Exception as exc:  # noqa: BLE001 - le catalogue et la recherche BM25 restent utilisables
                 print(f"Attention : modèle d'embedding non chargé ({exc}). La recherche sémantique échouera.")
         state["engine"], state["ingest"], state["rag"] = engine, IngestJob(), rag_factory(engine)
+        state["log"], state["stats"], state["stats_lock"] = question_log or QuestionLog(), None, threading.Lock()
         yield
 
     app = FastAPI(
         title="WebCognitive Engine",
         description="Recherche sémantique et assistant RAG local sur un corpus d'histoire d'Internet "
-                    "(ChromaDB + FastAPI + Ollama). Interface web : /",
-        version="0.6.0",
+                    "(ChromaDB + FastAPI + Ollama), avec tableau de bord. Interface web : /",
+        version="1.0.0",
         lifespan=lifespan,
     )
 
@@ -323,13 +330,51 @@ def create_app(engine_factory: Callable[[], SearchEngine] = SearchEngine, warmup
                 for event in rag.stream(req.question, req.k, req.mode, req.filters()):
                     if event["type"] == "done":
                         event["question"] = req.question
+                        state["log"].add(req.question, req.mode, req.k, event)
                     yield json.dumps(event, ensure_ascii=False) + "\n"
             return StreamingResponse(events(), media_type="application/x-ndjson")
         try:
             result = rag.ask(req.question, req.k, req.mode, req.filters())
         except LLMUnavailable as exc:
             raise HTTPException(503, str(exc)) from exc
+        state["log"].add(req.question, req.mode, req.k, result)
         return {**result, "question": req.question}
+
+    # Étape 7 : données du tableau de bord
+    @app.get("/stats", tags=["dataviz"])
+    def stats():
+        """Indicateurs agrégés : répartitions, taille des segments, thématiques, termes fréquents."""
+        e = engine(require_index=False)
+        key = (id(e.collection), e.manifest.get("created_at"))  # recalcul après une réindexation
+        with state["stats_lock"]:
+            if state["stats"] is None or state["stats"][0] != key:
+                state["stats"] = (key, corpus_stats(e))
+            return state["stats"][1]
+
+    @app.get("/stats/questions", tags=["dataviz"])
+    def stats_questions():
+        """Questions posées à l'assistant : nombre, refus, temps moyen, documents les plus cités."""
+        return state["log"].stats(engine(require_index=False).documents())
+
+    @app.get("/stats/map", tags=["dataviz"])
+    def stats_map():
+        """Coordonnées 2D de chaque segment (t-SNE), calculées par scripts/carte_vecteurs.py."""
+        data = load_map()
+        if data is None:
+            raise HTTPException(404, "Carte absente : lancez python scripts/carte_vecteurs.py")
+        return data
+
+    @app.get("/vendor/plotly.min.js", include_in_schema=False)
+    def plotly_js():
+        """Bibliothèque de graphiques servie en local depuis le paquet Python plotly (aucun CDN)."""
+        if "plotly" not in state:
+            try:
+                from plotly.offline import get_plotlyjs
+                state["plotly"] = get_plotlyjs()
+            except ImportError:
+                raise HTTPException(404, "plotly n'est pas installé : pip install -r requirements.txt")
+        return Response(state["plotly"], media_type="application/javascript",
+                        headers={"Cache-Control": "max-age=86400"})
 
     # Étape 6 : l'interface web est servie par la même application (pas de problème de CORS)
     if FRONTEND_DIR.exists():

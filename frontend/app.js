@@ -5,6 +5,7 @@
  *   GET  /chunks/{id}          contexte d'un extrait (segments voisins)
  *   GET  /search               onglet « Recherche dans le corpus »
  *   GET  /health               état de la base et du LLM (en haut à droite)
+ * Le tableau de bord (étape 7) est dans dashboard.js.
  */
 "use strict";
 
@@ -34,15 +35,17 @@ async function checkHealth() {
 
 /* ------------------------------------------------------------------ onglets */
 function showTab(name) {
-  const chat = name === "chat";
-  $("tab-chat").setAttribute("aria-selected", chat);
-  $("tab-search").setAttribute("aria-selected", !chat);
-  $("view-chat").hidden = !chat;
-  $("view-search").hidden = chat;
-  (chat ? $("question") : $("search-q")).focus();
+  for (const tab of ["chat", "search", "stats"]) {
+    $(`tab-${tab}`).setAttribute("aria-selected", tab === name);
+    $(`view-${tab}`).hidden = tab !== name;
+  }
+  if (name === "chat") $("question").focus();
+  if (name === "search") $("search-q").focus();
+  if (name === "stats") window.loadDashboard();   // dashboard.js
 }
 $("tab-chat").onclick = () => showTab("chat");
 $("tab-search").onclick = () => showTab("search");
+$("tab-stats").onclick = () => showTab("stats");
 
 /* ------------------------------------------------------------------ rendu de la réponse */
 // Échappe le texte, met le gras **…** et transforme [1], [1, 3] en boutons cliquables

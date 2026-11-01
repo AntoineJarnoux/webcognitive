@@ -7,10 +7,13 @@ streaming, erreurs) sans avoir besoin d'Ollama.
 from __future__ import annotations
 
 import json
+import tempfile
+from pathlib import Path
 
 import pytest
 from fastapi.testclient import TestClient
 
+from webcognitive.analytics import QuestionLog
 from webcognitive.api import create_app
 from webcognitive.rag import (REFUSAL, SYSTEM_PROMPT, LLMUnavailable, RagPipeline, build_messages,
                               cited_numbers, is_refusal)
@@ -36,8 +39,10 @@ class FakeLLM:
 
 # Avec le faux modèle, les cosinus sont plus bas qu'avec le vrai : on désactive le garde-fou (min_score=0),
 # sauf dans le test qui lui est consacré.
-def make_client(engine, llm: FakeLLM) -> TestClient:
-    return TestClient(create_app(lambda: engine, warmup=False, rag_factory=lambda e: RagPipeline(e, llm, min_score=0)))
+def make_client(engine, llm: FakeLLM, log: QuestionLog | None = None) -> TestClient:
+    log = log or QuestionLog(Path(tempfile.mkdtemp()) / "questions.jsonl")  # jamais le vrai journal
+    return TestClient(create_app(lambda: engine, warmup=False, question_log=log,
+                                 rag_factory=lambda e: RagPipeline(e, llm, min_score=0)))
 
 
 # --------------------------------------------------------------------------- prompt et citations

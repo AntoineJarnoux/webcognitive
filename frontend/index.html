@@ -21,6 +21,7 @@
   <nav class="tabs" role="tablist">
     <button role="tab" id="tab-chat" aria-selected="true" aria-controls="view-chat">Assistant</button>
     <button role="tab" id="tab-search" aria-selected="false" aria-controls="view-search">Recherche dans le corpus</button>
+    <button role="tab" id="tab-stats" aria-selected="false" aria-controls="view-stats">Tableau de bord</button>
   </nav>
 
   <!-- Vue 1 : le chat (étape 5 + 6) -->
@@ -85,6 +86,69 @@
     <ol id="search-results" class="search-results"></ol>
   </main>
 
+  <!-- Vue 3 : le tableau de bord (étape 7) -->
+  <main id="view-stats" class="stats-view" role="tabpanel" hidden>
+    <div class="stats-inner">
+      <div class="tiles" id="tiles"></div>
+
+      <section class="panel-row">
+        <figure class="chart-card">
+          <figcaption><h2>Documents par format</h2><p>Nombre de fichiers du corpus.</p></figcaption>
+          <div id="ch-format" class="chart"></div>
+        </figure>
+        <figure class="chart-card">
+          <figcaption><h2>Volume de texte par format</h2><p>Mots extraits après nettoyage : les RFC en texte brut sont longues, les pages HTML courtes.</p></figcaption>
+          <div id="ch-words" class="chart"></div>
+        </figure>
+      </section>
+
+      <section class="panel-row">
+        <figure class="chart-card">
+          <figcaption><h2>Documents par décennie de publication</h2><p>Les notes Wikipédia et plusieurs pages web ne sont pas datées.</p></figcaption>
+          <div id="ch-decade" class="chart"></div>
+        </figure>
+        <figure class="chart-card">
+          <figcaption><h2>Taille des segments indexés</h2><p id="cap-chunks">Nombre de segments par tranche de 25 caractères (découpage visé : 500).</p></figcaption>
+          <div id="ch-chunks" class="chart"></div>
+        </figure>
+      </section>
+
+      <figure class="chart-card wide">
+        <figcaption><h2>Thématiques par document</h2><p>Mentions de chaque thème pour 10 000 mots du document, du plus ancien au plus récent (les documents non datés à la fin). Survolez une case pour le nombre exact de mentions.</p></figcaption>
+        <div id="ch-themes" class="chart tall"></div>
+      </figure>
+
+      <section class="panel-row">
+        <figure class="chart-card">
+          <figcaption><h2>Évolution des thèmes par décennie</h2><p>Mentions pour 10 000 mots, documents datés seulement.</p></figcaption>
+          <div id="ch-decade-themes" class="chart"></div>
+        </figure>
+        <figure class="chart-card">
+          <figcaption><h2>Termes les plus fréquents</h2>
+            <p>Hors mots vides, par langue des documents.
+              <span class="seg-toggle" role="group" aria-label="Langue">
+                <button type="button" data-lang="fr" aria-pressed="true">français</button><button type="button" data-lang="en" aria-pressed="false">anglais</button>
+              </span></p></figcaption>
+          <div id="ch-terms" class="chart"></div>
+        </figure>
+      </section>
+
+      <figure class="chart-card wide">
+        <figcaption><h2>Carte sémantique des segments</h2>
+          <p>Chaque point est un segment ; deux points proches parlent de la même chose (vecteurs de 384 dimensions projetés en 2D par t-SNE). Quand ils traitent du même sujet, les passages français et anglais se retrouvent côte à côte.
+            <label class="inline-select">Mettre en évidence
+              <select id="map-doc"><option value="">aucun document</option></select></label></p></figcaption>
+        <div id="ch-map" class="chart map"></div>
+      </figure>
+
+      <figure class="chart-card wide">
+        <figcaption><h2>Questions posées à l'assistant</h2><p>Depuis le premier lancement de l'application sur cet ordinateur.</p></figcaption>
+        <div id="questions" class="questions"></div>
+      </figure>
+    </div>
+  </main>
+
   <script src="app.js"></script>
+  <script src="dashboard.js"></script>
 </body>
 </html>

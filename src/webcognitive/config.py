@@ -57,3 +57,7 @@ LLM_TIMEOUT = 300        # secondes (le premier appel charge le modèle en mémo
 RAG_K = 8                # extraits donnés au LLM (8 : meilleur résultat que 5, voir docs/etape5_resultats.md)
 RAG_MODE = "hybrid"      # sens + mots-clés : retrouve mieux les noms propres (« selon Clark », « Mitranet »)
 RAG_MIN_SCORE = 0.35     # garde-fou : sous ce cosinus, la question est jugée hors sujet sans appeler le LLM
+
+# Étape 7 : dataviz
+QUESTION_LOG = DATA_DIR / "logs" / "questions.jsonl"   # questions posées à l'assistant (local, ignoré par Git)
+MAP_FILE = DATA_DIR / "analytics" / "carte_2d.json"     # projection 2D des vecteurs (scripts/carte_vecteurs.py)

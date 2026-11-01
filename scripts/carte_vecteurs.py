@@ -7,8 +7,9 @@ les projette en 2 dimensions en essayant de garder les voisins proches ensemble 
 deux segments de sens proche restent deux points proches sur la carte.
 (Les distances entre groupes éloignés, elles, ne sont pas fiables.)
 
-Sortie : docs/carte_vecteurs.html (page interactive, à ouvrir dans un navigateur).
-La bibliothèque de graphiques Plotly est incluse dans la page : elle s'ouvre sans connexion.
+Sorties :
+- data/analytics/carte_2d.json : les coordonnées, affichées dans le tableau de bord de l'interface (étape 7) ;
+- docs/carte_vecteurs.html     : la même carte en page autonome (Plotly inclus, s'ouvre sans connexion).
 
 Usage :
     python scripts/carte_vecteurs.py          # ~1 min sur CPU
@@ -52,6 +53,14 @@ def main() -> int:
         "loc": [location(c) for c in chunks],
         "text": [c["text"] for c in chunks],
     }
+    # Version légère pour le tableau de bord : extrait de 160 caractères au lieu du segment entier
+    light = {k: v for k, v in data.items() if k not in ("text", "year", "format")}
+    light["text"] = [t[:160] + ("…" if len(t) > 160 else "") for t in data["text"]]
+    light["model"] = manifest["model"]
+    config.MAP_FILE.parent.mkdir(parents=True, exist_ok=True)
+    config.MAP_FILE.write_text(json.dumps(light, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    print(f"Coordonnées écrites : {config.MAP_FILE.relative_to(config.ROOT)}")
+
     html = TEMPLATE.replace("__PLOTLY__", get_plotlyjs()).replace("__DATA__", json.dumps(data, ensure_ascii=False)) \
                    .replace("__MODEL__", manifest["model"].split("/")[-1]) \
                    .replace("__COUNT__", f"{len(chunks):,}".replace(",", " "))
